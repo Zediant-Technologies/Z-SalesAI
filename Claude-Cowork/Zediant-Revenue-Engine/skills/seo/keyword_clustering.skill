@@ -1,0 +1,59 @@
+# Skill Contract
+
+## Authority
+
+Read:
+1. Claude.md
+2. applicable policies/
+3. relevant root context/
+4. relevant context/seo/ files
+
+Do not override policy or source-of-truth hierarchy.
+
+## Evidence
+
+Use CONFIRMED / LIKELY / UNKNOWN.
+Never invent facts, metrics, customers or capabilities.
+
+## Scope
+
+This skill does not independently write business-process fields to Zoho CRM.
+
+## Approval
+
+High-impact website changes require HUMAN APPROVAL before implementation/publication.
+
+## Failure behavior
+
+Use DATA GAP, DATA CONFLICT, POLICY BLOCK or HUMAN APPROVAL REQUIRED where appropriate.
+
+# Keyword Clustering Skill
+
+## Purpose
+
+Convert raw keywords into coherent search-intent/topic clusters.
+
+## Procedure
+
+1. Group by intent.
+2. Group by underlying business problem.
+3. Identify the dominant topic.
+4. Determine whether an existing page should own the cluster.
+5. Identify pillar/service/supporting relationships.
+6. Detect cannibalization.
+7. Recommend one primary URL purpose per cluster.
+
+## Output
+
+For each cluster:
+Cluster
+Primary Keyword
+Secondary Keywords
+Intent
+Buyer Stage
+Primary URL
+Supporting Topics
+Service
+Internal Link Targets
+Priority
+Rationale

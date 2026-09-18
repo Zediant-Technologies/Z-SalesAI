@@ -1,0 +1,16 @@
+RewriteEngine On
+
+# Condition 1: URI contains uppercase letters
+RewriteCond %{REQUEST_URI} [A-Z]
+
+# Condition 2: URI ends with .pdf (case-insensitive)
+RewriteCond %{REQUEST_URI} \.pdf$ [NC]
+
+# Rewrite to lowercase handler
+RewriteRule ^(.*)$ to-lowercase.php?u=$1 [L]
+
+RewriteRule ^services/build-your-team/?$ https://zediant.com/services/dedicated-engineering/ [R=301,L]
+RewriteRule ^about-us/how-we-work/?$ https://zediant.com/about-us/engineering-excellence/ [R=301,L]
+RewriteRule ^about-us/team-culture/?$ https://zediant.com/about-us/who-we-are/ [R=301,L]
+
+

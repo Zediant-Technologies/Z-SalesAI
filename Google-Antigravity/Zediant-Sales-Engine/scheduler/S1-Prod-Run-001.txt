@@ -1,0 +1,62 @@
+PRODUCTION RUN TARGET
+
+Scheduler 1 must target UP TO 50 qualified prospective clients per production run.
+
+50 is the maximum production output per run, not a forced quota.
+
+The objective is to identify the highest-quality prospective clients for Zediant and add only those that satisfy all existing ICP, deduplication, enrichment, Initial Buying Signal Score, campaign-fit, personalization, and data-quality requirements.
+
+Do NOT weaken, bypass, or relax any qualification rule to reach 50.
+
+Do NOT pad the production batch with weaker, borderline, duplicate, Partner/Overflow, insufficient-evidence, or incomplete prospective clients.
+
+If fewer than 50 prospective clients genuinely pass all production gates, write only the qualified number.
+
+Examples:
+- 50 qualified prospective clients → write 50
+- 37 qualified prospective clients → write 37
+- 18 qualified prospective clients → write 18
+- 0 qualified prospective clients → write 0
+
+The final Scheduler 1 output must therefore always be:
+
+0 ≤ qualified prospective clients written to Zoho ≤ 50
+
+Apollo sourcing may retrieve more than 50 prospective clients because the system may need to evaluate a larger pool in order to identify up to 50 that genuinely meet Zediant's qualification criteria.
+
+The Apollo sourcing volume is NOT the production output target.
+
+QUALITY OVER QUANTITY
+
+Never interpret the 50-lead target as an instruction to find 50 records at any cost.
+
+The system must stop when:
+1. 50 qualified prospective clients have been identified and all required data is complete; OR
+2. the available sourcing pool has been sufficiently exhausted and fewer than 50 prospective clients pass all qualification gates.
+
+In the second case, report the actual qualified count honestly.
+
+Never lower the ICP threshold, Initial Buying Signal Score requirements, campaign-fit requirements, personalization requirements, Partner/Overflow exclusion rules, deduplication rules, or evidence requirements simply to increase the number of prospective clients.
+
+PRODUCTION RUN REPORT
+
+The final report must clearly distinguish:
+
+1. Raw prospective clients sourced from Apollo
+2. Existing prospective clients excluded through Zoho deduplication
+3. Prospective clients remaining after deduplication
+4. Prospective clients enriched
+5. Prospective clients rejected during qualification
+6. Prospective clients rejected as Partner/Overflow
+7. Prospective clients rejected because of insufficient buying-signal evidence
+8. Prospective clients rejected because required enrichment or personalization data was incomplete
+9. Final qualified prospective clients written to Zoho
+10. Number below the 50-lead production target, if applicable
+
+Terminology rule:
+
+Use "prospective client", "prospect", or "qualified lead" for companies/persons being evaluated for Zediant's sales pipeline.
+
+Do NOT refer to them as "clients" unless the record represents an existing Zediant customer.
+
+Do NOT use "candidate" for the sales-lead generation process.

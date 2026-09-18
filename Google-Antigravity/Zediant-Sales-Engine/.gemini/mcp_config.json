@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "apollo": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "apollo-mcp-server"
+      ],
+      "env": {
+        "APOLLO_API_KEY": "Y7A_hcyzWWwdaKTF5CT1Og"
+      }
+    },
+    "zoho-crm": {
+      "command": "zoho-mcp",
+      "args": [],
+      "env": {
+        "PYTHONUTF8": "1",
+        "ZOHO_CLIENT_ID": "1000.TQC7FG86QK0KXHSHT9NDGUOGN1S7VB",
+        "ZOHO_CLIENT_SECRET": "9f314fcbdd67ecc15581e30341497e4fb7b429b2ee",
+        "ZOHO_REDIRECT_URI": "http://localhost:8080/callback",
+        "ZOHO_API_DOMAIN": "https://www.zohoapis.in",
+        "ZOHO_ACCESS_TOKEN": "1000.0676bb7f8a4c00acbfdf515851c661ff.c44fdf8c7db71cc6f4e61f230d9bfcbd",
+        "ZOHO_REFRESH_TOKEN": "1000.d07a536f83b8e8ec4e9f46482a12ce3d.9f74a78262def6e3d7191132e2cf5b37",
+        "ZOHO_ACCOUNTS_URL": "https://accounts.zoho.in/oauth/v2"
+      }
+    }
+  }
+}

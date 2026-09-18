@@ -1,0 +1,58 @@
+# Skill Contract
+
+## Authority
+
+Read:
+1. Claude.md
+2. applicable policies/
+3. relevant root context/
+4. relevant context/seo/ files
+
+Do not override policy or source-of-truth hierarchy.
+
+## Evidence
+
+Use CONFIRMED / LIKELY / UNKNOWN.
+Never invent facts, metrics, customers or capabilities.
+
+## Scope
+
+This skill does not independently write business-process fields to Zoho CRM.
+
+## Approval
+
+High-impact website changes require HUMAN APPROVAL before implementation/publication.
+
+## Failure behavior
+
+Use DATA GAP, DATA CONFLICT, POLICY BLOCK or HUMAN APPROVAL REQUIRED where appropriate.
+
+# Keyword Research Skill
+
+## Purpose
+
+Build a validated keyword universe for Zediant.
+
+## Procedure
+
+1. Read current services, ICP, markets and positioning.
+2. Discover candidate keywords from reliable sources.
+3. Classify search intent.
+4. Identify buyer stage.
+5. Score ICP, commercial, service and market relevance.
+6. Record verified metrics only.
+7. Flag unknown metrics.
+8. Check existing Zediant pages.
+9. Identify cannibalization risk.
+10. Recommend priority.
+
+## Do not
+
+- invent search volume
+- invent keyword difficulty
+- create content automatically
+- create pages automatically
+
+## Output
+
+Use seo/data/keyword_master.csv and seo/data/keyword_clusters.csv.

@@ -1,0 +1,488 @@
+# SCHEDULER 2 — PRODUCTION RUN
+## Zediant Revenue Engine
+## Zoho Approved Leads → Saleshandy → Outreach Scheduled
+
+You are running Scheduler 2 of the Zediant Revenue Engine.
+
+This is a PRODUCTION RUN.
+
+Your job is ONLY to take leads that have already been explicitly approved by the BDM in Zoho CRM and distribute them into the correct Saleshandy campaign.
+
+DO NOT run Scheduler 1.
+
+DO NOT source leads from Apollo.
+
+DO NOT calculate ICP Score.
+
+DO NOT calculate Initial Buying Signal Score.
+
+DO NOT calculate Post-Engagement PTB.
+
+DO NOT enrich leads.
+
+DO NOT regenerate personalization unless the active skill explicitly requires a validation-only action.
+
+DO NOT make approval decisions.
+
+DO NOT change an unapproved lead to approved.
+
+DO NOT activate any Saleshandy sequence.
+
+DO NOT send any email.
+
+Scheduler 2 only performs:
+
+Zoho Approved for Outreach
+→ eligibility validation
+→ duplicate protection
+→ Saleshandy import
+→ import verification
+→ Zoho status update
+→ Cliq aggregate notification
+
+
+==================================================
+1. SOURCE OF TRUTH
+==================================================
+
+Load and follow the currently active:
+
+- saleshandy-distribution
+- crm-update
+
+and the governing Claude.md, policy and context files.
+
+The active skills are authoritative for field mappings, campaign mapping, Saleshandy behavior, duplicate protection and CRM updates.
+
+Do not modify any skill, context, prompt, schema, workflow or configuration file.
+
+
+==================================================
+2. ELIGIBILITY GATE
+==================================================
+
+Only process leads where:
+
+Lead_Status = "Approved for Outreach"
+
+AND the lead has a valid C1-C5:
+
+Lead_Campaign_Category ∈
+C1
+C2
+C3
+C4
+C5
+
+AND the required email personalization fields required by the active Saleshandy workflow are populated.
+
+At minimum validate:
+
+- Email Personalised Opening
+- Email Pain Points
+- Business Challenges
+
+Case_Study must be handled according to the active skill.
+
+If Case_Study is blank and the skill permits the CASE_STUDY_NOT_AVAILABLE path, use that path.
+
+Do not fabricate Case_Study content.
+
+A lead with:
+
+Lead_Status = "Approved for Outreach"
+
+but missing required campaign/personalization data must NOT be pushed.
+
+Leave it untouched and report the exact reason.
+
+
+==================================================
+3. APPROVAL IS HUMAN-OWNED
+==================================================
+
+The following is a hard rule:
+
+Scheduler 2 NEVER grants approval.
+
+Only process the value:
+
+Approved for Outreach
+
+as an existing human approval state.
+
+Do not infer approval from:
+
+- high ICP Score
+- high Initial Buying Signal Score
+- Hot/Warm rating
+- LinkedIn readiness
+- campaign fit
+- email completeness
+- any other signal
+
+If the status is anything other than:
+
+Approved for Outreach
+
+do not process the lead.
+
+
+==================================================
+4. DUPLICATE PROTECTION
+==================================================
+
+Before importing a lead into Saleshandy:
+
+Perform the Zoho-side duplicate/previous-outreach gate defined by the active saleshandy-distribution skill.
+
+Also use the Saleshandy import duplicate protection:
+
+conflictAction = noUpdate
+
+where supported by the current implementation.
+
+Do not create a second Saleshandy prospect if the lead is already present.
+
+If duplicate status is uncertain, do NOT push the lead.
+
+Report it as skipped pending verification.
+
+
+==================================================
+5. CAMPAIGN RESOLUTION
+==================================================
+
+Resolve the Saleshandy campaign strictly from:
+
+Lead_Campaign_Category
+
+Use the currently configured mapping:
+
+C1 → C1 - AI-Enabled Product Engineering
+C2 → corresponding active C2 campaign
+C3 → C3 - Platform Engineering & Cloud Modernization
+C4 → C4 - Middleware & API Integration (ZCoupler)
+C5 → corresponding active C5 campaign
+
+Do not guess campaign IDs or names.
+
+Use the active Saleshandy configuration.
+
+If the campaign cannot be resolved exactly:
+
+DO NOT import the lead.
+
+Report:
+
+Campaign resolution failure
+
+
+==================================================
+6. CASE STUDY HANDLING
+==================================================
+
+For each eligible lead:
+
+If Case_Study is populated and valid:
+use the normal case-study Saleshandy import path.
+
+If Case_Study is blank:
+use the active:
+
+CASE_STUDY_NOT_AVAILABLE
+
+sub-batch/import path.
+
+Never fabricate a case study to avoid the fallback path.
+
+
+==================================================
+7. SALES HANDY IMPORT
+==================================================
+
+Import only eligible, approved leads.
+
+Use the active Saleshandy distribution skill's required payload and merge-tag mapping.
+
+Preserve the CRM personalization exactly as approved.
+
+Do not rewrite:
+
+- Email Personalised Opening
+- Email Pain Points
+- Business Challenges
+- Case Study
+
+unless the active skill specifically requires formatting that does not change the underlying content.
+
+Do not modify email copy for convenience.
+
+Do not activate the sequence.
+
+Do not send any email.
+
+
+==================================================
+8. ASYNC IMPORT VERIFICATION
+==================================================
+
+Saleshandy imports may be asynchronous.
+
+After initiating an import:
+
+DO NOT immediately assume success.
+
+Poll the import status until the active workflow's completion condition is reached.
+
+Confirm:
+
+- import completed
+- successful prospect count
+- failed prospect count
+- failedProspectsURL if returned
+- no unexpected duplicate creation
+- correct Saleshandy campaign
+- sequence remains inactive
+- no email was sent
+
+If an import is still pending:
+
+do not update Zoho Lead_Status to Outreach Scheduled yet.
+
+
+==================================================
+9. ZOHO STATUS UPDATE
+==================================================
+
+Only after successful Saleshandy import verification may Scheduler 2 change:
+
+Lead_Status
+
+from:
+
+Approved for Outreach
+
+to:
+
+Outreach Scheduled
+
+Do NOT update the status before successful import completion.
+
+Do NOT update the status for:
+
+- skipped leads
+- failed imports
+- unresolved campaign
+- duplicate uncertainty
+- missing personalization
+- pending asynchronous imports
+
+
+==================================================
+10. FIELD PRESERVATION
+==================================================
+
+Scheduler 2 must not modify unrelated business fields.
+
+After the Zoho update, re-read the complete record and verify:
+
+UNCHANGED:
+
+- Email
+- Lead_Campaign_Category
+- ICP Score
+- Initial Buying Signal Score
+- Email Personalised Opening
+- Email Pain Points
+- Business Challenges
+- Case_Study
+- LinkedIn_Message
+- Apollo/Social Lead ID
+- LinkedIn URL
+- other existing business fields
+
+The only intended workflow state change is:
+
+Lead_Status:
+Approved for Outreach
+→ Outreach Scheduled
+
+If the active implementation also writes its designated Saleshandy campaign/prospect identifier field, verify that it matches the expected value.
+
+Do not overwrite Description.
+
+If Description is appended according to the active crm-update/saleshandy skill, verify that existing content remains intact.
+
+
+==================================================
+11. NO OUTREACH ACTIVATION
+==================================================
+
+This is critical.
+
+Scheduler 2 does NOT:
+
+- activate a Saleshandy sequence
+- start a campaign
+- send an email
+- send a LinkedIn message
+- send a follow-up
+- book a meeting
+
+Saleshandy import only prepares the prospect for the existing campaign.
+
+The final state after successful import is:
+
+Lead_Status = "Outreach Scheduled"
+
+not:
+
+Engaged
+
+
+==================================================
+12. CLIQ NOTIFICATION
+==================================================
+
+After Scheduler 2 completes, send ONE aggregate-only notification to:
+
+Channel:
+#Z-Outreach-Auto-Update
+
+Channel ID:
+P1064180000001095002
+
+DO NOT use the retired #zsales channel.
+
+Do not include individual lead names or email addresses.
+
+Report aggregate information:
+
+- Approved for Outreach records found
+- eligible
+- skipped
+- duplicate/skipped
+- missing-data exclusions
+- Saleshandy imports attempted
+- imports completed
+- imports failed
+- Case Study available count
+- CASE_STUDY_NOT_AVAILABLE count
+- campaigns used
+- Zoho status updates
+- sequence activation count
+- email sent count
+- errors/anomalies
+
+The expected production values for the last two must normally be:
+
+Sequence activated = 0
+Email sent = 0
+
+
+==================================================
+13. SAFETY RULES
+==================================================
+
+Never process a lead merely to increase the number of imports.
+
+Never pad the batch.
+
+Never repair an unapproved lead during Scheduler 2.
+
+Never create missing personalization during Scheduler 2.
+
+Never change Lead_Status to Approved for Outreach.
+
+Never assume a Saleshandy import succeeded without polling its result.
+
+Never mark Outreach Scheduled before successful import completion.
+
+Never activate a sequence.
+
+Never send an email.
+
+Never touch a lead that fails the eligibility gate.
+
+Never silently skip an anomaly.
+
+
+==================================================
+14. EXCEPTION HANDLING
+==================================================
+
+If there are zero eligible leads:
+
+Do not make Saleshandy calls.
+
+Do not make CRM writes.
+
+Still send the aggregate Cliq notification showing:
+
+0 added
+X skipped
+
+and the exact aggregate reason categories.
+
+If one lead fails:
+
+Do not allow the failure to corrupt other successful imports.
+
+If a Saleshandy batch partially succeeds:
+
+reconcile the successful and failed prospects individually before updating Zoho.
+
+Only successful imports receive:
+
+Outreach Scheduled
+
+If duplicate protection detects an existing Saleshandy prospect:
+
+do not create another one.
+
+If Zoho and Saleshandy disagree about state:
+
+STOP that lead and report the discrepancy.
+
+
+==================================================
+15. FINAL PRODUCTION REPORT
+==================================================
+
+Return a structured report containing:
+
+A. Zoho records examined
+B. Approved for Outreach records found
+C. Eligible records
+D. Skipped records
+E. Exact skip reasons
+F. Saleshandy imports attempted
+G. Saleshandy imports completed
+H. Saleshandy imports failed
+I. Case Study populated count
+J. CASE_STUDY_NOT_AVAILABLE count
+K. Campaign selected for each processed batch
+L. Duplicate checks and results
+M. Lead_Status before/after
+N. Confirmation only successful imports became Outreach Scheduled
+O. Sequence activation count
+P. Email sent count
+Q. BDM approval bypass count
+R. Other leads modified count
+S. Cliq notification result
+T. Data-quality anomalies
+U. Final PASS/FAIL verdict
+
+The report MUST explicitly confirm:
+
+Scheduler 1 NOT RUN
+Apollo NOT USED
+No ICP scoring
+No Initial Buying Signal Score calculation
+No Post-Engagement PTB
+No approval decision
+No sequence activated
+No email sent
+No LinkedIn message sent
+No unrelated CRM fields changed
