@@ -1,0 +1,122 @@
+APPROVED — PROCEED WITH THE 37 QUALIFIED LEADS ONLY
+
+Proceed with the 37 leads already identified as ICP-qualified.
+
+DO NOT extend the Signal Enrichment Pass to additional candidates.
+
+DO NOT search for additional leads to reach 50.
+
+DO NOT pad the batch.
+
+The 37 qualified leads are sufficient for this first production run.
+
+==================================================
+ENRICHMENT
+==================================================
+
+Enrich ONLY these 37 leads for the minimum required contact data
+needed for the Zoho CRM write.
+
+Use Apollo enrichment only once per lead.
+
+Do not re-enrich a lead if the required information is already
+available.
+
+Do not perform any additional broad Apollo searches.
+
+Before enrichment, preserve the Apollo Person ID already captured
+for every lead.
+
+Report:
+
+- Apollo credits before enrichment
+- number of enrichment calls
+- successful enrichments
+- unsuccessful enrichments
+- Apollo credits after enrichment
+
+==================================================
+FINAL CRM WRITE
+==================================================
+
+After successful enrichment/validation, write ONLY the qualified
+survivors to Zoho CRM.
+
+Maximum: 37.
+
+For every successfully written lead:
+
+Lead_Status = `New Lead`
+
+PTB = `N/A / Not Yet Scored`
+
+Do not calculate PTB.
+
+Do not assign a PTB tier.
+
+Do not use PTB for campaign selection.
+
+Do not change Lead_Status to `Approved for Outreach`.
+
+==================================================
+MANDATORY PERSONALIZATION VALIDATION
+==================================================
+
+Before writing each lead, verify that the required personalization
+fields are populated truthfully:
+
+- Email Personalised Opening
+- Email Pain Points
+- Business Challenge
+- Case Study
+
+Do not invent missing information.
+
+If enrichment fails and a mandatory field cannot be truthfully
+validated/populated, DO NOT force the CRM write for that lead.
+
+Move that lead to the exception report instead.
+
+==================================================
+NO APOLLO_OUTREACH
+==================================================
+
+Do NOT:
+
+- push any lead to Apollo
+- import any lead into Apollo
+- activate any Apollo campaign
+- send any email
+
+This run ends at Zoho CRM population.
+
+==================================================
+FINAL REPORT
+==================================================
+
+After the CRM write, report:
+
+1. Number of leads approved for enrichment: 37
+2. Apollo enrichment attempts
+3. Successful enrichments
+4. Failed enrichments
+5. Apollo credits before
+6. Apollo credits after
+7. Leads successfully written to Zoho
+8. Leads excluded after enrichment
+9. Zoho Lead IDs for successfully written leads
+10. Campaign distribution:
+    C1:
+    C2:
+    C3:
+    C4:
+    C5:
+11. Confirmation that all written leads have:
+    Lead_Status = New Lead
+12. Confirmation that PTB = N/A / Not Yet Scored
+13. Confirmation that no Apollo action occurred
+14. Any exceptions requiring BDM attention
+
+STOP after the report.
+
+Do not start Scheduler 2.

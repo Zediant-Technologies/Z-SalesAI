@@ -1,0 +1,535 @@
+# SCHEDULER 1 — PRODUCTION RUN
+## Zediant Revenue Engine
+## Apollo → Qualification → Enrichment → Scoring → Campaign → Personalization → Zoho
+
+You are running Scheduler 1 of the Zediant Revenue Engine. It must target UP TO 100 qualified prospective clients per production run.
+
+This is a PRODUCTION RUN, not a test.
+
+Your job is to execute the currently installed Scheduler 1 workflow using the active skills and context files as the source of truth.
+
+DO NOT modify any skill, context, prompt, schema, workflow, or configuration file during this run.
+
+DO NOT run Scheduler 2.
+
+DO NOT activate or send any Saleshandy sequence.
+
+DO NOT send email.
+
+DO NOT send LinkedIn messages or connection requests.
+
+DO NOT change any lead to "Approved for Outreach".
+
+Scheduler 1 ends after the qualified leads are written to Zoho CRM with:
+
+Lead_Status = "New Lead"
+
+
+==================================================
+1. SOURCE OF TRUTH
+==================================================
+
+Before execution, load and follow the currently active:
+
+- scheduler-lead-population
+- apollo-search-builder
+- lead-qualification
+- ptb-scoring
+- campaign-selection
+- email-personalization
+- crm-update
+
+and all governing context/policy files referenced by Claude.md.
+
+Do not recreate business rules from this prompt if the installed skills contain a more specific rule.
+
+The installed skills are authoritative for execution mechanics.
+
+This prompt defines the production boundary and safety requirements.
+
+
+==================================================
+2. PRODUCTION OBJECTIVE
+==================================================
+
+Source high-quality prospects from Apollo, remove existing Zoho records, qualify them, enrich only the strongest survivors, calculate:
+
+1. ICP Score
+2. Initial Buying Signal Score
+
+then select the best campaign, generate email and LinkedIn personalization, and write the final qualified batch to Zoho.
+
+Quality is more important than reaching an arbitrary lead-count target.
+
+Never lower qualification standards to hit a numerical target.
+
+If only 12 leads genuinely qualify, write 12.
+
+Do not pad the batch.
+
+
+==================================================
+3. SCHEDULER 1 EXECUTION FLOW
+==================================================
+
+Execute in this order:
+
+Apollo discovery
+→ Zoho-first deduplication
+→ qualification
+→ ICP scoring
+→ signal/evidence enrichment
+→ paid enrichment where required
+→ Initial Buying Signal Score
+→ campaign selection
+→ email personalization
+→ LinkedIn personalization
+→ complete validation
+→ Zoho write
+→ final verification
+→ Cliq aggregate notification
+
+Do not skip a required stage.
+
+Do not move a lead forward merely because it is close to the next stage.
+
+
+==================================================
+4. APOLLO DISCOVERY
+==================================================
+
+Use the active Apollo search-builder skill.
+
+Follow the currently configured campaign taxonomy C1-C5.
+
+Use the configured geographic, company-size, persona, technology, industry and ICP criteria.
+
+Use Apollo for sourcing and enrichment only.
+
+Apollo is NOT the system of record.
+
+Do not assume an Apollo result is a new lead until Zoho deduplication is complete.
+
+
+==================================================
+5. ZOHO-FIRST DEDUPLICATION
+==================================================
+
+Before considering a sourced prospect eligible for enrichment or CRM creation:
+
+Pull the current Zoho Leads exclusion set completely.
+
+The Zoho exclusion data must be fully paginated.
+
+Confirm the final page explicitly reports no further records.
+
+Deduplicate using the active apollo-search-builder cascade.
+
+Use all currently required matching methods, including where applicable:
+
+- Apollo Person ID
+- email
+- LinkedIn URL
+- company + person identity
+
+If there is uncertainty about identity, do not create a duplicate.
+
+Do not spend paid Apollo enrichment credits on leads already known to exist in Zoho.
+
+If the exclusion pull appears incomplete or inconsistent, STOP the affected write path and report the problem rather than guessing.
+
+
+==================================================
+6. QUALIFICATION
+==================================================
+
+Use lead-qualification exactly as currently installed.
+
+Calculate the authoritative ICP Score from lead-qualification.
+
+Do not independently invent another ICP model.
+
+Exclude Partner/Overflow leads such as software development agencies or IT consultancies where the active policy says they should be excluded.
+
+Do not force campaign distribution targets.
+
+Campaign fit must come from actual lead/company evidence.
+
+
+==================================================
+7. INITIAL BUYING SIGNAL SCORE
+==================================================
+
+This is mandatory in Scheduler 1.
+
+Every lead that reaches the final written batch must receive a valid numeric:
+
+Initial Buying Signal Score
+
+Do NOT leave a normal qualified lead as:
+
+NotYetScored
+
+simply because the lead has not been contacted.
+
+Initial Buying Signal Score is the PRE-ENGAGEMENT score.
+
+Use the current ptb-scoring Path A model exactly:
+
+A. Active Business/Technical Need = 25%
+B. Current Buying Signal = 20%
+C. Business Urgency/Timing = 15%
+D. Growth/Expansion/Change Signal = 15%
+E. Relevance of Business Challenge to Zediant = 15%
+F. Evidence Strength/Recency = 10%
+
+Total = 100.
+
+Use only evidence available before outreach.
+
+Do not use:
+
+- email opens
+- replies
+- LinkedIn acceptance
+- LinkedIn replies
+- meetings
+- post-outreach engagement
+
+for Initial Buying Signal Score.
+
+Do not confuse Initial Buying Signal Score with Post-Engagement PTB.
+
+Do not combine ICP Score and Initial Buying Signal Score.
+
+Do not average them.
+
+Do not invent evidence.
+
+If evidence is genuinely insufficient for a valid score, document the exact evidence gap and exclude the lead from the production batch rather than fabricating a score.
+
+
+==================================================
+8. APOLLO INTENT
+==================================================
+
+If Apollo actually returns Intent information for the lead:
+
+capture the verified Apollo Intent.
+
+Store it in the Zoho Description field according to the active crm-update skill.
+
+Do not fabricate Intent.
+
+Do not convert general company information into "Intent".
+
+Do not overwrite existing Description content.
+
+If Apollo provides no Intent, leave the Intent portion absent and report:
+
+Apollo Intent available = 0
+
+or the actual count.
+
+==================================================
+9. EMAIL PERSONALIZATION
+==================================================
+
+Generate the required email personalization fields using the active email-personalization skill.
+
+The following fields must be written with content suitable for DIRECT USE in the email sequence:
+
+- Email Personalised Opening
+- Email Pain Points
+- Business Challenges
+- Case Study
+
+The wording must be:
+
+- natural
+- human
+- concise
+- specific
+- conversational
+- appropriate to a real cold email
+
+Do NOT write research notes into these fields.
+
+Do NOT write analytical summaries.
+
+Do NOT use artificial "AI-style" language.
+
+Do NOT use phrases that sound like an AI-generated company analysis.
+
+Do NOT use em dash, en dash or double hyphen.
+
+Do not fabricate a case study.
+
+If no approved case study genuinely fits, leave Case_Study blank.
+
+Do not force a case study simply to fill the field.
+
+Every statement must be supportable by the available evidence.
+
+
+==================================================
+10. LINKEDIN PERSONALIZATION
+==================================================
+
+Generate LinkedIn Message & Follow-up according to the current email-personalization skill v2.7 or later.
+
+The CONNECT message is the actual first LinkedIn connection request.
+
+It must feel like Rajeev Jaiswal personally researched the person/company and genuinely wants to connect.
+
+Structure:
+
+Specific observation
++
+genuine reason for interest
++
+simple connection
+
+Do NOT:
+
+- mention Zediant in CONNECT
+- pitch services
+- ask for a meeting
+- ask for a call
+- use "I'd love to explore synergies"
+- use "I came across your impressive profile"
+- use "I believe there could be opportunities"
+- use generic industry-only personalization
+- over-personalize
+- fabricate a signal
+- sound like a sales template
+
+Hard rule:
+
+NEVER create a supposedly personalized LinkedIn connection request unless there is a verifiable personalization signal or verified person/company-specific context.
+
+Look first for:
+
+- recent LinkedIn post
+- company announcement
+- product launch
+- hiring activity
+- expansion
+- new market
+- funding
+- investment
+- technology/product change
+- interview
+- podcast
+- webinar
+- article
+- comment/activity
+- specific professional responsibility
+- verified product/company detail
+
+If a verified recent signal exists, use Path 1.
+
+If no recent signal exists but there is verified company/product/person context, use Path 2.
+
+If neither exists, use State C and do not manufacture personalization.
+
+FOLLOW-UP must remain relationship-oriented and non-sales-oriented.
+
+It may contain a small amount of context about what Rajeev does, but it must not become a pitch or meeting request.
+
+Run the LinkedIn quality audit before CRM write.
+
+
+==================================================
+11. CAMPAIGN SELECTION
+==================================================
+
+Select exactly one campaign from:
+
+C1
+C2
+C3
+C4
+C5
+
+Use the active campaign-selection skill.
+
+Campaign selection must be based on actual campaign fit.
+
+Do not preserve the Apollo sourcing campaign merely because that was the search used.
+
+Do not force portfolio percentages.
+
+If a lead does not have a defensible C1-C5 fit, do not write it as a production lead.
+
+
+==================================================
+12. FINAL PRE-WRITE VALIDATION
+==================================================
+
+Before writing any lead to Zoho, verify:
+
+[ ] Lead is not already in Zoho
+[ ] Person identity is correct
+[ ] Company identity is correct
+[ ] Lead passed qualification
+[ ] ICP Score is valid
+[ ] Initial Buying Signal Score is numeric
+[ ] Campaign is C1-C5
+[ ] Email Personalised Opening is populated
+[ ] Email Pain Points is populated
+[ ] Business Challenges is populated
+[ ] Case Study is populated only if genuinely supported
+[ ] Apollo Intent is captured only if Apollo actually supplied it
+[ ] LinkedIn CONNECT exists
+[ ] LinkedIn FOLLOW-UP exists where required
+[ ] LinkedIn message passed quality audit
+[ ] No Zediant pitch exists in CONNECT
+[ ] No fabricated personalization exists
+[ ] No prohibited AI-style wording exists
+[ ] No em dash/en dash/double hyphen exists in outreach content
+[ ] Lead_Status will be exactly "New Lead"
+
+
+==================================================
+13. CRM WRITE
+==================================================
+
+Use crm-update for the Zoho write.
+
+Do not let any other skill independently invent CRM field mappings.
+
+Scheduler 1 may create/write new leads.
+
+Scheduler 1 must NOT write:
+
+Lead_Status = "Approved for Outreach"
+
+The only production state written by Scheduler 1 is:
+
+Lead_Status = "New Lead"
+
+After the write, re-read the written records and verify the important fields exactly match the intended payload.
+
+Confirm no unexpected field was changed.
+
+
+==================================================
+14. CLIQ NOTIFICATION
+==================================================
+
+At the end of Scheduler 1, send ONE aggregate-only notification to:
+
+Channel:
+#Z-Outreach-Auto-Update
+
+Channel ID:
+P1064180000001095002
+
+Do NOT use the retired #zsales channel.
+
+The notification must not contain individual lead names or email addresses.
+
+Include aggregate information such as:
+
+- raw candidates
+- Zoho dedup exclusions
+- qualified
+- enriched
+- written
+- dropped
+- campaign distribution
+- Initial Buying Signal Score range
+- average Initial Buying Signal Score
+- LinkedIn personalization status
+- Apollo Intent availability
+- Case Study usage
+- any important data-quality exception
+- confirmation that Scheduler 2 was NOT run
+- confirmation that no outreach was sent
+
+
+==================================================
+15. FAILURE AND EXCEPTION RULES
+==================================================
+
+Never hide an error.
+
+If a lead is excluded, state why.
+
+If enrichment was paid and the lead is later dropped, disclose that.
+
+If a duplicate is discovered after the initial exclusion pull, disclose it immediately.
+
+If a name/company collision occurs, exclude the questionable external evidence.
+
+If an API response is incomplete, do not guess.
+
+If a CRM write partially fails, stop and report the exact state before attempting recovery.
+
+Never retry a write blindly if duplicate risk exists.
+
+Never fabricate missing personalization.
+
+Never inflate scores.
+
+Never pad the lead count.
+
+
+==================================================
+16. PRODUCTION SAFETY BOUNDARY
+==================================================
+
+This run may perform:
+
+- Apollo discovery
+- Apollo enrichment
+- Zoho reads
+- Zoho lead creation/update required by Scheduler 1
+- Cliq aggregate notification
+
+This run may NOT perform:
+
+- Saleshandy imports
+- Saleshandy sequence activation
+- email sending
+- LinkedIn sending
+- Scheduler 2
+- approval decisions
+- Post-Engagement PTB scoring
+- opportunity creation
+- meeting booking
+
+
+==================================================
+17. FINAL REPORT
+==================================================
+
+After completion, provide a production execution report containing:
+
+1. Raw candidates
+2. Zoho dedup exclusions
+3. Qualification count
+4. Paid enrichment count and credits consumed
+5. Qualified final count
+6. Campaign distribution
+7. ICP Score range/average
+8. Initial Buying Signal Score range/average
+9. Count with numeric Initial Buying Signal Score
+10. Count dropped and exact reasons
+11. Email personalization completeness
+12. LinkedIn CONNECT/FOLLOW-UP audit
+13. Apollo Intent availability
+14. Case Study usage
+15. Zoho records created/updated
+16. Lead_Status verification
+17. Duplicate exceptions
+18. Cliq notification result
+19. Any anomalies
+20. Explicit confirmation:
+
+Scheduler 2 NOT RUN
+Saleshandy NOT TOUCHED
+No email sent
+No LinkedIn message sent
+No BDM approval bypassed

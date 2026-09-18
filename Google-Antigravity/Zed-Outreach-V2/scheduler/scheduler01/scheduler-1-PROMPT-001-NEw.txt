@@ -1,0 +1,218 @@
+Run Scheduler 1 for today's controlled production test.
+
+OBJECTIVE
+Populate up to 50 approved-quality, net-new prospects into Zoho CRM for BDM review.
+
+This is Scheduler 1 ONLY.
+
+DO NOT:
+- distribute or send any lead through Apollo
+- calculate PTB
+- estimate, infer, proxy, or fabricate PTB
+- bypass BDM approval
+- create or modify CRM fields
+- invent missing data
+- pad the batch with weak leads merely to reach 50
+
+PTB STATE
+At Scheduler 1 stage every lead has:
+- PTB semantic state: N/A / Not Yet Scored
+- Zoho CRM Twitter field representation: NotYetScored
+
+Treat this as an explicit pre-engagement state.
+
+CAMPAIGN SELECTION
+When campaign-selection is invoked while PTB = N/A / Not Yet Scored:
+- use its pre-engagement Path B
+- exclude PTB from the campaign-fit calculation
+- use the documented renormalized pre-engagement weights
+- do NOT calculate or estimate a PTB value
+- do NOT treat PTB as zero
+- do NOT apply the post-engagement PTB threshold
+- select exactly one current C1-C5 campaign where the lead qualifies
+
+When PTB is numeric in a genuinely post-engagement workflow, use the normal post-engagement campaign-selection model. That condition does not apply to today's Scheduler 1 run.
+
+APOLLO / CREDIT EFFICIENCY
+Optimize Apollo credits without reducing qualification quality.
+
+Required order:
+1. Build/use the broad candidate pool using search-only operations wherever possible.
+2. Deduplicate against Zoho before any paid enrichment.
+3. Apply qualification and inexpensive screening before paid enrichment.
+4. Use signal evidence to narrow the pool.
+5. Enrich only the strongest final survivors.
+6. Never enrich a lead that will already be excluded by deduplication, hard disqualification, or obvious ICP failure.
+7. Batch enrichment efficiently.
+8. Do not spend Apollo credits merely to obtain information that can be established reliably from already available data.
+9. Before each paid enrichment batch, verify the available Apollo credit balance and confirm the expected maximum spend.
+10. Never exceed the approved credit budget for this run.
+
+CLAUDE / TOKEN EFFICIENCY
+Optimize Claude token usage without affecting the outcome.
+
+- Do not repeatedly reread the same context files.
+- Load each required skill/context file only when needed.
+- Reuse already-established candidate facts instead of regenerating them.
+- Do not run expensive web research on candidates that will fail deduplication or hard qualification.
+- Use structured batches wherever possible.
+- Do not perform duplicate reasoning passes unless a downstream skill explicitly requires an authoritative recomputation.
+- The lead-qualification ICP score is authoritative for CRM.
+- Any earlier pre-enrichment ICP score is triage-only and must not replace the authoritative post-enrichment qualification score.
+- Do not sacrifice evidence quality merely to reduce token usage.
+
+LEAD QUALITY
+Prioritize quality over volume.
+
+Maximum:
+50 CRM writes.
+
+It is acceptable to finish below 50 if fewer than 50 candidates meet the complete qualification, evidence, personalization, and data-quality requirements.
+
+Never lower the qualification threshold simply to reach 50.
+
+DEDUPLICATION
+Exclude existing Zoho CRM leads using the documented Zoho-first deduplication cascade.
+
+Do not rely only on Apollo's duplicate detection.
+
+CRM remains the system of record.
+
+QUALIFICATION
+For every final survivor:
+- apply the authoritative lead-qualification process
+- calculate the ICP Score according to icp.md
+- preserve evidence supporting the qualification
+- apply all hard exclusions
+- do not qualify competing agencies/IT consultancies as normal prospects where policy routes them to partner/overflow
+- do not fabricate business challenges or buying signals
+
+CAMPAIGN DISTRIBUTION
+Use the current C1-C5 taxonomy from context/campaigns.md.
+
+Do not use retired campaign structures.
+
+Select the single best campaign for each qualified lead based on the current campaign-selection logic.
+
+PERSONALIZATION
+Every lead written to CRM must have the mandatory personalization fields required by the current email-personalization and crm-update skills.
+
+Ensure:
+- Email Personalised Opening
+- Email Pain Points
+- Business Challenges
+- Case Study, where an approved case study genuinely applies
+- LinkedIn Message where required by the current workflow
+
+Do not fabricate case studies.
+
+If no approved case study applies, leave Case_Study blank according to the current governance.
+
+CRM WRITE
+Use crm-update as the sole authority for CRM field mapping and writing.
+
+Before writing:
+- verify the live Zoho CRM schema where required
+- preserve valid existing data
+- do not overwrite existing records incorrectly
+- use the current field API names
+- do not create new fields
+
+For newly populated Scheduler 1 leads:
+- Lead_Status = New Lead
+- PTB / Twitter = NotYetScored
+- ICP Score goes into the currently mapped ICP field
+- Lead_Campaign_Category = selected C1-C5 campaign
+- Apollo Person ID goes into the currently mapped Social Lead ID field
+- populate all required personalization fields
+
+Do not write:
+- Approved for Outreach
+- Outreach Scheduled
+- Engaged
+- any PTB numeric score
+
+BDM APPROVAL
+BDM approval remains completely human-controlled.
+
+Scheduler 1 must never mark a lead as Approved for Outreach.
+
+SALES HANDY
+Do not call Apollo.
+
+Do not import leads into a Apollo campaign.
+
+Do not activate any sequence.
+
+Do not send any email.
+
+The run ends after CRM population and notification.
+
+CLIQ NOTIFICATION — MANDATORY
+After the Scheduler 1 CRM population step completes, execute the mandatory aggregate-only Zoho Cliq completion notification.
+
+Channel:
+P1064180000001095002
+(#Z-Outreach-Auto-Update)
+
+The Cliq message must contain aggregate operational information only, such as:
+- candidate pool
+- deduplication/result funnel
+- qualified count
+- CRM written count
+- campaign distribution
+- LinkedIn priority/coverage
+- Apollo credits used and remaining
+- major exception counts
+
+DO NOT include:
+- individual lead names
+- individual email addresses
+- individual company names
+- personal contact details
+- per-lead scoring details
+
+The Cliq notification is a mandatory completion step, not optional.
+
+After calling the Cliq posting tool:
+- inspect the actual tool response
+- verify that the message was successfully posted
+- do not treat merely calling the tool as success
+
+If Cliq posting fails:
+1. retry the notification once
+2. do NOT rerun Scheduler 1
+3. do NOT repeat Apollo searches
+4. do NOT repeat enrichment
+5. do NOT repeat Zoho writes
+6. report CLIQ_NOTIFICATION_FAILED / COMPLETED_WITH_NOTIFICATION_FAILURE if the retry also fails
+
+FINAL REPORT
+After completion provide the BDM approval report in chat.
+
+Include:
+- total raw candidate pool
+- deduplication exclusions
+- qualification funnel
+- final qualified count
+- CRM written count
+- excluded/no-email count
+- campaign distribution
+- LinkedIn priority count
+- personalization completeness
+- Apollo credits before/used/after
+- confirmation that PTB was NOT calculated
+- confirmation that CRM PTB representation is NotYetScored
+- confirmation that Apollo was NOT called
+- confirmation that BDM approval remains pending
+- Cliq notification status
+
+Do not provide individual lead details in the Cliq notification, but individual lead details may be included in the final direct chat report if required by the Scheduler 1 skill.
+
+STOP CONDITION
+Stop after:
+1. CRM population,
+2. successful Cliq completion notification,
+3. final BDM approval report.
+
+Do not start Scheduler 2.

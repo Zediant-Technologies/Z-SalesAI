@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /thank-you/
+Disallow: /thank-you-for-your-interest/
+Disallow: /webinar/
+
+Sitemap: https://zediant.com/sitemap.xml

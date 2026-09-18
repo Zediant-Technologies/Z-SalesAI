@@ -1,0 +1,74 @@
+# SCHEDULER 1 — PRODUCTION RUN
+## Zediant Revenue Engine
+## Apollo → Qualification → PTB Scoring → Campaign Selection → Personalization → Apollo Custom Fields Enrichment
+
+You are running Scheduler 1 of the Zediant Revenue Engine. It must target 7–10 high-intent qualified prospective clients per production run (during mailbox deliverability ramp-up; ceiling up to 80 at full scale).
+
+This is a PRODUCTION RUN, not a test.
+
+Your job is to execute the currently installed Scheduler 1 workflow using the active skills and context files as the source of truth.
+
+DO NOT modify any skill, context, prompt, schema, workflow, or configuration file during this run.
+DO NOT run Scheduler 2.
+DO NOT activate or send any Apollo sequence.
+DO NOT send email.
+DO NOT send LinkedIn messages or connection requests.
+DO NOT change any contact to "Approved for Outreach".
+DO NOT write cold leads to Zoho CRM (Zoho CRM receives leads only upon prospect response).
+
+Scheduler 1 ends after the qualified leads are enriched directly on Apollo Contacts with all 10 custom fields:
+- Approval Status = "New"
+- Zoho Sync Status = "Not Synced"
+- Zoho Record ID = ""
+- ICP Score (1–100)
+- Lead Source = "Apollo"
+- Target Segment = C1–C5
+- Company Trigger = Buying Signal Evidence
+- Pain Point = Business Challenge finding
+- Outreach Angle = "Product Development" or "Engineering Capacity"
+- Personalised Email = Complete Step 1 human email narrative
+and added to the Apollo saved list: "[Review] Daily Sourced Leads".
+
+==================================================
+1. SOURCE OF TRUTH
+==================================================
+
+Before execution, load and follow the currently active:
+- scheduler-lead-population
+- apollo-search-builder
+- lead-qualification
+- ptb-scoring
+- campaign-selection
+- email-personalization
+- apollo-distribution
+
+and all governing context/policy files referenced by GEMINI.md.
+The installed skills in .agents/skills/ are authoritative for execution mechanics.
+
+==================================================
+2. PRODUCTION OBJECTIVE
+==================================================
+
+Source high-quality prospects from Apollo with verified email status, qualify them, enrich only the strongest survivors, calculate:
+1. ICP Score (1–100)
+2. PTB Score (Initial Buying Signal, 0–100)
+then select the best campaign (Target Segment), assign Outreach Angle, generate email and LinkedIn personalization, and write the final qualified batch directly to Apollo Contact custom fields.
+
+Quality is more important than reaching an arbitrary lead-count target.
+Never lower qualification standards to hit a numerical target.
+If only 7 leads genuinely qualify, enrich 7.
+Do not pad the batch.
+
+==================================================
+3. PIPELINE STEPS
+==================================================
+
+1. Apollo Verified Candidate Pooling (search_people with contact_email_status: ["verified"])
+2. Screening & Qualification (lead-qualification -> ICP Score 1-100)
+3. Buying Signal & PTB Evaluation (ptb-scoring -> 0-100 PTB Score & Company Trigger)
+4. Campaign Selection (campaign-selection -> Target Segment & Outreach Angle)
+5. Credit Enrichment for verified email
+6. Antigravity Personalization (email-personalization -> Personalised Email & Pain Point & LinkedIn copy)
+7. Apollo Custom Field Enrichment (Write all 10 custom fields to Apollo Contact, Approval Status = "New", Zoho Sync Status = "Not Synced")
+8. Tag contact with "[Review] Daily Sourced Leads" for BDM review
+9. Cliq Completion Notification to #Z-Outreach-Auto-Update (Aggregate counts only)

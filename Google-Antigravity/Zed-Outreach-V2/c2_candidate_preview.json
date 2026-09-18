@@ -1,0 +1,585 @@
+{
+  "id": "55e2b51cf3e5bb2c03003a1b",
+  "first_name": "Jacinta",
+  "last_name": "Carne",
+  "name": "Jacinta Carne",
+  "linkedin_url": "http://www.linkedin.com/in/jacinta-carne-65796719",
+  "title": "Chief Operating Officer",
+  "photo_url": "https://media.licdn.com/dms/image/v2/C5603AQHOYkx-lDzJyw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1536977623652?e=2147483647&v=beta&t=hjZJUNjL83denCbP1UBa7310z6XJMefMUB_SGc8AiKk",
+  "twitter_url": null,
+  "github_url": null,
+  "facebook_url": null,
+  "extrapolated_email_confidence": null,
+  "headline": "Chief Operating Officer at Inlight | Operational Leadership | Building systems that scale",
+  "organization_id": "54a1216d69702d8ed46aa502",
+  "match_confidence": "high",
+  "employment_history": [
+    {
+      "_id": "6a78edd6addbe400014e9e71",
+      "created_at": null,
+      "current": true,
+      "degree": null,
+      "description": null,
+      "emails": null,
+      "end_date": null,
+      "grade_level": null,
+      "kind": null,
+      "major": null,
+      "org_matched_by_name": false,
+      "organization_id": "54a1216d69702d8ed46aa502",
+      "organization_name": "Inlight",
+      "raw_address": null,
+      "start_date": "2025-11-01",
+      "title": "Chief Operating Officer",
+      "updated_at": null,
+      "id": "6a78edd6addbe400014e9e71",
+      "key": "6a78edd6addbe400014e9e71"
+    },
+    {
+      "_id": "6a78edd6addbe400014e9e72",
+      "created_at": null,
+      "current": false,
+      "degree": null,
+      "description": null,
+      "emails": null,
+      "end_date": "2025-11-01",
+      "grade_level": null,
+      "kind": null,
+      "major": null,
+      "org_matched_by_name": false,
+      "organization_id": "54a1216d69702d8ed46aa502",
+      "organization_name": "Inlight",
+      "raw_address": null,
+      "start_date": "2020-10-01",
+      "title": "General Manager",
+      "updated_at": null,
+      "id": "6a78edd6addbe400014e9e72",
+      "key": "6a78edd6addbe400014e9e72"
+    },
+    {
+      "_id": "6a78edd6addbe400014e9e73",
+      "created_at": null,
+      "current": false,
+      "degree": null,
+      "description": null,
+      "emails": null,
+      "end_date": "2020-10-01",
+      "grade_level": null,
+      "kind": null,
+      "major": null,
+      "org_matched_by_name": false,
+      "organization_id": "54a1216d69702d8ed46aa502",
+      "organization_name": "Inlight",
+      "raw_address": null,
+      "start_date": "2020-02-01",
+      "title": "Finance and Operations Lead",
+      "updated_at": null,
+      "id": "6a78edd6addbe400014e9e73",
+      "key": "6a78edd6addbe400014e9e73"
+    },
+    {
+      "_id": "6a78edd6addbe400014e9e74",
+      "created_at": null,
+      "current": false,
+      "degree": null,
+      "description": null,
+      "emails": null,
+      "end_date": "2019-11-01",
+      "grade_level": null,
+      "kind": null,
+      "major": null,
+      "org_matched_by_name": true,
+      "organization_id": "5f49782be4178300015a1a23",
+      "organization_name": "Lightform",
+      "raw_address": null,
+      "start_date": "2017-11-01",
+      "title": "Head of Operations",
+      "updated_at": null,
+      "id": "6a78edd6addbe400014e9e74",
+      "key": "6a78edd6addbe400014e9e74"
+    },
+    {
+      "_id": "6a78edd6addbe400014e9e75",
+      "created_at": null,
+      "current": false,
+      "degree": null,
+      "description": null,
+      "emails": null,
+      "end_date": "2017-11-01",
+      "grade_level": null,
+      "kind": null,
+      "major": null,
+      "org_matched_by_name": true,
+      "organization_id": null,
+      "organization_name": "Lighthouse.io",
+      "raw_address": null,
+      "start_date": "2017-06-01",
+      "title": "Head of Operations",
+      "updated_at": null,
+      "id": "6a78edd6addbe400014e9e75",
+      "key": "6a78edd6addbe400014e9e75"
+    },
+    {
+      "_id": "6a78edd6addbe400014e9e76",
+      "created_at": null,
+      "current": false,
+      "degree": null,
+      "description": null,
+      "emails": null,
+      "end_date": "2017-04-01",
+      "grade_level": null,
+      "kind": null,
+      "major": null,
+      "org_matched_by_name": false,
+      "organization_id": "54a1216d69702d8ed46aa502",
+      "organization_name": "Inlight Media",
+      "raw_address": null,
+      "start_date": "2013-01-01",
+      "title": "Operations Manager",
+      "updated_at": null,
+      "id": "6a78edd6addbe400014e9e76",
+      "key": "6a78edd6addbe400014e9e76"
+    },
+    {
+      "_id": "6a78edd6addbe400014e9e77",
+      "created_at": null,
+      "current": false,
+      "degree": null,
+      "description": null,
+      "emails": null,
+      "end_date": "2012-12-01",
+      "grade_level": null,
+      "kind": null,
+      "major": null,
+      "org_matched_by_name": false,
+      "organization_id": "54a11c7969702d97c1bdb200",
+      "organization_name": "Department of Treasury and Finance, Victoria",
+      "raw_address": null,
+      "start_date": "2006-10-01",
+      "title": "Environmental Project Manager",
+      "updated_at": null,
+      "id": "6a78edd6addbe400014e9e77",
+      "key": "6a78edd6addbe400014e9e77"
+    }
+  ],
+  "street_address": null,
+  "city": null,
+  "state": null,
+  "country": "Australia",
+  "postal_code": null,
+  "formatted_address": "Australia",
+  "time_zone": null,
+  "email": "jacinta@inlight.com.au",
+  "email_status": "verified",
+  "directory_url": null,
+  "organization": {
+    "id": "54a1216d69702d8ed46aa502",
+    "name": "Inlight",
+    "website_url": "http://www.inlight.com.au",
+    "angellist_url": "http://angel.co/inlight-media",
+    "linkedin_url": "http://www.linkedin.com/company/inlightau",
+    "twitter_url": "http://twitter.com/inlightmedia",
+    "facebook_url": "https://facebook.com/InlightMedia",
+    "languages": [
+      "English"
+    ],
+    "alexa_ranking": 730879,
+    "phone": "+61 3 9416 4665",
+    "linkedin_uid": "2162814",
+    "founded_year": 2008,
+    "publicly_traded_symbol": null,
+    "publicly_traded_exchange": null,
+    "logo_url": "https://zenprospect-production.s3.amazonaws.com/uploads/pictures/69099380c19a240001215964/picture",
+    "crunchbase_url": null,
+    "primary_domain": "inlight.com.au",
+    "sic_codes": [
+      "7375"
+    ],
+    "naics_codes": [
+      "541512",
+      "541810"
+    ],
+    "primary_phone": {
+      "number": "+61 3 9416 4665",
+      "sanitized_number": "+61394164665"
+    },
+    "sanitized_phone": "+61394164665",
+    "industry": "information technology & services",
+    "estimated_num_employees": 49,
+    "keywords": [
+      "web development",
+      "application development",
+      "mobile development",
+      "digital strategy",
+      "information architecture",
+      "user experience",
+      "mobile websites",
+      "mobile applications",
+      "digital",
+      "design",
+      "uxui",
+      "react",
+      "react native",
+      "digital product strategy",
+      "client experience",
+      "delivery excellence",
+      "product development",
+      "software development",
+      "ecommerce",
+      "mach",
+      "apis",
+      "it services & it consulting",
+      "headless cms systems",
+      "experimentation & optimization",
+      "experience design",
+      "customer engagement",
+      "system integration",
+      "data-driven insights",
+      "martech stack",
+      "customer experience",
+      "mobile app development",
+      "ai & martech consulting",
+      "composable mindset",
+      "b2c",
+      "services",
+      "ecosystem evolution",
+      "incremental development",
+      "digital ecosystem",
+      "platform evolution",
+      "product management",
+      "d2c",
+      "smart upselling",
+      "retail",
+      "digital product agency",
+      "ux/ui design",
+      "ai-powered experiences",
+      "mobile-first design",
+      "consulting",
+      "cloud solutions",
+      "platform strategy",
+      "innovation strategy",
+      "branding",
+      "real-time data integration",
+      "user-centric design",
+      "headless cms",
+      "healthtech",
+      "personalized engagement",
+      "agile development",
+      "scalable architecture",
+      "map-based discovery",
+      "technology consulting",
+      "e-commerce",
+      "government",
+      "data analytics",
+      "api development & integration",
+      "content management",
+      "low friction user journeys",
+      "information technology and services",
+      "data & analytics",
+      "composable architecture",
+      "customer portals",
+      "capability building",
+      "logistics",
+      "computer systems design and related services",
+      "aws",
+      "b2b",
+      "usability testing",
+      "responsive design",
+      "continuous value",
+      "ux design",
+      "digital transformation",
+      "api integration",
+      "digital marketing",
+      "consumer products & retail",
+      "information technology & services",
+      "app development",
+      "apps",
+      "marketing",
+      "marketing & advertising",
+      "ux",
+      "mobile apps",
+      "consumer internet",
+      "consumers",
+      "internet",
+      "cloud computing",
+      "enterprise software",
+      "enterprises",
+      "computer software",
+      "management consulting"
+    ],
+    "organization_revenue_printed": "6.9M",
+    "organization_revenue": 6923000.0,
+    "industries": [
+      "information technology & services",
+      "marketing & advertising",
+      "internet"
+    ],
+    "secondary_industries": [
+      "marketing & advertising",
+      "internet"
+    ],
+    "snippets_loaded": true,
+    "industry_tag_id": "5567cd4773696439b10b0000",
+    "industry_tag_hash": {
+      "information technology & services": "5567cd4773696439b10b0000",
+      "marketing & advertising": "5567cd467369644d39040000",
+      "internet": "5567cd4d736964397e020000"
+    },
+    "retail_location_count": 0,
+    "raw_address": "24 Groom St, Clifton Hill, Victoria 3068, AU",
+    "street_address": null,
+    "city": "Clifton Hill",
+    "state": "Victoria",
+    "postal_code": "3068",
+    "country": "Australia",
+    "owned_by_organization_id": null,
+    "short_description": "Inlight is a digital product agency and IT consulting firm located in Clifton Hill, Victoria, Australia. Founded in 2008, the company focuses on creating digital products that enhance business operations through a blend of product strategy, design, user experience, and software development. With a team of 51\u2013200 professionals, Inlight specializes in web development, application development, mobile development, and digital strategy.\n\nThe agency offers a range of services, including web and application development using React and React Native, mobile app creation, and digital strategy and UX/UI design. Inlight also provides ecommerce solutions and API integrations, ensuring compatibility across systems. The company is dedicated to managing full-cycle product development with an emphasis on delivery excellence and exceptional client experiences.",
+    "total_funding": null,
+    "total_funding_printed": null,
+    "latest_funding_round_date": null,
+    "latest_funding_stage": null,
+    "latest_funding_detected_at": null,
+    "funding_events": [],
+    "suborganizations": [],
+    "num_suborganizations": 0,
+    "annual_revenue_printed": "6.9M",
+    "annual_revenue": 6923000.0,
+    "technology_names": [
+      "AI",
+      "AWS Cloud",
+      "Amazon AWS",
+      "Amazon Route 53",
+      "Apache",
+      "C3.js",
+      "Craft CMS",
+      "Cursor",
+      "Gatsby",
+      "Gmail",
+      "Google Meet",
+      "Google Search Console",
+      "Google Search Console",
+      "Google Tag Manager",
+      "Google Workspace",
+      "HSTS",
+      "Hubspot",
+      "Mobile Friendly",
+      "Next.js",
+      "Node.js",
+      "Open Graph",
+      "OpenSSL",
+      "PHP",
+      "Priority Hints",
+      "React",
+      "Sanity",
+      "Segment",
+      "Segment",
+      "StatCounter",
+      "Vercel",
+      "Viewport Meta",
+      "Visual Website Optimizer",
+      "Yii Framework",
+      "webpack"
+    ],
+    "current_technologies": [
+      {
+        "uid": "ai",
+        "name": "AI",
+        "category": "Other"
+      },
+      {
+        "uid": "aws_cloud",
+        "name": "AWS Cloud",
+        "category": "Cloud Services"
+      },
+      {
+        "uid": "amazon_aws",
+        "name": "Amazon AWS",
+        "category": "Hosting"
+      },
+      {
+        "uid": "amazon_route_53",
+        "name": "Amazon Route 53",
+        "category": "Domain Name Services"
+      },
+      {
+        "uid": "apache",
+        "name": "Apache",
+        "category": "Load Balancers"
+      },
+      {
+        "uid": "c3.js",
+        "name": "C3.js",
+        "category": "CSS and JavaScript Libraries"
+      },
+      {
+        "uid": "craft_cms",
+        "name": "Craft CMS",
+        "category": "CMS"
+      },
+      {
+        "uid": "cursor",
+        "name": "Cursor",
+        "category": "Other"
+      },
+      {
+        "uid": "gatsby",
+        "name": "Gatsby",
+        "category": "CMS"
+      },
+      {
+        "uid": "gmail",
+        "name": "Gmail",
+        "category": "Email Providers"
+      },
+      {
+        "uid": "google_meet",
+        "name": "Google Meet",
+        "category": "Communication and Collaboration"
+      },
+      {
+        "uid": "google_search_console",
+        "name": "Google Search Console",
+        "category": "Analytics and Tracking"
+      },
+      {
+        "uid": "google_search_console",
+        "name": "Google Search Console",
+        "category": "Analytics and Tracking"
+      },
+      {
+        "uid": "google_tag_manager",
+        "name": "Google Tag Manager",
+        "category": "Tag Management"
+      },
+      {
+        "uid": "google workspace",
+        "name": "Google Workspace",
+        "category": "Cloud Services"
+      },
+      {
+        "uid": "hsts",
+        "name": "HSTS",
+        "category": "Security"
+      },
+      {
+        "uid": "hubspot",
+        "name": "Hubspot",
+        "category": "Marketing Automation"
+      },
+      {
+        "uid": "mobile_friendly",
+        "name": "Mobile Friendly",
+        "category": "Other"
+      },
+      {
+        "uid": "nextjs",
+        "name": "Next.js",
+        "category": "Frameworks and Programming Languages"
+      },
+      {
+        "uid": "node.js",
+        "name": "Node.js",
+        "category": "Frameworks and Programming Languages"
+      },
+      {
+        "uid": "open_graph",
+        "name": "Open Graph",
+        "category": "Other"
+      },
+      {
+        "uid": "openssl",
+        "name": "OpenSSL",
+        "category": "SSL Certificates"
+      },
+      {
+        "uid": "php",
+        "name": "PHP",
+        "category": "Frameworks and Programming Languages"
+      },
+      {
+        "uid": "priority_hints",
+        "name": "Priority Hints",
+        "category": "Web Performance Monitoring"
+      },
+      {
+        "uid": "react",
+        "name": "React",
+        "category": "CSS and JavaScript Libraries"
+      },
+      {
+        "uid": "sanity",
+        "name": "Sanity",
+        "category": "CMS"
+      },
+      {
+        "uid": "segment",
+        "name": "Segment",
+        "category": "Data Management Platform"
+      },
+      {
+        "uid": "segment",
+        "name": "Segment",
+        "category": "Data Management Platform"
+      },
+      {
+        "uid": "statcounter",
+        "name": "StatCounter",
+        "category": "Analytics and Tracking"
+      },
+      {
+        "uid": "vercel",
+        "name": "Vercel",
+        "category": "Hosting"
+      },
+      {
+        "uid": "viewport_meta",
+        "name": "Viewport Meta",
+        "category": "CSS and JavaScript Libraries"
+      },
+      {
+        "uid": "visual_website_optimizer",
+        "name": "Visual Website Optimizer",
+        "category": "Online Testing Platforms"
+      },
+      {
+        "uid": "yii_framework",
+        "name": "Yii Framework",
+        "category": "Cloud Services"
+      },
+      {
+        "uid": "webpack",
+        "name": "webpack",
+        "category": "CSS and JavaScript Libraries"
+      }
+    ],
+    "org_chart_root_people_ids": [
+      "66fd3a0aad2fc1000101c481"
+    ],
+    "org_chart_sector": "OrgChart::SectorHierarchy::Rules::IT",
+    "org_chart_removed": false,
+    "org_chart_show_department_filter": true,
+    "is_placeholder_organization": null,
+    "organization_headcount_six_month_growth": 0.0,
+    "organization_headcount_twelve_month_growth": 0.05063291139240506,
+    "organization_headcount_twenty_four_month_growth": 0.07792207792207792
+  },
+  "departments": [
+    "c_suite",
+    "master_information_technology",
+    "master_operations"
+  ],
+  "subdepartments": [
+    "operations_executive",
+    "business_service_management_itsm",
+    "operations"
+  ],
+  "seniority": "c_suite",
+  "functions": [
+    "operations"
+  ],
+  "intent_strength": null,
+  "show_intent": false,
+  "email_domain_catchall": true,
+  "email_domain_catchall_verdict": "allow",
+  "revealed_for_current_team": true
+}

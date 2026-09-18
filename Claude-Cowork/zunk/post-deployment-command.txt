@@ -1,0 +1,164 @@
+SEO Batch — Post-Deployment Technical SEO Validation
+The latest SEO implementation has now been completed and committed.
+DO NOT modify any files.
+This is a READ-ONLY validation task against the LIVE production website:
+https://www.zediant.com/
+The purpose is to confirm that the SEO changes we implemented are actually live and behaving correctly after deployment.
+IMPORTANT:
+- Do not edit files.
+- Do not stage anything.
+- Do not commit.
+- Do not push.
+- Do not change sitemap.xml.
+- Do not change redirects.
+- Do not change metadata.
+- Do not run formatting or normalization.
+- Do not make any code changes.
+- If something fails, report it only.
+PHASE 1 — DEPLOYMENT HEALTH
+Confirm the following production URLs return HTTP 200:
+/
+ /about-us/who-we-are/
+/about-us/trust-compliance/
+/services/ai-enabled-product-engineering/
+/services/dedicated-engineering/
+/services/platform-engineering/
+/services/enterprise-custom-development/
+/blogs/
+/case-studies/
+Report any unexpected status code.
+PHASE 2 — 301 REDIRECT VALIDATION
+Individually request every retired URL below.
+Confirm:
+1. HTTP status = 301
+2. Location header points directly to the intended destination
+3. No redirect chain
+4. Destination returns 200
+5. Destination has a self-referencing canonical
+Test:
+/about-us/how-we-work/
+→ /about-us/who-we-are/
+/about-us/our-story/
+→ /about-us/who-we-are/
+/about-us/team-culture/
+→ /about-us/who-we-are/
+/services/
+→ /services/ai-enabled-product-engineering/
+/services/cloud-security/
+→ /services/ai-enabled-product-engineering/
+/services/digital-presence/
+→ /services/ai-enabled-product-engineering/
+/services/ecommerce-business/
+→ /services/platform-engineering/
+/services/middleware-integration/
+→ /services/enterprise-custom-development/
+/services/saas-development/
+→ /services/ai-enabled-product-engineering/
+/staff-augmentation/
+→ /services/dedicated-engineering/
+IMPORTANT:
+Do not assume the redirect works because it exists in Astro configuration.
+Test the LIVE production response.
+PHASE 3 — NOINDEX VALIDATION
+Verify these pages remain live with HTTP 200:
+/thank-you/
+/thank-you-for-your-interest/
+/webinar/
+Confirm each contains:
+<meta name="robots" content="noindex, nofollow">
+Confirm they do NOT appear in the sitemap.
+Also confirm they are not accidentally redirected.
+PHASE 4 — SITEMAP VALIDATION
+Fetch:
+https://www.zediant.com/sitemap.xml
+Confirm:
+- HTTP 200
+- Valid XML
+- Correct sitemap namespace
+- Exactly 43 URLs
+- No duplicate URLs
+- All URLs use https://www.zediant.com/
+- No retired URLs appear
+- No /thank-you/ URL
+- No /thank-you-for-your-interest/ URL
+- No /webinar/ URL
+- No /about-us/how-we-work/
+- No /about-us/our-story/
+- No /about-us/team-culture/
+- No retired service URLs
+- No /staff-augmentation/
+Confirm all 43 sitemap URLs return HTTP 200.
+Do NOT modify the sitemap if anything is wrong. Report it only.
+PHASE 5 — HOMEPAGE SEO
+Fetch the production homepage HTML and verify:
+<title>Dedicated Engineering Pods | AI-Enabled Engineering | Zediant</title>
+Verify the meta description is exactly:
+Zediant offers Dedicated Engineering Pods and AI-enabled product engineering. Explore Platform Engineering and Enterprise Custom Development services.
+Confirm:
+- title appears once
+- meta description appears once
+- canonical points to https://www.zediant.com/
+- no unexpected noindex directive exists
+PHASE 6 — BLOG METADATA
+Audit all 20 active blog posts.
+For every blog page confirm:
+1. HTTP 200
+2. Self-referencing canonical
+3. Unique title
+4. Unique meta description
+5. No duplicated ZCoupler title
+6. No duplicated ZCoupler description
+The only page allowed to contain the ZCoupler-specific metadata is:
+/blogs/zcoupler-our-integration-platform-now-supports-7lyuc/
+Confirm the original ZCoupler page has appropriate ZCoupler metadata.
+Pay particular attention to the 19 pages corrected in the previous implementation.
+Do not change anything.
+PHASE 7 — CANONICAL / INDEXABILITY CHECK
+For all 43 sitemap URLs:
+- HTTP 200
+- canonical exists
+- canonical points to the same URL
+- no noindex
+- no robots directive preventing indexing
+If any sitemap URL redirects, is noindexed, has a different canonical, or returns an error, report it individually.
+PHASE 8 — INTERNAL LINK / ORPHAN CHECK
+Re-run a lightweight route inventory.
+Identify:
+- active routes not in sitemap
+- sitemap URLs with no internal links
+- links still pointing to retired URLs
+Separate results into:
+A. Expected utility/legacy pages
+B. Genuine SEO orphan pages
+C. Broken/stale internal links
+Do not make any changes.
+PHASE 9 — GIT SAFETY CHECK
+Because this is a live-site validation task:
+- Do not modify the repository.
+- Run git status only.
+- Confirm there are no unexpected working-tree changes caused by this validation.
+- Do not attempt to clean up pre-existing CRLF noise.
+PHASE 10 — FINAL REPORT
+Provide a clear report with:
+1. Deployment status
+2. Homepage metadata — PASS/FAIL
+3. Redirects — PASS/FAIL table
+4. Noindex pages — PASS/FAIL
+5. Sitemap — PASS/FAIL
+6. Sitemap URL validation — PASS/FAIL
+7. Blog metadata — PASS/FAIL
+8. Canonicals — PASS/FAIL
+9. Indexability — PASS/FAIL
+10. Remaining orphan URLs
+11. Remaining stale internal links
+12. Any unexpected findings
+13. Overall SEO deployment status
+Use explicit classifications:
+PASS
+FAIL
+WARNING
+NEEDS REVIEW
+Most importantly:
+Do not fix anything during this task.
+This is a verification-only task.
+STOP after the report.

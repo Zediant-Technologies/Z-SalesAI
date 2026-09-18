@@ -1,0 +1,963 @@
+[
+  {
+    "sequence": {
+      "id": "68Pvv34nP7",
+      "title": "C1 - AI-Enabled Product Engineering",
+      "progress": 1,
+      "user": {
+        "id": "LVPX5V3Wal",
+        "firstName": "Rajeev",
+        "lastName": "Jaiswal",
+        "email": "saas@zediant.com"
+      },
+      "client": null,
+      "active": true,
+      "steps": [
+        {
+          "id": "gOwE9LAKwb",
+          "name": "Step 1"
+        },
+        {
+          "id": "EeaNNnBdag",
+          "name": "Step 2"
+        },
+        {
+          "id": "9bzZYZnZaM",
+          "name": "Step 3"
+        },
+        {
+          "id": "VvP7GEVpP5",
+          "name": "Step 4"
+        },
+        {
+          "id": "lXwAnDEQP8",
+          "name": "Step 5"
+        }
+      ],
+      "subSequences": [
+        {
+          "name": "Sub A: C1 - AI-Enabled Product Engineering",
+          "active": false
+        }
+      ]
+    },
+    "steps": [
+      {
+        "id": "gOwE9LAKwb",
+        "sequenceId": "68Pvv34nP7",
+        "number": 1,
+        "type": 1,
+        "executionType": 1,
+        "relativeDays": 0,
+        "status": 1,
+        "priority": null,
+        "assigneeId": "LVPX5V3Wal",
+        "sPriority": 1,
+        "sDistribution": 1,
+        "createdAt": "2026-08-07T00:15:43.900Z",
+        "modifiedAt": "2026-08-07T00:15:43.923Z",
+        "deletedAt": null,
+        "variants": [
+          {
+            "id": "XdPdpd9QPV",
+            "stepId": "gOwE9LAKwb",
+            "taskNote": null,
+            "payload": {
+              "content": "<div>Hi {{First Name}},</div>\n<div>&nbsp;</div>\n<div>{{Email Personalised Opening}} {{Email Pain Points}}</div>\n<div>&nbsp;</div>\n<div>\n<div class=\"code-line \" data-index=\"4\" data-line-number=\"5\" data-line-start=\"5\" data-line-end=\"5\">\n<div class=\"line-content\"><span class=\"\">{spin} We help product teams with extra engineering hands when the roadmap outgrows internal capacity. Our developers work directly in your codebase and join your daily stand-ups, so there\u2019s no agency overhead or separate management layer. | We help engineering teams add capacity when the roadmap gets heavier than the team can handle. Our developers plug directly into your current setup, same codebase, same tools, and same stand-ups. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"5\" data-line-number=\"6\" data-line-start=\"6\" data-line-end=\"6\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"6\" data-line-number=\"7\" data-line-start=\"7\" data-line-end=\"7\">\n<div class=\"line-content\"><span class=\"\">{spin} Are you looking for extra engineering bandwidth right now, or is your team pretty well set for the current roadmap? | Is adding extra engineering capacity something you are looking at right now, or more of a consideration for later? {endspin}</span></div>\n<div class=\"line-content\">&nbsp;</div>\n</div>\n</div>\n<div>{spin} Best, | Cheers, {endspin}</div>",
+              "subject": "{spin} Product engineering at {{Company}} | Engineering capacity at {{Company}} | AI product engineering at {{Company}} | {{Company}}'s product roadmap | {{First Name}} / product engineering {endspin}",
+              "preheader": ""
+            },
+            "status": 1,
+            "isAIGenerated": true,
+            "templateHistoryId": null,
+            "createdAt": "2026-08-09T10:12:18.757Z",
+            "modifiedAt": "2026-08-09T10:12:18.757Z",
+            "deletedAt": null
+          }
+        ]
+      },
+      {
+        "id": "EeaNNnBdag",
+        "sequenceId": "68Pvv34nP7",
+        "number": 2,
+        "type": 1,
+        "executionType": 1,
+        "relativeDays": 2,
+        "status": 1,
+        "priority": null,
+        "assigneeId": "LVPX5V3Wal",
+        "sPriority": 2,
+        "sDistribution": 2,
+        "createdAt": "2026-08-07T00:15:59.621Z",
+        "modifiedAt": "2026-08-07T00:15:59.644Z",
+        "deletedAt": null,
+        "variants": [
+          {
+            "id": "Y8aLV4Q6wN",
+            "stepId": "EeaNNnBdag",
+            "taskNote": null,
+            "payload": {
+              "content": "<div>Hi {{First Name}},</div>\n<div>\n<div class=\"code-line \" data-index=\"8\" data-line-number=\"9\" data-line-start=\"9\" data-line-end=\"9\">\n<div class=\"line-content\">&nbsp;</div>\n<div class=\"line-content\">\n<div class=\"code-line \" data-index=\"2\" data-line-number=\"3\" data-line-start=\"3\" data-line-end=\"3\">\n<div class=\"line-content\"><span class=\"\">{spin} Following up on my last note. | Quick follow-up on my previous email. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"3\" data-line-number=\"4\" data-line-start=\"4\" data-line-end=\"4\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"4\" data-line-number=\"5\" data-line-start=\"5\" data-line-end=\"5\">\n<div class=\"line-content\"><span class=\"\">{spin} When a product roadmap expands, the bottleneck is rarely about knowing what to build. It is simply having enough senior engineering bandwidth to build it on schedule. | This tends to happen as the product expands. It is rarely about knowing what to build, it is about having enough senior hands to execute without letting tech debt pile up. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"5\" data-line-number=\"6\" data-line-start=\"6\" data-line-end=\"6\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"6\" data-line-number=\"7\" data-line-start=\"7\" data-line-end=\"7\">\n<div class=\"line-content\"><span class=\"\">{spin} That is usually where we help. Our engineers plug directly into your current setup, same codebase, same workflow, and same stand-ups, so you can ship heavy features without the delay of full-time hiring. | That is typically where Zediant steps in. We provide experienced developers who fit directly into how your team already works, taking on delivery work so your core team never gets stretched thin. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"7\" data-line-number=\"8\" data-line-start=\"8\" data-line-end=\"8\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"8\" data-line-number=\"9\" data-line-start=\"9\" data-line-end=\"9\">\n<div class=\"line-content\"><span class=\"\">{spin} Is adding extra engineering bandwidth something on your radar right now, or more of a consideration for later? | Is this something worth exploring now, or more of a \"keep in mind for later\" item? {endspin}</span></div>\n</div>\n</div>\n</div>\n</div>\n<div>&nbsp;</div>\n<div>{spin} Best regards | Warm regards {endspin},</div>",
+              "subject": "",
+              "preheader": ""
+            },
+            "status": 1,
+            "isAIGenerated": true,
+            "templateHistoryId": null,
+            "createdAt": "2026-08-08T02:42:00.620Z",
+            "modifiedAt": "2026-08-08T02:42:00.620Z",
+            "deletedAt": null
+          }
+        ]
+      },
+      {
+        "id": "9bzZYZnZaM",
+        "sequenceId": "68Pvv34nP7",
+        "number": 3,
+        "type": 1,
+        "executionType": 1,
+        "relativeDays": 4,
+        "status": 1,
+        "priority": null,
+        "assigneeId": "LVPX5V3Wal",
+        "sPriority": 3,
+        "sDistribution": 3,
+        "createdAt": "2026-08-07T00:16:08.027Z",
+        "modifiedAt": "2026-08-09T09:51:22.900Z",
+        "deletedAt": null,
+        "variants": [
+          {
+            "id": "LGz3NZpNar",
+            "stepId": "9bzZYZnZaM",
+            "taskNote": null,
+            "payload": {
+              "content": "<div>Hi {{First Name}},</div>\n<div>\n<div class=\"code-line \" data-index=\"8\" data-line-number=\"9\" data-line-start=\"9\" data-line-end=\"9\">\n<div class=\"line-content\">\n<div class=\"code-line \" data-index=\"8\" data-line-number=\"9\" data-line-start=\"9\" data-line-end=\"9\">\n<div class=\"line-content\">&nbsp;</div>\n<div class=\"line-content\">\n<div class=\"code-line \" data-index=\"2\" data-line-number=\"3\" data-line-start=\"3\" data-line-end=\"3\">\n<div class=\"line-content\"><span class=\"\">{spin} Wanted to share a quick perspective on this. | Thought I would share a quick practical example on this. | One other thought regarding {{Company}}'s roadmap. {endspin} {{Business Challenge}}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"3\" data-line-number=\"4\" data-line-start=\"4\" data-line-end=\"4\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"4\" data-line-number=\"5\" data-line-start=\"5\" data-line-end=\"5\">\n<div class=\"line-content\"><span class=\"\">{spin} That is usually where the actual heavy lifting sits. It is rarely about building something in isolation, it is about integrating it into what already exists, working through the data layer, and keeping production stable while the roadmap moves forward. | That is often where the real effort is. It is less about building something from scratch, and more about fitting it into existing architecture and data pipelines without slowing down the active roadmap. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"5\" data-line-number=\"6\" data-line-start=\"6\" data-line-end=\"6\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"6\" data-line-number=\"7\" data-line-start=\"7\" data-line-end=\"7\">\n<div class=\"line-content\"><span class=\"\">{spin} That is the exact gap Zediant fills. Instead of a separate agency handoff, we add engineering capacity directly around what your existing team is already building. | That is typically where we step in. Rather than bringing in a standalone vendor, we plug senior developers directly into your existing setup to share the delivery load. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"7\" data-line-number=\"8\" data-line-start=\"8\" data-line-end=\"8\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"8\" data-line-number=\"9\" data-line-start=\"9\" data-line-end=\"9\">\n<div class=\"line-content\"><span class=\"\">{spin} Happy to send over a short 1-page overview of how we structure this if useful. No pressure either way. | Glad to share a quick overview of how this works in practice if it is helpful. No pressure either way. {endspin}</span></div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div>&nbsp;</div>\n<div>{spin} Warm regards | Best regards {endspin},</div>",
+              "subject": "",
+              "preheader": ""
+            },
+            "status": 1,
+            "isAIGenerated": true,
+            "templateHistoryId": null,
+            "createdAt": "2026-08-09T12:29:17.531Z",
+            "modifiedAt": "2026-08-09T12:29:17.531Z",
+            "deletedAt": null
+          }
+        ]
+      },
+      {
+        "id": "VvP7GEVpP5",
+        "sequenceId": "68Pvv34nP7",
+        "number": 4,
+        "type": 1,
+        "executionType": 1,
+        "relativeDays": 5,
+        "status": 1,
+        "priority": null,
+        "assigneeId": "LVPX5V3Wal",
+        "sPriority": 4,
+        "sDistribution": 4,
+        "createdAt": "2026-08-07T00:16:14.442Z",
+        "modifiedAt": "2026-08-09T09:51:48.000Z",
+        "deletedAt": null,
+        "variants": [
+          {
+            "id": "Y7PWNqokwo",
+            "stepId": "VvP7GEVpP5",
+            "taskNote": null,
+            "payload": {
+              "content": "<div>Hi {{First Name}},</div>\n<div>\n<div class=\"code-line \" data-index=\"2\" data-line-number=\"3\" data-line-start=\"3\" data-line-end=\"3\">&nbsp;</div>\n<div class=\"code-line \" data-index=\"9\" data-line-number=\"10\" data-line-start=\"10\" data-line-end=\"10\">\n<div class=\"line-content\">\n<div class=\"code-line \" data-index=\"2\" data-line-number=\"3\" data-line-start=\"3\" data-line-end=\"3\">\n<div class=\"line-content\"><span class=\"\">{spin} Most engineering leaders I speak with weigh the same choice: hire more in-house developers, or bring in outside capacity that can ramp up faster. | A lot of the teams I talk to face the same trade-off: spend months hiring, or add experienced capacity that gets up to speed much quicker. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"3\" data-line-number=\"4\" data-line-start=\"4\" data-line-end=\"4\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"4\" data-line-number=\"5\" data-line-start=\"5\" data-line-end=\"5\">\n<div class=\"line-content\"><span class=\"\">{spin} Hiring is usually the right long-term move, but it is slow. Between sourcing, interviewing, and onboarding, it can take three to six months before someone is fully productive. | Full-time hiring is often the right long-term call, but it takes time. Between recruiting cycles and onboarding, it is easily a few months before a new engineer is shipping meaningful code. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"5\" data-line-number=\"6\" data-line-start=\"6\" data-line-end=\"6\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"6\" data-line-number=\"7\" data-line-start=\"7\" data-line-end=\"7\">\n<div class=\"line-content\"><span class=\"\">{spin} Bringing in extra capacity is not about replacing that process. It is about giving your current roadmap some breathing room while internal hiring runs in parallel. | Adding flexible capacity is not about skipping hiring. It simply gives your team immediate delivery relief while you recruit full-time engineers on your own timeline. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"7\" data-line-number=\"8\" data-line-start=\"8\" data-line-end=\"8\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"8\" data-line-number=\"9\" data-line-start=\"9\" data-line-end=\"9\">\n<div class=\"line-content\"><span class=\"\">Does that line up with how you are thinking about engineering capacity at {{Company}}?</span></div>\n<div class=\"line-content\">&nbsp;</div>\n</div>\n</div>\n</div>\n<div class=\"code-line \" data-index=\"10\" data-line-number=\"11\" data-line-start=\"11\" data-line-end=\"11\">\n<div class=\"line-content\"><span class=\"\">{spin} Best regards, | Warm regards, {endspin}</span></div>\n</div>\n</div>",
+              "subject": "",
+              "preheader": ""
+            },
+            "status": 1,
+            "isAIGenerated": true,
+            "templateHistoryId": null,
+            "createdAt": "2026-08-09T12:49:56.417Z",
+            "modifiedAt": "2026-08-09T12:49:56.417Z",
+            "deletedAt": null
+          }
+        ]
+      },
+      {
+        "id": "lXwAnDEQP8",
+        "sequenceId": "68Pvv34nP7",
+        "number": 5,
+        "type": 1,
+        "executionType": 1,
+        "relativeDays": 4,
+        "status": 1,
+        "priority": null,
+        "assigneeId": "LVPX5V3Wal",
+        "sPriority": 5,
+        "sDistribution": 5,
+        "createdAt": "2026-08-07T00:16:20.932Z",
+        "modifiedAt": "2026-08-09T09:52:00.000Z",
+        "deletedAt": null,
+        "variants": [
+          {
+            "id": "M2zJnDy8z3",
+            "stepId": "lXwAnDEQP8",
+            "taskNote": null,
+            "payload": {
+              "content": "<div>Hi {{First Name}},</div>\n<div>\n<div>&nbsp;</div>\n<div>\n<div class=\"code-line \" data-index=\"2\" data-line-number=\"3\" data-line-start=\"3\" data-line-end=\"3\">\n<div class=\"line-content\"><span class=\"\">{spin} Final note from me on this. | Last note from my end on this. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"3\" data-line-number=\"4\" data-line-start=\"4\" data-line-end=\"4\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"4\" data-line-number=\"5\" data-line-start=\"5\" data-line-end=\"5\">\n<div class=\"line-content\"><span class=\"\">{spin} I imagine adding outside engineering capacity is not a priority for {{Company}} right now, which is completely fine. | I take it that developer capacity is not an immediate focus for your team right now, which makes complete sense. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"5\" data-line-number=\"6\" data-line-start=\"6\" data-line-end=\"6\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"6\" data-line-number=\"7\" data-line-start=\"7\" data-line-end=\"7\">\n<div class=\"line-content\"><span class=\"\">{spin} If things shift later in the year or the roadmap expands faster than hiring, you can always reach back out. | If priorities change down the road or you need quick engineering hands for a new build, the door is always open. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"7\" data-line-number=\"8\" data-line-start=\"8\" data-line-end=\"8\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"8\" data-line-number=\"9\" data-line-start=\"9\" data-line-end=\"9\">\n<div class=\"line-content\"><span class=\"\">{spin} Would it make sense to check back in a few months, or are you pretty well covered for the foreseeable future? | Should I touch base with you later in the year, or is your team set for the long run? {endspin}</span></div>\n</div>\n</div>\n<div>&nbsp;</div>\n</div>\n<div>{spin} Warm regards | Kind regards | Best regards {endspin},</div>",
+              "subject": "",
+              "preheader": ""
+            },
+            "status": 1,
+            "isAIGenerated": true,
+            "templateHistoryId": null,
+            "createdAt": "2026-08-09T12:54:35.039Z",
+            "modifiedAt": "2026-08-09T12:54:35.039Z",
+            "deletedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sequence": {
+      "id": "1qPBL69vzD",
+      "title": "C2 - Engineering Pods & Staff Augmentation",
+      "progress": 1,
+      "user": {
+        "id": "LVPX5V3Wal",
+        "firstName": "Rajeev",
+        "lastName": "Jaiswal",
+        "email": "saas@zediant.com"
+      },
+      "client": null,
+      "active": true,
+      "steps": [
+        {
+          "id": "9KwOmq7Ra6",
+          "name": "Step 1"
+        },
+        {
+          "id": "BVaDrG9ywo",
+          "name": "Step 2"
+        },
+        {
+          "id": "Mgw4DEBvwA",
+          "name": "Step 3"
+        },
+        {
+          "id": "glwGoy8nw6",
+          "name": "Step 4"
+        },
+        {
+          "id": "68PvKr7na7",
+          "name": "Step 5"
+        }
+      ],
+      "subSequences": [
+        {
+          "name": "Sub A: C2 - Engineering Pods & Staff Augmentation",
+          "active": false
+        }
+      ]
+    },
+    "steps": [
+      {
+        "id": "9KwOmq7Ra6",
+        "sequenceId": "1qPBL69vzD",
+        "number": 1,
+        "type": 1,
+        "executionType": 1,
+        "relativeDays": 0,
+        "status": 1,
+        "priority": null,
+        "assigneeId": "LVPX5V3Wal",
+        "sPriority": 1,
+        "sDistribution": 1,
+        "createdAt": "2026-08-07T00:25:20.086Z",
+        "modifiedAt": "2026-08-07T00:25:20.113Z",
+        "deletedAt": null,
+        "variants": [
+          {
+            "id": "2Awrpd4EaQ",
+            "stepId": "9KwOmq7Ra6",
+            "taskNote": null,
+            "payload": {
+              "content": "<div>Hi {{First Name}},</div>\n<div>\n<div>\n<div>\n<div>&nbsp;</div>\n<div>\n<div class=\"code-line \" data-index=\"4\" data-line-number=\"5\" data-line-start=\"5\" data-line-end=\"5\">\n<div class=\"line-content\"><span class=\"\">{{Email Personalised Opening}} {{Email Pain Points}}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"5\" data-line-number=\"6\" data-line-start=\"6\" data-line-end=\"6\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"6\" data-line-number=\"7\" data-line-start=\"7\" data-line-end=\"7\">\n<div class=\"line-content\"><span class=\"\">{spin} That is typically where Zediant helps. We provide dedicated engineering pods and embedded developers who plug directly into your current setup, working inside your codebase and daily stand-ups to match your active roadmap. | That is usually where we fit in. Zediant extends your team with dedicated engineering pods and developers who integrate directly into your existing workflow, taking on delivery work without disrupting how your team builds. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"7\" data-line-number=\"8\" data-line-start=\"8\" data-line-end=\"8\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"8\" data-line-number=\"9\" data-line-start=\"9\" data-line-end=\"9\">\n<div class=\"line-content\"><span class=\"\">{spin} The goal is to give you extra delivery bandwidth while your internal team keeps full ownership of architecture and product decisions. | Our engineers simply supply the extra hands to hit your roadmap milestones, while your core team stays in complete control of architecture and technical direction. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"9\" data-line-number=\"10\" data-line-start=\"10\" data-line-end=\"10\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"10\" data-line-number=\"11\" data-line-start=\"11\" data-line-end=\"11\">\n<div class=\"line-content\"><span class=\"\">{spin} Would it help to talk through where things stand with your engineering bandwidth right now? | Worth a brief conversation to see if extra engineering capacity makes sense for what is on your roadmap? {endspin}</span></div>\n</div>\n</div>\n</div>\n</div>\n<div>&nbsp;</div>\n<div>{spin} Best regards | Warm Regards {endspin},</div>\n</div>",
+              "subject": "{spin} Engineering capacity at {{Company}} | Dev bandwidth at {{Company}} | Engineering pods for {{Company}} | {{Company}}'s engineering capacity {endspin}",
+              "preheader": ""
+            },
+            "status": 1,
+            "isAIGenerated": true,
+            "templateHistoryId": null,
+            "createdAt": "2026-08-11T05:10:13.214Z",
+            "modifiedAt": "2026-08-11T05:10:13.214Z",
+            "deletedAt": null
+          }
+        ]
+      },
+      {
+        "id": "BVaDrG9ywo",
+        "sequenceId": "1qPBL69vzD",
+        "number": 2,
+        "type": 1,
+        "executionType": 1,
+        "relativeDays": 2,
+        "status": 1,
+        "priority": null,
+        "assigneeId": "LVPX5V3Wal",
+        "sPriority": 2,
+        "sDistribution": 2,
+        "createdAt": "2026-08-07T00:25:26.783Z",
+        "modifiedAt": "2026-08-07T00:25:26.802Z",
+        "deletedAt": null,
+        "variants": [
+          {
+            "id": "klw6AvNrz1",
+            "stepId": "BVaDrG9ywo",
+            "taskNote": null,
+            "payload": {
+              "content": "<div>Hi {{First Name}},</div>\n<div>\n<div>&nbsp;</div>\n<div>\n<div class=\"code-line \" data-index=\"10\" data-line-number=\"11\" data-line-start=\"11\" data-line-end=\"11\">\n<div class=\"line-content\">\n<div class=\"code-line \" data-index=\"2\" data-line-number=\"3\" data-line-start=\"3\" data-line-end=\"3\">\n<div class=\"line-content\"><span class=\"\">{spin} Following up on my last note. | Quick follow-up on my previous email. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"3\" data-line-number=\"4\" data-line-start=\"4\" data-line-end=\"4\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"4\" data-line-number=\"5\" data-line-start=\"5\" data-line-end=\"5\">\n<div class=\"line-content\"><span class=\"\">{spin} It is a familiar pattern once the roadmap expands across new features or client commitments. The challenge usually is not deciding what to build, it is finding enough senior hands to execute on schedule. | This tends to happen as the roadmap grows. It is rarely about knowing what to build, it is about having enough senior engineering bandwidth to deliver without letting technical debt accumulate. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"5\" data-line-number=\"6\" data-line-start=\"6\" data-line-end=\"6\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"6\" data-line-number=\"7\" data-line-start=\"7\" data-line-end=\"7\">\n<div class=\"line-content\"><span class=\"\">{spin} That is where our engineering pods plug in. We bring in experienced developers who work directly inside your codebase and join your daily stand-ups, matching your existing workflow so you can deliver faster without recruiting lag. | That is typically where Zediant helps. We provide dedicated engineering pods that fit directly into how your team already works, same codebase, same workflow, and same stand-ups. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"7\" data-line-number=\"8\" data-line-start=\"8\" data-line-end=\"8\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"8\" data-line-number=\"9\" data-line-start=\"9\" data-line-end=\"9\">\n<div class=\"line-content\"><span class=\"\">{spin} Is extra engineering bandwidth something worth exploring now, or is it more of a \"keep in mind for later\" item? | Is adding development capacity something you are looking at right now, or more of a future consideration? {endspin}</span></div>\n</div>\n</div>\n</div>\n<div class=\"code-line \" data-index=\"11\" data-line-number=\"12\" data-line-start=\"12\" data-line-end=\"12\">&nbsp;</div>\n</div>\n</div>\n<div>{spin} Best regards | Warm Regards {endspin},</div>",
+              "subject": "",
+              "preheader": ""
+            },
+            "status": 1,
+            "isAIGenerated": false,
+            "templateHistoryId": null,
+            "createdAt": "2026-08-07T00:25:26.785Z",
+            "modifiedAt": "2026-08-07T00:25:26.785Z",
+            "deletedAt": null
+          }
+        ]
+      },
+      {
+        "id": "Mgw4DEBvwA",
+        "sequenceId": "1qPBL69vzD",
+        "number": 3,
+        "type": 1,
+        "executionType": 1,
+        "relativeDays": 4,
+        "status": 1,
+        "priority": null,
+        "assigneeId": "LVPX5V3Wal",
+        "sPriority": 3,
+        "sDistribution": 3,
+        "createdAt": "2026-08-07T00:25:39.130Z",
+        "modifiedAt": "2026-08-08T15:19:29.956Z",
+        "deletedAt": null,
+        "variants": [
+          {
+            "id": "EeaN95gdPg",
+            "stepId": "Mgw4DEBvwA",
+            "taskNote": null,
+            "payload": {
+              "content": "<div class=\"code-line \" data-index=\"0\" data-line-number=\"1\" data-line-start=\"1\" data-line-end=\"1\">\n<div class=\"line-content\"><span class=\"\">Hi {{First Name}},</span></div>\n</div>\n<div class=\"code-line \" data-index=\"1\" data-line-number=\"2\" data-line-start=\"2\" data-line-end=\"2\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"2\" data-line-number=\"3\" data-line-start=\"3\" data-line-end=\"3\">\n<div class=\"line-content\"><span class=\"\">{spin} Wanted to share a quick perspective on this. | Thought I would share a quick practical example on this. | One other thought regarding {{Company}}'s roadmap. {endspin} {{Business Challenge}}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"3\" data-line-number=\"4\" data-line-start=\"4\" data-line-end=\"4\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"4\" data-line-number=\"5\" data-line-start=\"5\" data-line-end=\"5\">\n<div class=\"line-content\"><span class=\"\">{spin} We have built this exact kind of setup for other engineering teams before. | This is very similar to capacity setups we have put together for other product teams in the past. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"5\" data-line-number=\"6\" data-line-start=\"6\" data-line-end=\"6\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"6\" data-line-number=\"7\" data-line-start=\"7\" data-line-end=\"7\">\n<div class=\"line-content\"><span class=\"\">{spin} The way it works is simple: your team keeps full ownership of the roadmap and architecture, while our developers supply the extra hands to hit delivery milestones. | In practice, you stay in complete control of the roadmap and codebase, we just bring in the dedicated capacity to execute without hiring delays. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"7\" data-line-number=\"8\" data-line-start=\"8\" data-line-end=\"8\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"8\" data-line-number=\"9\" data-line-start=\"9\" data-line-end=\"9\">\n<div class=\"line-content\"><span class=\"\">{spin} If boosting development capacity is something {{Company}} needs right now, would it help to talk it through? | If extra engineering bandwidth is a priority for {{Company}} this quarter, worth a brief conversation? {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"9\" data-line-number=\"10\" data-line-start=\"10\" data-line-end=\"10\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"10\" data-line-number=\"11\" data-line-start=\"11\" data-line-end=\"11\">\n<div class=\"line-content\"><span class=\"\">{spin} Best regards, | Warm regards, {endspin}</span></div>\n</div>",
+              "subject": "",
+              "preheader": ""
+            },
+            "status": 1,
+            "isAIGenerated": false,
+            "templateHistoryId": null,
+            "createdAt": "2026-08-07T00:25:39.132Z",
+            "modifiedAt": "2026-08-07T00:25:39.132Z",
+            "deletedAt": null
+          }
+        ]
+      },
+      {
+        "id": "glwGoy8nw6",
+        "sequenceId": "1qPBL69vzD",
+        "number": 4,
+        "type": 1,
+        "executionType": 1,
+        "relativeDays": 3,
+        "status": 1,
+        "priority": null,
+        "assigneeId": "LVPX5V3Wal",
+        "sPriority": 4,
+        "sDistribution": 4,
+        "createdAt": "2026-08-07T00:25:45.657Z",
+        "modifiedAt": "2026-08-08T15:21:01.000Z",
+        "deletedAt": null,
+        "variants": [
+          {
+            "id": "9bzZA5RZaM",
+            "stepId": "glwGoy8nw6",
+            "taskNote": null,
+            "payload": {
+              "content": "<div class=\"code-line \" data-index=\"0\" data-line-number=\"1\" data-line-start=\"1\" data-line-end=\"1\">\n<div class=\"line-content\"><span class=\"\">Hi {{First Name}},</span></div>\n</div>\n<div class=\"code-line \" data-index=\"1\" data-line-number=\"2\" data-line-start=\"2\" data-line-end=\"2\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"2\" data-line-number=\"3\" data-line-start=\"3\" data-line-end=\"3\">\n<div class=\"line-content\"><span class=\"\">{spin} Most engineering leaders I speak with weigh the same choice: hire more in-house developers, or bring in outside capacity that can ramp up faster. | A lot of the teams I talk to face the same trade-off: spend months hiring, or add experienced capacity that gets up to speed much quicker. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"3\" data-line-number=\"4\" data-line-start=\"4\" data-line-end=\"4\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"4\" data-line-number=\"5\" data-line-start=\"5\" data-line-end=\"5\">\n<div class=\"line-content\"><span class=\"\">{spin} Hiring is usually the right long-term move, but it is slow. Between sourcing, interviewing, and onboarding, it can take three to six months before someone is fully productive. | Full-time hiring is often the right long-term call, but it takes time. Between recruiting cycles and onboarding, it is easily a few months before a new engineer is shipping meaningful code. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"5\" data-line-number=\"6\" data-line-start=\"6\" data-line-end=\"6\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"6\" data-line-number=\"7\" data-line-start=\"7\" data-line-end=\"7\">\n<div class=\"line-content\"><span class=\"\">{spin} Bringing in extra capacity is not about replacing that process. It is about giving your current roadmap some breathing room while internal hiring runs in parallel. | Adding flexible capacity is not about skipping hiring. It simply gives your team immediate delivery relief while you recruit full-time engineers on your own timeline. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"7\" data-line-number=\"8\" data-line-start=\"8\" data-line-end=\"8\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"8\" data-line-number=\"9\" data-line-start=\"9\" data-line-end=\"9\">\n<div class=\"line-content\"><span class=\"\">Does that line up with how you are thinking about engineering capacity at {{Company}}?</span></div>\n</div>\n<div class=\"code-line \" data-index=\"9\" data-line-number=\"10\" data-line-start=\"10\" data-line-end=\"10\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"10\" data-line-number=\"11\" data-line-start=\"11\" data-line-end=\"11\">\n<div class=\"line-content\"><span class=\"\">{spin} Best regards, | Warm regards, {endspin}</span></div>\n</div>",
+              "subject": "",
+              "preheader": ""
+            },
+            "status": 1,
+            "isAIGenerated": false,
+            "templateHistoryId": null,
+            "createdAt": "2026-08-07T00:25:45.660Z",
+            "modifiedAt": "2026-08-07T00:25:45.660Z",
+            "deletedAt": null
+          }
+        ]
+      },
+      {
+        "id": "68PvKr7na7",
+        "sequenceId": "1qPBL69vzD",
+        "number": 5,
+        "type": 1,
+        "executionType": 1,
+        "relativeDays": 4,
+        "status": 1,
+        "priority": null,
+        "assigneeId": "LVPX5V3Wal",
+        "sPriority": 5,
+        "sDistribution": 5,
+        "createdAt": "2026-09-11T00:47:58.887Z",
+        "modifiedAt": "2026-09-11T00:50:59.000Z",
+        "deletedAt": null,
+        "variants": [
+          {
+            "id": "mDPQLGnGwR",
+            "stepId": "68PvKr7na7",
+            "taskNote": null,
+            "payload": {
+              "content": "<div class=\"code-line \" data-index=\"0\" data-line-number=\"1\" data-line-start=\"1\" data-line-end=\"1\">\n<div class=\"line-content\">\n<div class=\"code-line \" data-index=\"0\" data-line-number=\"1\" data-line-start=\"1\" data-line-end=\"1\">\n<div class=\"line-content\"><span class=\"\">Hi {{First Name}},</span></div>\n</div>\n<div class=\"code-line \" data-index=\"1\" data-line-number=\"2\" data-line-start=\"2\" data-line-end=\"2\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"2\" data-line-number=\"3\" data-line-start=\"3\" data-line-end=\"3\">\n<div class=\"line-content\"><span class=\"\">{spin} I will close the loop on this one. | Final note from my end on this. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"3\" data-line-number=\"4\" data-line-start=\"4\" data-line-end=\"4\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"4\" data-line-number=\"5\" data-line-start=\"5\" data-line-end=\"5\">\n<div class=\"line-content\"><span class=\"\">{spin} I imagine adding external engineering capacity is not a priority for {{Company}} right now, which is completely understandable. | I take it that bringing on dedicated engineering pods is not on your roadmap right now, which makes complete sense. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"5\" data-line-number=\"6\" data-line-start=\"6\" data-line-end=\"6\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"6\" data-line-number=\"7\" data-line-start=\"7\" data-line-end=\"7\">\n<div class=\"line-content\"><span class=\"\">{spin} If priorities change down the road or you ever need flexible engineering hands to accelerate delivery, the door is always open. | If things shift later in the year and you need extra senior developers to hit a tight milestone, feel free to reach back out. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"7\" data-line-number=\"8\" data-line-start=\"8\" data-line-end=\"8\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"8\" data-line-number=\"9\" data-line-start=\"9\" data-line-end=\"9\">\n<div class=\"line-content\"><span class=\"\">{spin} Would it make sense to check back in a few months, or is your engineering team pretty well covered for the long run? | Should I touch base with you later in the year, or are you all set for the foreseeable future? {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"9\" data-line-number=\"10\" data-line-start=\"10\" data-line-end=\"10\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"10\" data-line-number=\"11\" data-line-start=\"11\" data-line-end=\"11\">\n<div class=\"line-content\"><span class=\"\">{spin} Best regards, | Warm regards, {endspin}</span></div>\n</div>\n</div>\n</div>\n<div class=\"code-line \" data-index=\"10\" data-line-number=\"11\" data-line-start=\"11\" data-line-end=\"11\">&nbsp;</div>",
+              "subject": "",
+              "preheader": ""
+            },
+            "status": 1,
+            "isAIGenerated": false,
+            "templateHistoryId": null,
+            "createdAt": "2026-09-11T00:47:58.892Z",
+            "modifiedAt": "2026-09-11T00:47:58.892Z",
+            "deletedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sequence": {
+      "id": "Mgw473olzA",
+      "title": "C3 - Platform Engineering & Cloud Modernization",
+      "progress": 1,
+      "user": {
+        "id": "LVPX5V3Wal",
+        "firstName": "Rajeev",
+        "lastName": "Jaiswal",
+        "email": "saas@zediant.com"
+      },
+      "client": null,
+      "active": true,
+      "steps": [
+        {
+          "id": "Y8aL6gElwN",
+          "name": "Step 1"
+        },
+        {
+          "id": "6vaKR36xPW",
+          "name": "Step 2"
+        },
+        {
+          "id": "dlPy2yMLaL",
+          "name": "Step 3"
+        },
+        {
+          "id": "XdPdAZg6aV",
+          "name": "Step 4"
+        }
+      ],
+      "subSequences": [
+        {
+          "name": "Sub A: C3 - Platform Engineering & Cloud Modernization",
+          "active": false
+        }
+      ]
+    },
+    "steps": [
+      {
+        "id": "Y8aL6gElwN",
+        "sequenceId": "Mgw473olzA",
+        "number": 1,
+        "type": 1,
+        "executionType": 1,
+        "relativeDays": 0,
+        "status": 1,
+        "priority": null,
+        "assigneeId": "LVPX5V3Wal",
+        "sPriority": 1,
+        "sDistribution": 1,
+        "createdAt": "2026-08-07T00:25:56.208Z",
+        "modifiedAt": "2026-08-07T00:25:56.232Z",
+        "deletedAt": null,
+        "variants": [
+          {
+            "id": "dlPypj16wL",
+            "stepId": "Y8aL6gElwN",
+            "taskNote": null,
+            "payload": {
+              "content": "<div class=\"code-line \" data-index=\"0\" data-line-number=\"1\" data-line-start=\"1\" data-line-end=\"1\">\n<div class=\"line-content\"><span class=\"\">Hi {{First Name}},</span></div>\n</div>\n<div class=\"code-line \" data-index=\"1\" data-line-number=\"2\" data-line-start=\"2\" data-line-end=\"2\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"2\" data-line-number=\"3\" data-line-start=\"3\" data-line-end=\"3\">\n<div class=\"line-content\"><span class=\"\">{{Email Personalised Opening}} {{Email Pain Points}}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"3\" data-line-number=\"4\" data-line-start=\"4\" data-line-end=\"4\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"4\" data-line-number=\"5\" data-line-start=\"5\" data-line-end=\"5\">\n<div class=\"line-content\"><span class=\"\">{spin} That is typically where Zediant helps. We handle the heavy lifting of cloud migration, architecture refactoring, and database scaling alongside your team. We work directly in your codebase so modernisation happens incrementally, without pulling your core developers off active product delivery. | That is usually where we fit in. Zediant takes on the complex platform and infrastructure upgrades built for scale, working alongside your team so modernisation moves forward without slowing down feature releases. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"5\" data-line-number=\"6\" data-line-start=\"6\" data-line-end=\"6\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"6\" data-line-number=\"7\" data-line-start=\"7\" data-line-end=\"7\">\n<div class=\"line-content\"><span class=\"\">{spin} The goal is to help you pay down architectural technical debt while your internal team keeps full momentum on the product roadmap. | In practice, your internal team keeps complete ownership of architecture and product priorities, while we supply the dedicated engineering hands to execute the modernisation. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"7\" data-line-number=\"8\" data-line-start=\"8\" data-line-end=\"8\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"8\" data-line-number=\"9\" data-line-start=\"9\" data-line-end=\"9\">\n<div class=\"line-content\"><span class=\"\">{spin} Would it help to compare notes on where platform modernisation sits on your roadmap right now? | Are you planning any major platform or cloud upgrades this year, or is the architecture holding up well? {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"9\" data-line-number=\"10\" data-line-start=\"10\" data-line-end=\"10\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"10\" data-line-number=\"11\" data-line-start=\"11\" data-line-end=\"11\">\n<div class=\"line-content\"><span class=\"\">{spin} Best regards, | Warm regards, {endspin}</span></div>\n</div>",
+              "subject": "{spin} Modernising {{Company}}'s platform | Scaling {{Company}}'s technology platform | Platform modernization at {{Company}} | Cloud infrastructure at {{Company}} {endspin}",
+              "preheader": ""
+            },
+            "status": 1,
+            "isAIGenerated": true,
+            "templateHistoryId": null,
+            "createdAt": "2026-08-11T05:37:15.338Z",
+            "modifiedAt": "2026-08-11T05:37:15.338Z",
+            "deletedAt": null
+          }
+        ]
+      },
+      {
+        "id": "6vaKR36xPW",
+        "sequenceId": "Mgw473olzA",
+        "number": 2,
+        "type": 1,
+        "executionType": 1,
+        "relativeDays": 3,
+        "status": 1,
+        "priority": null,
+        "assigneeId": "LVPX5V3Wal",
+        "sPriority": 2,
+        "sDistribution": 2,
+        "createdAt": "2026-08-07T00:26:02.970Z",
+        "modifiedAt": "2026-08-07T00:26:02.991Z",
+        "deletedAt": null,
+        "variants": [
+          {
+            "id": "lXwALrQQz8",
+            "stepId": "6vaKR36xPW",
+            "taskNote": null,
+            "payload": {
+              "content": "<div class=\"code-line \" data-index=\"0\" data-line-number=\"1\" data-line-start=\"1\" data-line-end=\"1\">\n<div class=\"line-content\"><span class=\"\">Hi {{First Name}},</span></div>\n</div>\n<div class=\"code-line \" data-index=\"1\" data-line-number=\"2\" data-line-start=\"2\" data-line-end=\"2\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"2\" data-line-number=\"3\" data-line-start=\"3\" data-line-end=\"3\">\n<div class=\"line-content\"><span class=\"\">{spin} Following up on my last note. | Quick follow-up on my previous email. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"3\" data-line-number=\"4\" data-line-start=\"4\" data-line-end=\"4\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"4\" data-line-number=\"5\" data-line-start=\"5\" data-line-end=\"5\">\n<div class=\"line-content\"><span class=\"\">{spin} It is the classic engineering dilemma: pushing new features forward while refactoring foundational architecture, without the live system ever getting to pause. | It is always a tough balancing act: keeping new product functionality moving while paying down underlying architectural constraints in real time. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"5\" data-line-number=\"6\" data-line-start=\"6\" data-line-end=\"6\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"6\" data-line-number=\"7\" data-line-start=\"7\" data-line-end=\"7\">\n<div class=\"line-content\"><span class=\"\">{spin} That is where Zediant steps in. We provide senior engineers who embed directly into your setup to handle complex migrations and platform modernisation incrementally, so your core developers can stay focused on active releases. | That is typically where we help. Zediant takes on the heavy lifting of cloud upgrades and architecture refactoring in steps, ensuring nothing in production is disrupted while the roadmap continues. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"7\" data-line-number=\"8\" data-line-start=\"8\" data-line-end=\"8\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"8\" data-line-number=\"9\" data-line-start=\"9\" data-line-end=\"9\">\n<div class=\"line-content\"><span class=\"\">{spin} Is platform modernisation something you are exploring now, or more of a \"keep in mind for later\" item? | Is this something currently on your roadmap, or more of a consideration for down the line? {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"9\" data-line-number=\"10\" data-line-start=\"10\" data-line-end=\"10\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"10\" data-line-number=\"11\" data-line-start=\"11\" data-line-end=\"11\">\n<div class=\"line-content\"><span class=\"\">{spin} Best regards, | Warm regards, {endspin}</span></div>\n</div>",
+              "subject": "",
+              "preheader": ""
+            },
+            "status": 1,
+            "isAIGenerated": false,
+            "templateHistoryId": null,
+            "createdAt": "2026-08-07T00:26:02.972Z",
+            "modifiedAt": "2026-08-07T00:26:02.972Z",
+            "deletedAt": null
+          }
+        ]
+      },
+      {
+        "id": "dlPy2yMLaL",
+        "sequenceId": "Mgw473olzA",
+        "number": 3,
+        "type": 1,
+        "executionType": 1,
+        "relativeDays": 3,
+        "status": 1,
+        "priority": null,
+        "assigneeId": "LVPX5V3Wal",
+        "sPriority": 3,
+        "sDistribution": 3,
+        "createdAt": "2026-08-07T00:26:09.869Z",
+        "modifiedAt": "2026-08-12T09:04:04.128Z",
+        "deletedAt": null,
+        "variants": [
+          {
+            "id": "LZwlpbq1wl",
+            "stepId": "dlPy2yMLaL",
+            "taskNote": null,
+            "payload": {
+              "content": "<div class=\"code-line \" data-index=\"0\" data-line-number=\"1\" data-line-start=\"1\" data-line-end=\"1\">\n<div class=\"line-content\"><span class=\"\">Hi {{First Name}},</span></div>\n</div>\n<div class=\"code-line \" data-index=\"1\" data-line-number=\"2\" data-line-start=\"2\" data-line-end=\"2\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"2\" data-line-number=\"3\" data-line-start=\"3\" data-line-end=\"3\">\n<div class=\"line-content\"><span class=\"\">{spin} Thought I would share a quick perspective on this. | Wanted to share a quick thought on your platform setup. | One other angle regarding your technical roadmap. {endspin} {{Business Challenge}}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"3\" data-line-number=\"4\" data-line-start=\"4\" data-line-end=\"4\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"4\" data-line-number=\"5\" data-line-start=\"5\" data-line-end=\"5\">\n<div class=\"line-content\"><span class=\"\">{spin} That is typically where Zediant helps. We work with engineering teams to modernise applications and cloud platforms incrementally, tackling database scaling, cloud upgrades, and architecture limits while your product roadmap keeps moving. | That is usually where we fit in. Zediant takes on the heavy architectural work step by step, resolving infrastructure bottlenecks without slowing down your active releases. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"5\" data-line-number=\"6\" data-line-start=\"6\" data-line-end=\"6\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"6\" data-line-number=\"7\" data-line-start=\"7\" data-line-end=\"7\">\n<div class=\"line-content\"><span class=\"\">{spin} This happens directly alongside your current team and codebase, rather than as a disconnected effort outside of your normal sprint workflow. | Our engineers plug right into your current environment, ensuring modernisation happens without interrupting live customer traffic. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"7\" data-line-number=\"8\" data-line-start=\"8\" data-line-end=\"8\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"8\" data-line-number=\"9\" data-line-start=\"9\" data-line-end=\"9\">\n<div class=\"line-content\"><span class=\"\">{spin} Is platform modernisation something on your team's radar right now? | Worth a brief conversation to see if extra engineering hands could help your platform roadmap? {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"9\" data-line-number=\"10\" data-line-start=\"10\" data-line-end=\"10\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"10\" data-line-number=\"11\" data-line-start=\"11\" data-line-end=\"11\">\n<div class=\"line-content\"><span class=\"\">{spin} Best regards, | Warm regards, {endspin}</span></div>\n</div>",
+              "subject": "",
+              "preheader": ""
+            },
+            "status": 1,
+            "isAIGenerated": false,
+            "templateHistoryId": null,
+            "createdAt": "2026-08-07T00:26:09.871Z",
+            "modifiedAt": "2026-08-07T00:26:09.871Z",
+            "deletedAt": null
+          }
+        ]
+      },
+      {
+        "id": "XdPdAZg6aV",
+        "sequenceId": "Mgw473olzA",
+        "number": 4,
+        "type": 1,
+        "executionType": 1,
+        "relativeDays": 3,
+        "status": 1,
+        "priority": null,
+        "assigneeId": "LVPX5V3Wal",
+        "sPriority": 4,
+        "sDistribution": 4,
+        "createdAt": "2026-08-07T00:26:15.607Z",
+        "modifiedAt": "2026-08-12T09:04:04.128Z",
+        "deletedAt": null,
+        "variants": [
+          {
+            "id": "mlP0RYAMzX",
+            "stepId": "XdPdAZg6aV",
+            "taskNote": null,
+            "payload": {
+              "content": "<div class=\"code-line \" data-index=\"2\" data-line-number=\"3\" data-line-start=\"3\" data-line-end=\"3\">\n<div class=\"line-content\">\n<div class=\"code-line \" data-index=\"0\" data-line-number=\"1\" data-line-start=\"1\" data-line-end=\"1\">\n<div class=\"line-content\"><span class=\"\">Hi {{First Name}},</span></div>\n</div>\n<div class=\"code-line \" data-index=\"1\" data-line-number=\"2\" data-line-start=\"2\" data-line-end=\"2\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"2\" data-line-number=\"3\" data-line-start=\"3\" data-line-end=\"3\">\n<div class=\"line-content\"><span class=\"\">{spin} I will close the loop on this one. | Final note from my end on this. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"3\" data-line-number=\"4\" data-line-start=\"4\" data-line-end=\"4\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"4\" data-line-number=\"5\" data-line-start=\"5\" data-line-end=\"5\">\n<div class=\"line-content\"><span class=\"\">{spin} I imagine platform refactoring or cloud modernization is not an immediate priority for {{Company}} right now, which makes complete sense. | I take it that infrastructure upgrades and platform changes are not a pressing focus for your team right now, which is completely understandable. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"5\" data-line-number=\"6\" data-line-start=\"6\" data-line-end=\"6\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"6\" data-line-number=\"7\" data-line-start=\"7\" data-line-end=\"7\">\n<div class=\"line-content\"><span class=\"\">{spin} If priorities shift later in the year or you ever need dedicated engineering hands to tackle architectural debt, feel free to reach back out. | If things change down the road and your team needs specialized capacity to accelerate a cloud migration, the door is always open. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"7\" data-line-number=\"8\" data-line-start=\"8\" data-line-end=\"8\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"8\" data-line-number=\"9\" data-line-start=\"9\" data-line-end=\"9\">\n<div class=\"line-content\"><span class=\"\">{spin} Would it make sense to touch base later in the year, or is your platform architecture pretty well set for the foreseeable future? | Should I check back in a few months, or is your team all covered on the platform front? {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"9\" data-line-number=\"10\" data-line-start=\"10\" data-line-end=\"10\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"10\" data-line-number=\"11\" data-line-start=\"11\" data-line-end=\"11\">\n<div class=\"line-content\"><span class=\"\">{spin} Best regards, | Warm regards, {endspin}</span></div>\n</div>\n</div>\n</div>\n<div class=\"code-line \" data-index=\"12\" data-line-number=\"13\" data-line-start=\"13\" data-line-end=\"13\">&nbsp;</div>",
+              "subject": "",
+              "preheader": ""
+            },
+            "status": 1,
+            "isAIGenerated": false,
+            "templateHistoryId": null,
+            "createdAt": "2026-08-07T00:26:15.610Z",
+            "modifiedAt": "2026-08-07T00:26:15.610Z",
+            "deletedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sequence": {
+      "id": "glwGOA9Rw6",
+      "title": "C4 - Middleware & API Integration (ZCoupler)",
+      "progress": 1,
+      "user": {
+        "id": "LVPX5V3Wal",
+        "firstName": "Rajeev",
+        "lastName": "Jaiswal",
+        "email": "saas@zediant.com"
+      },
+      "client": null,
+      "active": true,
+      "steps": [
+        {
+          "id": "LGz3OEDxzr",
+          "name": "Step 1"
+        },
+        {
+          "id": "MAwgAZqBaN",
+          "name": "Step 2"
+        },
+        {
+          "id": "rVz1ZEQgwG",
+          "name": "Step 3"
+        },
+        {
+          "id": "3RPnQZxDwr",
+          "name": "Step 4"
+        }
+      ],
+      "subSequences": [
+        {
+          "name": "Sub A: C4 - Middleware & API Integration (ZCoupler)",
+          "active": false
+        }
+      ]
+    },
+    "steps": [
+      {
+        "id": "LGz3OEDxzr",
+        "sequenceId": "glwGOA9Rw6",
+        "number": 1,
+        "type": 1,
+        "executionType": 1,
+        "relativeDays": 0,
+        "status": 1,
+        "priority": null,
+        "assigneeId": "LVPX5V3Wal",
+        "sPriority": 1,
+        "sDistribution": 1,
+        "createdAt": "2026-08-07T00:26:31.530Z",
+        "modifiedAt": "2026-08-07T00:26:31.556Z",
+        "deletedAt": null,
+        "variants": [
+          {
+            "id": "6vaKqrDJwW",
+            "stepId": "LGz3OEDxzr",
+            "taskNote": null,
+            "payload": {
+              "content": "<div><span>Hi {{First Name}},</span></div>\n<div><span>&nbsp;</span><span></span></div>\n<div>\n<div class=\"code-line \" data-index=\"4\" data-line-number=\"5\" data-line-start=\"5\" data-line-end=\"5\">\n<div class=\"line-content\"><span class=\"\">{{Email Personalised Opening}} {{Email Pain Points}}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"5\" data-line-number=\"6\" data-line-start=\"6\" data-line-end=\"6\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"6\" data-line-number=\"7\" data-line-start=\"7\" data-line-end=\"7\">\n<div class=\"line-content\"><span class=\"\">{spin} That is why we built ZCoupler. It is a lightweight middleware layer that standardizes data flows between separate systems, eliminating fragile point-to-point connectors so your engineering team does not have to spend sprint cycles troubleshooting broken integrations. | That is typically where ZCoupler fits in. It acts as an integration middleware layer that ties disparate platforms and APIs together, standardizing data pipelines so your developers are not stuck building custom connectors from scratch. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"7\" data-line-number=\"8\" data-line-start=\"8\" data-line-end=\"8\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"8\" data-line-number=\"9\" data-line-start=\"9\" data-line-end=\"9\">\n<div class=\"line-content\"><span class=\"\">{spin} The goal is to keep data flowing reliably across your systems without turning integration into an ongoing engineering headache. | In practice, it allows your business systems and APIs to scale together seamlessly without adding technical debt to your core roadmap. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"9\" data-line-number=\"10\" data-line-start=\"10\" data-line-end=\"10\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"10\" data-line-number=\"11\" data-line-start=\"11\" data-line-end=\"11\">\n<div class=\"line-content\"><span class=\"\">{spin} Would it be worth comparing notes on how your team is handling system integrations right now? | Worth a brief conversation to see how ZCoupler handles integration for setups like {{Company}}'s? {endspin}</span></div>\n<div class=\"line-content\">&nbsp;</div>\n</div>\n</div>\n<div><span>{spin} Best regards | Warm Regards {endspin},&nbsp;</span></div>",
+              "subject": "{spin} API integration at {{Company}} | Middleware & APIs at {{Company}} | System integration at {{Company}} | {{Company}}'s API architecture {endspin}",
+              "preheader": ""
+            },
+            "status": 1,
+            "isAIGenerated": true,
+            "templateHistoryId": null,
+            "createdAt": "2026-08-11T05:50:47.450Z",
+            "modifiedAt": "2026-08-11T05:50:47.450Z",
+            "deletedAt": null
+          }
+        ]
+      },
+      {
+        "id": "MAwgAZqBaN",
+        "sequenceId": "glwGOA9Rw6",
+        "number": 2,
+        "type": 1,
+        "executionType": 1,
+        "relativeDays": 2,
+        "status": 1,
+        "priority": null,
+        "assigneeId": "LVPX5V3Wal",
+        "sPriority": 2,
+        "sDistribution": 2,
+        "createdAt": "2026-08-07T00:26:37.951Z",
+        "modifiedAt": "2026-08-07T00:26:37.969Z",
+        "deletedAt": null,
+        "variants": [
+          {
+            "id": "LVPXZpxnzl",
+            "stepId": "MAwgAZqBaN",
+            "taskNote": null,
+            "payload": {
+              "content": "<div><span>Hi {{First Name}},</span></div>\n<div><span>&nbsp;<br></span></div>\n<div>\n<div class=\"code-line \" data-index=\"4\" data-line-number=\"5\" data-line-start=\"5\" data-line-end=\"5\">\n<div class=\"line-content\"><span class=\"\">{spin} Following up on my last note regarding system integrations. | Quick follow-up to my previous email on API architecture. {endspin} {spin} As platforms expand, building separate point-to-point connectors between apps, external APIs, and internal tools quickly becomes a heavy maintenance bottleneck. Every new addition makes the overall integration web harder to manage. | This tends to happen as tech stacks grow: each new system ends up needing its own custom connectors to everything else, creating integration debt that slows down the whole team. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"5\" data-line-number=\"6\" data-line-start=\"6\" data-line-end=\"6\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"6\" data-line-number=\"7\" data-line-start=\"7\" data-line-end=\"7\">\n<div class=\"line-content\"><span class=\"\">{spin} A dedicated middleware layer solves that by giving you a single, structured hub to manage APIs, data flows, and message queues. It connects directly into what {{Company}} already runs, standardizing data pipelines without having to rip anything out. | Middleware gives your team one clean layer to handle API connections and real-time data sync across your existing platforms, keeping data reliable without disrupting your active stack. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"7\" data-line-number=\"8\" data-line-start=\"8\" data-line-end=\"8\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"8\" data-line-number=\"9\" data-line-start=\"9\" data-line-end=\"9\">\n<div class=\"line-content\"><span class=\"\">{spin} Is there a specific integration bottleneck your engineering team is currently working through? | Is managing custom API connections something {{Company}} is looking to simplify right now, or more of a consideration for later? {endspin}</span></div>\n</div>\n</div>\n<div>&nbsp;</div>\n<div><span>{spin} Best regards | Warm regards {endspin},</span></div>",
+              "subject": "{spin} {{Company}}'s integration architecture | API & middleware architecture at {{Company}} | Managing API connections at {{Company}} {endspin}",
+              "preheader": ""
+            },
+            "status": 1,
+            "isAIGenerated": false,
+            "templateHistoryId": null,
+            "createdAt": "2026-08-07T00:26:37.953Z",
+            "modifiedAt": "2026-08-07T00:26:37.953Z",
+            "deletedAt": null
+          }
+        ]
+      },
+      {
+        "id": "rVz1ZEQgwG",
+        "sequenceId": "glwGOA9Rw6",
+        "number": 3,
+        "type": 1,
+        "executionType": 1,
+        "relativeDays": 4,
+        "status": 1,
+        "priority": null,
+        "assigneeId": "LVPX5V3Wal",
+        "sPriority": 3,
+        "sDistribution": 3,
+        "createdAt": "2026-08-07T00:26:44.698Z",
+        "modifiedAt": "2026-08-12T09:07:09.214Z",
+        "deletedAt": null,
+        "variants": [
+          {
+            "id": "Y7PWN28xwo",
+            "stepId": "rVz1ZEQgwG",
+            "taskNote": null,
+            "payload": {
+              "content": "<div><span>Hi {{First Name}},</span></div>\n<div><span>&nbsp;</span>\n<div>&nbsp;</div>\n</div>\n<div>\n<div class=\"code-line \" data-index=\"4\" data-line-number=\"5\" data-line-start=\"5\" data-line-end=\"5\">\n<div class=\"line-content\"><span class=\"\">{spin} Thought I would share a quick perspective on this. | Wanted to share a quick thought on your integration architecture. | One other angle regarding your system connections. {endspin} {{Business Challenge}}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"5\" data-line-number=\"6\" data-line-start=\"6\" data-line-end=\"6\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"6\" data-line-number=\"7\" data-line-start=\"7\" data-line-end=\"7\">\n<div class=\"line-content\"><span class=\"\">{spin} That is typically where ZCoupler steps in. It links applications and business systems together through a standardized middleware layer, handling data transfer and API communication as a central hub. | That is why we built ZCoupler. It connects disparate applications and APIs through a clean middleware layer, serving as the reliable backbone for data transfer across your stack. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"7\" data-line-number=\"8\" data-line-start=\"8\" data-line-end=\"8\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"8\" data-line-number=\"9\" data-line-start=\"9\" data-line-end=\"9\">\n<div class=\"line-content\"><span class=\"\">{spin} This becomes especially valuable when multiple platforms need to talk to each other, keeping data flowing reliably without piling up a messy web of separate one-off connectors. | The goal is to keep your core systems in sync seamlessly, without forcing your developers to build and troubleshoot custom integration scripts. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"9\" data-line-number=\"10\" data-line-start=\"10\" data-line-end=\"10\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"10\" data-line-number=\"11\" data-line-start=\"11\" data-line-end=\"11\">\n<div class=\"line-content\"><span class=\"\">{spin} Is simplifying system integrations something you are looking into right now, or is your current setup holding up well? | Worth a brief conversation to see how ZCoupler handles data integration for setups like {{Company}}'s? {endspin}</span></div>\n<div class=\"line-content\">&nbsp;</div>\n</div>\n</div>\n<div><span>{spin} Best regards | Warm regards {endspin},</span></div>",
+              "subject": "{spin} An integration setup like {{Company}}'s | An integration challenge like {{Company}}'s | System integration at {{Company}} {endspin}",
+              "preheader": ""
+            },
+            "status": 1,
+            "isAIGenerated": false,
+            "templateHistoryId": null,
+            "createdAt": "2026-08-07T00:26:44.700Z",
+            "modifiedAt": "2026-08-07T00:26:44.700Z",
+            "deletedAt": null
+          }
+        ]
+      },
+      {
+        "id": "3RPnQZxDwr",
+        "sequenceId": "glwGOA9Rw6",
+        "number": 4,
+        "type": 1,
+        "executionType": 1,
+        "relativeDays": 3,
+        "status": 1,
+        "priority": null,
+        "assigneeId": "LVPX5V3Wal",
+        "sPriority": 4,
+        "sDistribution": 4,
+        "createdAt": "2026-08-07T00:26:55.409Z",
+        "modifiedAt": "2026-08-12T09:07:09.214Z",
+        "deletedAt": null,
+        "variants": [
+          {
+            "id": "VMw57vNmab",
+            "stepId": "3RPnQZxDwr",
+            "taskNote": null,
+            "payload": {
+              "content": "<div><span>Hi {{First Name}},</span></div>\n<div><span><span>&nbsp;</span></span>\n<div>\n<div class=\"code-line \" data-index=\"4\" data-line-number=\"5\" data-line-start=\"5\" data-line-end=\"5\">\n<div class=\"line-content\"><span class=\"\">{spin} I will close the loop on this one. | Final note from my end on this. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"5\" data-line-number=\"6\" data-line-start=\"6\" data-line-end=\"6\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"6\" data-line-number=\"7\" data-line-start=\"7\" data-line-end=\"7\">\n<div class=\"line-content\"><span class=\"\">{spin} I imagine streamlining system integrations or adopting a dedicated middleware layer is not an immediate priority for {{Company}} right now, which is completely understandable. | I take it that managing custom API connections is not a pressing focus for your team right now, which makes complete sense. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"7\" data-line-number=\"8\" data-line-start=\"8\" data-line-end=\"8\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"8\" data-line-number=\"9\" data-line-start=\"9\" data-line-end=\"9\">\n<div class=\"line-content\"><span class=\"\">{spin} If integration bottlenecks or partner API connections start piling up down the road, feel free to reach back out. | If your systems expand later in the year and you need a cleaner way to connect applications and sync data, the door is always open. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"9\" data-line-number=\"10\" data-line-start=\"10\" data-line-end=\"10\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"10\" data-line-number=\"11\" data-line-start=\"11\" data-line-end=\"11\">\n<div class=\"line-content\"><span class=\"\">{spin} Would it make sense to touch base later in the year, or is your integration setup pretty well sorted for the foreseeable future? | Should I check back in a few months, or is your team all covered on the integration front? {endspin}</span></div>\n</div>\n</div>\n<span></span></div>\n<div><span>&nbsp;</span></div>\n<div><span>{spin} Best regards | Warm regards {endspin},</span></div>",
+              "subject": "{spin} Closing the loop, {{First Name}} | Final note, {{First Name}} | Last note re: {{Company}} {endspin}",
+              "preheader": "Cleaner middleware and APIs"
+            },
+            "status": 1,
+            "isAIGenerated": false,
+            "templateHistoryId": null,
+            "createdAt": "2026-08-07T00:26:55.411Z",
+            "modifiedAt": "2026-08-07T00:26:55.411Z",
+            "deletedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sequence": {
+      "id": "6vaKGDl4aW",
+      "title": "C5 - Enterprise Custom Development & Modernization",
+      "progress": 1,
+      "user": {
+        "id": "LVPX5V3Wal",
+        "firstName": "Rajeev",
+        "lastName": "Jaiswal",
+        "email": "saas@zediant.com"
+      },
+      "client": null,
+      "active": true,
+      "steps": [
+        {
+          "id": "7pzVpxXxPb",
+          "name": "Step 1"
+        },
+        {
+          "id": "2Awr4OElaQ",
+          "name": "Step 2"
+        },
+        {
+          "id": "l7w9KZymaj",
+          "name": "Step 3"
+        },
+        {
+          "id": "8JwoOZexwO",
+          "name": "Step 4"
+        }
+      ],
+      "subSequences": [
+        {
+          "name": "Sub A: C5 - Enterprise Custom Development & Modernization",
+          "active": false
+        }
+      ]
+    },
+    "steps": [
+      {
+        "id": "7pzVpxXxPb",
+        "sequenceId": "6vaKGDl4aW",
+        "number": 1,
+        "type": 1,
+        "executionType": 1,
+        "relativeDays": 0,
+        "status": 1,
+        "priority": null,
+        "assigneeId": "LVPX5V3Wal",
+        "sPriority": 1,
+        "sDistribution": 1,
+        "createdAt": "2026-08-07T00:27:12.901Z",
+        "modifiedAt": "2026-08-07T00:27:12.921Z",
+        "deletedAt": null,
+        "variants": [
+          {
+            "id": "M2zJnldYz3",
+            "stepId": "7pzVpxXxPb",
+            "taskNote": null,
+            "payload": {
+              "content": "<div class=\"code-line \" data-index=\"0\" data-line-number=\"1\" data-line-start=\"1\" data-line-end=\"1\">\n<div class=\"line-content\"><span class=\"\">Hi {{First Name}},</span></div>\n</div>\n<div class=\"code-line \" data-index=\"1\" data-line-number=\"2\" data-line-start=\"2\" data-line-end=\"2\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"2\" data-line-number=\"3\" data-line-start=\"3\" data-line-end=\"3\">\n<div class=\"line-content\"><span class=\"\">{{Email Personalised Opening}} {{Email Pain Points}}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"3\" data-line-number=\"4\" data-line-start=\"4\" data-line-end=\"4\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"4\" data-line-number=\"5\" data-line-start=\"5\" data-line-end=\"5\">\n<div class=\"line-content\"><span class=\"\">{spin} That is typically where Zediant helps. We work with engineering teams to enhance, refactor, and modernise the custom applications running their core business processes. | That is usually where we fit in. Zediant partners with internal IT and software teams to build new features, resolve technical bottlenecks, and modernize legacy custom software without disrupting active operations. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"5\" data-line-number=\"6\" data-line-start=\"6\" data-line-end=\"6\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"6\" data-line-number=\"7\" data-line-start=\"7\" data-line-end=\"7\">\n<div class=\"line-content\"><span class=\"\">{spin} We work directly alongside your existing team so modernization happens step by step, keeping your core business running smoothly throughout. | Our engineers plug directly into your current setup to take on the heavy delivery and refactoring work, while your internal team keeps full ownership of systems and priorities. {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"7\" data-line-number=\"8\" data-line-start=\"8\" data-line-end=\"8\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"8\" data-line-number=\"9\" data-line-start=\"9\" data-line-end=\"9\">\n<div class=\"line-content\"><span class=\"\">{spin} Would it help to compare notes on what is currently on your application roadmap? | Worth a brief conversation about your custom application priorities this quarter? {endspin}</span></div>\n</div>\n<div class=\"code-line \" data-index=\"9\" data-line-number=\"10\" data-line-start=\"10\" data-line-end=\"10\">\n<div class=\"line-content\">&nbsp;</div>\n</div>\n<div class=\"code-line \" data-index=\"10\" data-line-number=\"11\" data-line-start=\"11\" data-line-end=\"11\">\n<div class=\"line-content\"><span class=\"\">{spin} Best regards, | Warm regards, {endspin}</span></div>\n</div>",
+              "subject": "{spin} Custom applications at {{Company}} | Modernising custom software at {{Company}} | {{Company}}'s custom development | Enterprise applications at {{Company}} {endspin}",
+              "preheader": ""
+            },
+            "status": 1,
+            "isAIGenerated": false,
+            "templateHistoryId": null,
+            "createdAt": "2026-08-07T00:27:12.903Z",
+            "modifiedAt": "2026-08-07T00:27:12.903Z",
+            "deletedAt": null
+          }
+        ]
+      },
+      {
+        "id": "2Awr4OElaQ",
+        "sequenceId": "6vaKGDl4aW",
+        "number": 2,
+        "type": 1,
+        "executionType": 1,
+        "relativeDays": 2,
+        "status": 1,
+        "priority": null,
+        "assigneeId": "LVPX5V3Wal",
+        "sPriority": 2,
+        "sDistribution": 2,
+        "createdAt": "2026-08-07T00:27:18.824Z",
+        "modifiedAt": "2026-08-07T00:27:18.847Z",
+        "deletedAt": null,
+        "variants": [
+          {
+            "id": "4bwbpKL2aE",
+            "stepId": "2Awr4OElaQ",
+            "taskNote": null,
+            "payload": {
+              "content": "<div class=\"code-line \" data-index=\"0\" data-line-number=\"1\" data-line-start=\"1\" data-line-end=\"1\">\n<div class=\"line-content\">Hi {{First Name}},</div>\n<div class=\"line-content\"><br>{spin} Wanted to follow up on my last note, but come at this from a slightly different angle. | Quick follow-up on my previous email, looking at this from a practical angle. {endspin}</div>\n<div class=\"line-content\"><br>{spin} This is a common pattern with custom enterprise software: the applications were built to run the business reliably for years, but adding new features gets progressively harder as older technical constraints pile up. | Most enterprise software faces the same reality: the core platform runs the business well, but shipping new functionality gets bogged down by legacy architecture and technical debt. {endspin}</div>\n<div class=\"line-content\"><br>{spin} That is the exact gap Zediant fills. We help engineering teams modernise and enhance existing custom software in increments, so you can deliver modern capabilities without the risk of a high-cost rewrite. | That is typically where we help. Our engineers embed into your setup to modernise legacy components step by step, keeping daily operations completely stable. {endspin}</div>\n<div class=\"line-content\"><br>{spin} Is custom application enhancement or modernisation on the table at {{Company}} right now? | Is this kind of application modernisation something worth exploring now, or more of a consideration for later? {endspin}</div>\n<div class=\"line-content\"><br>{spin} Best regards, | Warm regards, {endspin}</div>\n</div>\n<div class=\"code-line \" data-index=\"10\" data-line-number=\"11\" data-line-start=\"11\" data-line-end=\"11\">&nbsp;</div>",
+              "subject": "",
+              "preheader": ""
+            },
+            "status": 1,
+            "isAIGenerated": false,
+            "templateHistoryId": null,
+            "createdAt": "2026-08-07T00:27:18.826Z",
+            "modifiedAt": "2026-08-07T00:27:18.826Z",
+            "deletedAt": null
+          }
+        ]
+      },
+      {
+        "id": "l7w9KZymaj",
+        "sequenceId": "6vaKGDl4aW",
+        "number": 3,
+        "type": 1,
+        "executionType": 1,
+        "relativeDays": 4,
+        "status": 1,
+        "priority": null,
+        "assigneeId": "LVPX5V3Wal",
+        "sPriority": 3,
+        "sDistribution": 3,
+        "createdAt": "2026-08-07T00:27:25.026Z",
+        "modifiedAt": "2026-08-12T09:12:19.852Z",
+        "deletedAt": null,
+        "variants": [
+          {
+            "id": "OqwmpXVRzj",
+            "stepId": "l7w9KZymaj",
+            "taskNote": null,
+            "payload": {
+              "content": "<div>Hi {{First Name}},</div>\n<div><br>{spin} Wanted to share a quick perspective on this. | Thought I would share a quick thought on your application roadmap. | One other angle regarding your software setup. {endspin} {{Business Challenge}}</div>\n<div><br>{spin} That is typically where Zediant helps. We work with companies to enhance and modernise custom enterprise applications step by step, without losing sight of daily operational requirements. | That is usually where we step in. Zediant helps engineering teams pay down legacy constraints and build new capabilities incrementally, keeping the business running smoothly. {endspin}</div>\n<div><br>{spin} Rather than treating modernisation as a high-risk rewrite, we tackle it in stages, starting with the specific bottlenecks that are slowing down your team the most. | Our engineers work directly in your codebase alongside your team, ensuring older systems are upgraded without interrupting live business processes. {endspin}</div>\n<div><br>{spin} Is application modernisation something your team is currently evaluating? | Worth a brief conversation to see if extra engineering hands could help your application roadmap? {endspin}</div>\n<div><br>{spin} Best regards, | Warm regards, {endspin}</div>",
+              "subject": "",
+              "preheader": ""
+            },
+            "status": 1,
+            "isAIGenerated": false,
+            "templateHistoryId": null,
+            "createdAt": "2026-08-07T00:27:25.028Z",
+            "modifiedAt": "2026-08-07T00:27:25.028Z",
+            "deletedAt": null
+          }
+        ]
+      },
+      {
+        "id": "8JwoOZexwO",
+        "sequenceId": "6vaKGDl4aW",
+        "number": 4,
+        "type": 1,
+        "executionType": 1,
+        "relativeDays": 3,
+        "status": 1,
+        "priority": null,
+        "assigneeId": "LVPX5V3Wal",
+        "sPriority": 4,
+        "sDistribution": 4,
+        "createdAt": "2026-08-07T00:27:31.293Z",
+        "modifiedAt": "2026-08-12T09:12:19.852Z",
+        "deletedAt": null,
+        "variants": [
+          {
+            "id": "9KwOjy1Mz6",
+            "stepId": "8JwoOZexwO",
+            "taskNote": null,
+            "payload": {
+              "content": "<div>Hi {{First Name}},</div>\n<div><br>{spin} I will close the loop on this one. | Final note from my end on this. {endspin}</div>\n<div><br>{spin} I imagine upgrading or modernising custom applications is not an immediate priority for {{Company}} right now, which is completely understandable. | I take it that custom software modernisation is not an active focus for your team right now, which makes complete sense. {endspin}</div>\n<div><br>{spin} If priorities shift down the road or legacy software constraints start slowing down your roadmap, feel free to reach back out. | If things change later in the year and you need specialized engineering capacity to modernise an older system, the door is always open. {endspin}</div>\n<div><br>{spin} Would it make sense to touch base in a few months, or are your core applications pretty well set for the foreseeable future? | Should I check back with you later in the year, or is your team all covered on the software front? {endspin}</div>\n<div><br>{spin} Best regards, | Warm regards, {endspin}</div>",
+              "subject": "",
+              "preheader": ""
+            },
+            "status": 1,
+            "isAIGenerated": false,
+            "templateHistoryId": null,
+            "createdAt": "2026-08-07T00:27:31.295Z",
+            "modifiedAt": "2026-08-07T00:27:31.295Z",
+            "deletedAt": null
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,589 @@
+RUN SCHEDULER 1 — FIRST CONTROLLED PRODUCTION BATCH
+====================================================
+
+Execute Scheduler 1 for today's Zediant Revenue Engine
+lead-population cycle.
+
+This is the FIRST CONTROLLED PRODUCTION RUN.
+
+MAXIMUM FINAL CRM WRITES:
+50 qualified leads.
+
+QUALITY HAS PRIORITY OVER QUANTITY.
+
+Do NOT weaken qualification criteria, ICP fit, campaign fit,
+personalization quality, or evidence requirements merely to reach
+50 leads.
+
+If fewer than 50 leads genuinely qualify, stop with the actual
+qualified number.
+
+====================================================
+PRIMARY OBJECTIVE
+====================================================
+
+Source qualified prospects from Apollo, qualify and score them,
+deduplicate against Zoho CRM, enrich only qualified survivors,
+select exactly one C1–C5 campaign, generate the mandatory
+personalization fields, and write the final qualified leads to
+Zoho CRM for BDM review.
+
+STOP after CRM population.
+
+DO NOT distribute leads to Apollo.
+
+DO NOT activate any Apollo campaign.
+
+DO NOT send outreach.
+
+DO NOT calculate PTB.
+
+====================================================
+AUTHORITATIVE WORKFLOW
+====================================================
+
+Follow the active Scheduler 1 skill and current project context.
+
+The execution flow is:
+
+Apollo
+  ↓
+Native/cheap filtering
+  ↓
+Basic qualification
+  ↓
+Zoho deduplication
+  ↓
+ICP scoring
+  ↓
+Required signal enrichment
+  ↓
+Campaign selection C1–C5
+  ↓
+Personalization
+  ↓
+Final validation
+  ↓
+Zoho CRM
+  ↓
+BDM review
+
+Do not skip gates.
+
+Do not perform expensive research before the lead has passed the
+appropriate cheaper gates.
+
+====================================================
+APOLLO CREDIT OPTIMIZATION
+====================================================
+
+Use Apollo primarily for candidate discovery and available
+firmographic/persona filtering.
+
+Before retrieving candidates, apply all relevant low-cost/native
+Apollo filters available from the active ICP and campaign rules,
+including where applicable:
+
+- geography
+- company size
+- company type/industry
+- target persona/job title
+- relevant technology filters
+- available contactability requirements
+- other explicit exclusion criteria
+
+Do NOT retrieve a large unrestricted candidate pool and then ask
+Claude to reject most of it.
+
+Use the smallest practical candidate pool capable of producing the
+required qualified batch.
+
+====================================================
+CANDIDATE BUFFER
+====================================================
+
+The final CRM write limit is 50.
+
+Do not assume that exactly 50 Apollo records will produce 50
+qualified leads.
+
+Use a reasonable candidate buffer to account for:
+
+- qualification failures
+- duplicates
+- insufficient evidence
+- poor ICP fit
+- missing mandatory personalization data
+- campaign-fit failures
+
+Do NOT continuously search Apollo indefinitely to force the final
+count to 50.
+
+Do NOT lower quality standards to fill the batch.
+
+If the available candidate pool has been exhausted or the reasonable
+search budget has been reached, stop and report the actual result.
+
+====================================================
+QUALIFICATION BEFORE ENRICHMENT
+====================================================
+
+For each Apollo candidate, first use the information already
+available from Apollo and the minimum necessary context to determine
+whether the lead is worth further processing.
+
+Reject obvious non-fits before expensive research/enrichment.
+
+Examples include:
+
+- wrong geography
+- wrong company size
+- wrong company type
+- wrong persona
+- obvious competitor/disqualifier
+- clear ICP mismatch
+- other explicit qualification failures
+
+Do NOT spend enrichment credits on leads that have already failed
+a qualification gate.
+
+====================================================
+ZOHO DEDUPLICATION
+====================================================
+
+Before expensive enrichment, check whether the prospect/company
+already exists in Zoho CRM.
+
+Use batched CRM operations wherever the available CRM interface
+supports them.
+
+Do NOT perform unnecessary one-lead-at-a-time searches when a
+batched lookup can achieve the same result.
+
+Exclude existing/duplicate records.
+
+Do not create duplicate Leads.
+
+If both email and company/person identity are available, use the
+strongest available matching evidence according to the active
+deduplication rules.
+
+====================================================
+CLAUDE TOKEN OPTIMIZATION
+====================================================
+
+Use progressive context loading.
+
+Do NOT load every project context file for every lead.
+
+Start with only the context required for:
+
+- ICP qualification
+- Scheduler 1 execution
+- campaign selection
+
+Load additional context only when required for the specific lead
+or selected campaign.
+
+Once a campaign is selected, use only the relevant campaign/service/
+case-study/company information needed for the next step.
+
+Do NOT repeatedly reread the same large context files unnecessarily.
+
+====================================================
+RESEARCH REUSE — MANDATORY
+====================================================
+
+Research each company/lead only as much as necessary.
+
+Create and maintain a compact research record for each surviving
+lead containing the verified evidence already obtained.
+
+Reuse that evidence across:
+
+- qualification
+- ICP scoring
+- signal enrichment
+- campaign selection
+- personalization
+
+DO NOT research the same company again simply because a later stage
+needs information that was already obtained.
+
+DO NOT perform "comprehensive research."
+
+Only research information required to make the current decision.
+
+Once sufficient evidence exists, STOP researching that lead.
+
+====================================================
+ENRICHMENT CREDIT CONTROL
+====================================================
+
+Apollo enrichment must happen ONLY after:
+
+1. Basic qualification passed
+2. Zoho duplicate check passed
+3. The lead remains commercially relevant
+
+Perform no more than one necessary enrichment pass per lead during
+this run.
+
+Do not repeat an Apollo enrichment request because another stage
+needs information already retrieved.
+
+If available Apollo data already contains the required information,
+reuse it instead of enriching again.
+
+If a required fact cannot be verified without disproportionate
+additional cost, do not invent it. Flag/exclude the lead according
+to the existing qualification rules.
+
+====================================================
+ICP SCORING
+====================================================
+
+Calculate the ICP Score according to the active ICP model.
+
+Use verified evidence.
+
+Do not invent facts to improve a score.
+
+Do not use PTB as part of the initial ICP Score.
+
+Do not create a substitute PTB score.
+
+====================================================
+SIGNAL ENRICHMENT
+====================================================
+
+Perform the required signal-enrichment pass only for leads that have
+survived the preceding gates.
+
+Capture only commercially useful, verifiable signals relevant to:
+
+- qualification
+- campaign relevance
+- personalization
+- future engagement interpretation
+
+Examples may include:
+
+- hiring
+- funding
+- expansion
+- modernization
+- technology/platform changes
+- product growth
+- other verified business signals defined by the active context
+
+Do not collect signals merely because they are interesting.
+
+Do not perform open-ended research.
+
+====================================================
+PTB — STRICT BOUNDARY
+====================================================
+
+PTB is NOT calculated during Scheduler 1.
+
+PTB is NOT a sourcing score.
+
+PTB is NOT an initial qualification score.
+
+PTB is NOT a campaign-selection score.
+
+PTB is NOT used to rank the initial batch.
+
+For every newly created lead:
+
+PTB = `N/A / Not Yet Scored`
+
+Do NOT assign:
+
+- numeric PTB
+- PTB tier
+- PTB threshold
+- PTB probability
+- preliminary PTB
+- pre-engagement PTB
+
+Post-engagement PTB belongs exclusively to `ptb-scoring`.
+
+The approved post-engagement model is:
+
+Engagement: 0–40
+Urgency Signal: 0–30
+Multi-threading: 0–15
+Decision-maker Confirmed Reachable: 0–15
+
+Total: 100
+
+Do not calculate any of these components during Scheduler 1.
+
+====================================================
+CAMPAIGN SELECTION
+====================================================
+
+Select exactly ONE campaign:
+
+C1
+C2
+C3
+C4
+C5
+
+Campaign selection must be based on actual verified service need
+and evidence.
+
+Do not force campaign distribution percentages.
+
+Do not use PTB or a PTB proxy for campaign selection.
+
+Use the strongest verified evidence of:
+
+- service need
+- business/technical problem
+- company situation
+- persona relevance
+- campaign-specific signals
+
+If campaign fit cannot be established confidently, do not force a
+campaign merely to fill the batch.
+
+====================================================
+PERSONALIZATION
+====================================================
+
+Only final qualified campaign-matched leads proceed to deep
+personalization.
+
+Generate and validate all mandatory Zoho CRM fields:
+
+1. Email Personalised Opening
+2. Email Pain Points
+3. Business Challenge
+4. Case Study
+
+Use verified lead/company evidence already collected.
+
+Reuse the research record.
+
+Do NOT perform a second round of company research if the existing
+evidence is sufficient.
+
+Do NOT invent:
+
+- company initiatives
+- technology usage
+- hiring plans
+- funding
+- business problems
+- projects
+- case-study applicability
+
+If a claim cannot be supported, use the approved fallback behavior
+or exclude the lead if the field is mandatory and cannot be
+truthfully populated.
+
+====================================================
+FINAL CRM VALIDATION
+====================================================
+
+Before writing each lead to Zoho CRM, verify:
+
+- qualified
+- ICP Score calculated
+- not a duplicate
+- campaign selected
+- required evidence available
+- LinkedIn/profile information available where required
+- Email Personalised Opening populated
+- Email Pain Points populated
+- Business Challenge populated
+- Case Study populated according to approved rules
+- no unsupported claims
+- PTB = `N/A / Not Yet Scored`
+- Lead_Status = `New Lead`
+
+Only then write the lead.
+
+====================================================
+CRM WRITE EFFICIENCY
+====================================================
+
+Use batched CRM writes wherever the available CRM interface
+supports them.
+
+Do not make unnecessary repeated API calls.
+
+Do not re-read a CRM record immediately after writing it unless
+verification is actually required by the available CRM operation.
+
+Do not update the same lead repeatedly during the same run.
+
+====================================================
+BDM APPROVAL BOUNDARY
+====================================================
+
+Claude's qualification is NOT BDM approval.
+
+All newly created leads must remain:
+
+Lead_Status = `New Lead`
+
+The BDM must manually review the leads.
+
+Only the BDM may subsequently move an appropriate lead to:
+
+`Approved for Outreach`
+
+Do not change a lead to `Approved for Outreach`.
+
+Do not distribute any lead to Apollo.
+
+====================================================
+STOP CONDITIONS
+====================================================
+
+STOP immediately if:
+
+- 50 qualified leads have been successfully written to Zoho
+- the reasonable Apollo candidate/search budget is exhausted
+- no additional high-quality candidates are available
+- the remaining candidates would require weakening qualification
+- a required system/API dependency fails repeatedly
+- mandatory personalization cannot be truthfully produced
+
+Never sacrifice quality to reach 50.
+
+====================================================
+FAILURE HANDLING
+====================================================
+
+If an individual lead fails:
+
+- do not repeatedly retry expensive operations without reason
+- record the reason
+- continue with the remaining candidates
+
+If Apollo fails:
+
+- report the failure
+- do not blindly repeat the same expensive request
+
+If Zoho fails:
+
+- do not assume the lead was written
+- record the failure
+- do not create duplicates through blind retry
+
+If personalization fails:
+
+- do not invent content
+- exclude/flag the lead according to the active rules
+
+====================================================
+EFFICIENCY REPORT — REQUIRED
+====================================================
+
+At the end of the run, provide:
+
+A. APOLLO
+
+- Search calls performed
+- Candidate records retrieved
+- Candidates rejected before enrichment
+- Apollo enrichment calls performed
+- Apollo enrichment calls avoided because the lead failed earlier
+  gates
+
+B. QUALIFICATION
+
+- Candidates assessed
+- Qualification failures
+- ICP-qualified leads
+- Zoho duplicates excluded
+
+C. RESEARCH
+
+- Leads deeply researched
+- Leads where existing Apollo/CRM evidence was reused
+- Leads requiring additional research
+- Number of repeated research operations
+
+D. CAMPAIGN
+
+- C1:
+- C2:
+- C3:
+- C4:
+- C5:
+
+E. PERSONALIZATION
+
+- Leads reaching personalization
+- Leads successfully personalized
+- Leads excluded because mandatory information could not be
+  truthfully generated
+
+F. CRM
+
+- Leads successfully written
+- Leads that failed CRM write
+- Final Lead_Status
+- Confirmation that PTB was set to `N/A / Not Yet Scored`
+
+G. SAFETY CONFIRMATIONS
+
+Explicitly confirm:
+
+`No PTB was calculated.`
+
+`No PTB was used for campaign selection.`
+
+`No lead was distributed to Apollo.`
+
+`No Apollo campaign was activated.`
+
+`No lead was changed to Approved for Outreach.`
+
+`No unsupported personalization claims were knowingly created.`
+
+====================================================
+FINAL BDM APPROVAL REPORT
+====================================================
+
+Provide a concise table for every lead successfully written to Zoho:
+
+Lead Name
+Company
+Title
+Country
+ICP Score
+Campaign
+Key Verified Signal
+Lead_Status
+PTB
+Personalization Complete
+
+Then provide:
+
+- total leads written
+- campaign distribution
+- ICP score range
+- duplicate count
+- qualification-failure count
+- enrichment count
+- efficiency metrics
+- any exceptions requiring BDM attention
+
+STOP AFTER REPORTING.
+
+DO NOT START SCHEDULER 2.
+
+DO NOT SEND EMAIL.
+
+DO NOT ACTIVATE APOLLO_OUTREACH.
+
+END RUN.
