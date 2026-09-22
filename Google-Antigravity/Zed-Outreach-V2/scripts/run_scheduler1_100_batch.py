@@ -555,5 +555,31 @@ def run():
     print(f"  Geographic Mix: {g_counts}")
     print(f"  Campaign Mix: {c_counts}")
 
+    # Dispatch Zoho Cliq Notification
+    try:
+        try:
+            from scripts.notify_cliq import send_cliq_notification
+        except ImportError:
+            from notify_cliq import send_cliq_notification
+        cliq_msg = (
+            f"🚀 [SalesAI Lead Population Complete]\n"
+            f"Net-New Verified Leads Populated in Apollo: {len(all_enriched_leads)}\n\n"
+            f"🌍 Geographic Breakdown:\n"
+            f"• Australia (AUS): {g_counts.get('AUS', 0)}\n"
+            f"• United Arab Emirates (UAE): {g_counts.get('UAE', 0)}\n"
+            f"• United States (US): {g_counts.get('US', 0)}\n\n"
+            f"🎯 Campaign Breakdown:\n"
+            f"• C1 (AI Engineering): {c_counts.get('C1', 0)}\n"
+            f"• C2 (Engineering Pods): {c_counts.get('C2', 0)}\n"
+            f"• C3 (Cloud & Platform): {c_counts.get('C3', 0)}\n"
+            f"• C4 (API & Middleware): {c_counts.get('C4', 0)}\n"
+            f"• C5 (Custom Enterprise): {c_counts.get('C5', 0)}\n\n"
+            f"🔒 Status: All 10 custom fields written to Apollo, Sequences field linked, Approval Status = 'New' (Awaiting BDM review)."
+        )
+        cliq_res = send_cliq_notification(cliq_msg)
+        print(f"Cliq notification dispatched: {cliq_res}")
+    except Exception as e:
+        print(f"Cliq notification skipped/failed: {e}")
+
 if __name__ == "__main__":
     run()

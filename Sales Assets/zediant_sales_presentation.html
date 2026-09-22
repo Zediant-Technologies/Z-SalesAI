@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zediant Technologies | Global Revenue Engine & Sales Operations Manual v2.0</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+    
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    
+    code, pre, .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .slide {
+      display: none;
+      animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .slide.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Custom Scrollbar for slide content */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #475569;
+    }
+
+    /* Print styling: Converts presentation into a clean, landscape executive slide deck */
+    @media print {
+      @page {
+        size: landscape;
+        margin: 1.2cm;
+      }
+      body {
+        background: white !important;
+        color: #0f172a !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .slide {
+        display: block !important;
+        page-break-after: always;
+        break-after: page;
+        padding: 0 !important;
+        margin-bottom: 2cm;
+      }
+      .shadow-2xl, .shadow-lg, .shadow-md, .shadow-sm {
+        box-shadow: none !important;
+      }
+      .border-slate-800, .border-slate-700 {
+        border-color: #cbd5e1 !important;
+      }
+      .bg-slate-900, .bg-slate-950, .bg-slate-900\/80, .bg-slate-950\/80, .bg-slate-900\/60 {
+        background: #f8fafc !important;
+        color: #0f172a !important;
+      }
+      .text-slate-100, .text-slate-200, .text-white {
+        color: #0f172a !important;
+      }
+      .text-slate-300, .text-slate-400 {
+        color: #334155 !important;
+      }
+      .text-cyan-400, .text-cyan-300 {
+        color: #0284c7 !important;
+      }
+      .text-blue-400, .text-blue-300 {
+        color: #2563eb !important;
+      }
+      .text-emerald-400, .text-emerald-300 {
+        color: #059669 !important;
+      }
+      .text-amber-400, .text-amber-300 {
+        color: #d97706 !important;
+      }
+      .bg-cyan-950, .bg-blue-950, .bg-emerald-950, .bg-purple-950, .bg-amber-950 {
+        background: #f1f5f9 !important;
+        border-color: #cbd5e1 !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-cyan-500 selection:text-white">
+
+  <!-- TOP HEADER BAR -->
+  <header class="no-print border-b border-slate-800/80 bg-slate-900/80 backdrop-blur-md sticky top-0 z-50 px-6 py-3.5 flex items-center justify-between">
+    <div class="flex items-center space-x-3">
+      <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center font-black text-white text-lg shadow-lg shadow-cyan-500/20">
+        Z
+      </div>
+      <div>
+        <h1 class="text-xs sm:text-sm font-bold tracking-wide uppercase text-slate-200">Zediant Technologies</h1>
+        <p class="text-[11px] text-slate-400 font-medium">Revenue Engine & Sales Operations Manual v2.0</p>
+      </div>
+    </div>
+
+    <!-- Quick Navigation Controls -->
+    <div class="flex items-center space-x-3 sm:space-x-4">
+      <div class="flex items-center space-x-2 text-xs font-semibold px-3 py-1.5 rounded-full bg-slate-800/90 border border-slate-700/70 text-slate-300 shadow-inner">
+        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+        <span id="slideIndicator" class="font-mono text-xs">Slide 1 of 14</span>
+      </div>
+
+      <!-- Jump to Slide Menu Button -->
+      <button onclick="toggleTOC()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-all border border-slate-700 text-xs font-semibold flex items-center gap-1.5" title="Table of Contents">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"/></svg>
+        <span class="hidden md:inline">Contents</span>
+      </button>
+
+      <div class="flex items-center space-x-1.5">
+        <button onclick="prevSlide()" class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-all border border-slate-700 active:scale-95 text-xs font-semibold flex items-center gap-1">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          <span class="hidden sm:inline">Prev</span>
+        </button>
+        <button onclick="nextSlide()" class="px-3 py-1.5 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white transition-all shadow-md shadow-cyan-600/20 active:scale-95 text-xs font-semibold flex items-center gap-1">
+          <span class="hidden sm:inline">Next</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </button>
+        <button onclick="window.print()" class="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-all border border-slate-700 text-xs font-semibold" title="Print to PDF (Landscape)">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- TABLE OF CONTENTS MODAL (DRAWER) -->
+  <div id="tocModal" class="no-print fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-2xl w-full p-6 shadow-2xl">
+      <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-800">
+        <h3 class="text-sm font-bold uppercase tracking-wider text-white flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+          Table of Contents — Operations Deck
+        </h3>
+        <button onclick="toggleTOC()" class="text-slate-400 hover:text-white text-sm font-bold p-1">&times; Close</button>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs" id="tocList"></div>
+    </div>
+  </div>
+
+  <!-- MAIN SLIDE CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full flex-1">
+
+    <!-- ==================== SLIDE 1: TITLE & STRATEGIC MANDATE ==================== -->
+    <div class="slide active" data-title="Executive Overview">
+      <div class="bg-gradient-to-b from-slate-900 via-slate-900/90 to-slate-950 border border-slate-800 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+        <div class="absolute -right-24 -top-24 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -left-24 -bottom-24 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="flex items-center space-x-2 text-xs font-bold tracking-widest text-cyan-400 uppercase mb-4">
+          <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+          <span>Confidential Partner Operations Blueprint</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4 leading-tight">
+          ZEDIANT REVENUE ENGINE <br><span class="bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-400 bg-clip-text text-transparent">Sales Operations & Execution Manual v2.0</span>
+        </h1>
+        <p class="text-slate-300 text-base sm:text-lg max-w-3xl mb-8 leading-relaxed">
+          The official operational standard for Zediant Technologies leadership. Defines role accountabilities, daily execution schedules, measurable scorecards, and high-probability sales channels to eliminate single-client revenue concentration.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
+          <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 hover:border-slate-700 transition">
+            <div class="text-xs font-bold uppercase text-slate-400 mb-1">Operational Baseline</div>
+            <div class="text-2xl font-black text-white">25–35</div>
+            <div class="text-xs text-slate-400 mt-1">Specialized software engineering team operating at break-even.</div>
+          </div>
+          <div class="bg-slate-900/80 border border-amber-500/30 rounded-2xl p-5 hover:border-amber-500/50 transition">
+            <div class="text-xs font-bold uppercase text-amber-400 mb-1">Core Existential Risk</div>
+            <div class="text-2xl font-black text-amber-300">~90% Concentration</div>
+            <div class="text-xs text-slate-400 mt-1">Single client dependency creates acute cashflow vulnerability.</div>
+          </div>
+          <div class="bg-slate-900/80 border border-emerald-500/30 rounded-2xl p-5 hover:border-emerald-500/50 transition">
+            <div class="text-xs font-bold uppercase text-emerald-400 mb-1">12–18 Month Target</div>
+            <div class="text-2xl font-black text-emerald-300">&lt; 40% Concentration</div>
+            <div class="text-xs text-slate-400 mt-1">Diversify into agency pods, SaaS capacity, and ecosystem partners.</div>
+          </div>
+        </div>
+
+        <div class="bg-slate-800/50 border border-slate-700/60 rounded-2xl p-6">
+          <div class="text-xs font-bold uppercase text-slate-300 mb-2 flex items-center gap-2">
+            <svg class="w-4 h-4 text-cyan-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg>
+            Delivery Constraint & Strategic Target
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Zediant can sustainably onboard <strong class="text-white">5–7 senior developers every 3 months</strong> against our total headcount. Our sales engine is not designed to win massive 50-developer accounts that cause delivery collapse, nor can we survive on $2k one-off projects. We win by acquiring <strong class="text-cyan-400">1–3 developer pods ($80k–$150k annualized MRR)</strong> with fast decision cycles and recurring retention.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SLIDE 2: COMMERCIAL RULES OF ENGAGEMENT ==================== -->
+    <div class="slide" data-title="Commercial Guardrails">
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-10 shadow-2xl">
+        <div class="flex items-center space-x-2 text-xs font-bold tracking-widest text-cyan-400 uppercase mb-2">
+          <span>Section 01 // Policy Standards</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-3">Non-Negotiable Commercial Rules</h2>
+        <p class="text-slate-400 text-sm max-w-3xl mb-8">
+          These rules govern every proposal, pricing conversation, and client engagement. They protect our gross margins and eliminate low-probability distractions.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-6">
+          <div class="bg-slate-950/60 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold uppercase tracking-wider text-cyan-400">Rate Floor Policy</span>
+              <span class="px-2.5 py-1 text-xs font-bold rounded-md bg-cyan-950 text-cyan-300 border border-cyan-800">$25–$30 / hr</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Blended Hourly Rate Minimum</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Never quote below <strong>USD 25/hour</strong> blended rate. We do not compete with low-tier commodity offshore freelance body shops. We staff senior developers with Australian/Dubai working-hour overlap who integrate into client stand-ups and codebases.
+            </p>
+          </div>
+
+          <div class="bg-slate-950/60 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold uppercase tracking-wider text-purple-400">Deal Sizing Policy</span>
+              <span class="px-2.5 py-1 text-xs font-bold rounded-md bg-purple-950 text-purple-300 border border-purple-800">$10k+ Floor</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Minimum Contract Threshold</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Minimum fixed-scope entry deal is <strong>USD 10,000</strong>. Pod engagements must target <strong>USD 80,000–$150,000+ annualized</strong>. Any request under $5,000 is disqualified—it drains onboarding capacity without generating sustainable margin.
+            </p>
+          </div>
+
+          <div class="bg-slate-950/60 border border-rose-500/30 rounded-2xl p-6 hover:border-rose-500/50 transition">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold uppercase tracking-wider text-rose-400">Speculative Work Rule</span>
+              <span class="px-2.5 py-1 text-xs font-bold rounded-md bg-rose-950 text-rose-300 border border-rose-800">Zero Free Work</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">No Free POCs or Unpaid Tenders</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Explicitly prohibited by internal strategy. Free technical work devalues our authority. Convert any discovery friction into a paid <strong>2-Week Architecture & Integration Diagnostic ($3,000–$5,000)</strong> or pre-cleared umbrella teaming agreement.
+            </p>
+          </div>
+
+          <div class="bg-slate-950/60 border border-amber-500/30 rounded-2xl p-6 hover:border-amber-500/50 transition">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Public Sector Policy</span>
+              <span class="px-2.5 py-1 text-xs font-bold rounded-md bg-amber-950 text-amber-300 border border-amber-800">Teaming Agreements Only</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Government Tender Guardrail</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Chasing standalone government tenders without panel status drains billable capacity through massive uncompensated documentation. Manish will only engage public sector opportunities via formal <strong>Teaming Agreements with pre-approved Prime Contractors</strong>.
+            </p>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 flex items-center justify-between text-xs text-slate-400">
+          <div><strong class="text-slate-200">Compliance Stance:</strong> Always use <code class="text-cyan-300 bg-slate-900 px-2 py-0.5 rounded">SOC 2 Type II aligned</code> in all collateral. Never state "certified" until the audit attestation is delivered.</div>
+          <div class="font-bold text-emerald-400">100% Policy Enforced</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SLIDE 3: REVENUE COUNCIL & ROLE MATRIX ==================== -->
+    <div class="slide" data-title="Roles & Responsibilities">
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-10 shadow-2xl">
+        <div class="flex items-center space-x-2 text-xs font-bold tracking-widest text-cyan-400 uppercase mb-2">
+          <span>Section 02 // Governance & Accountability</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-3">Revenue Council & Functional Ownership</h2>
+        <p class="text-slate-400 text-sm max-w-3xl mb-8">
+          Clear division of labor eliminates overlap, prevents micro-management, and ensures every key revenue channel has an active executive owner.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+          <!-- Pritamjit Card -->
+          <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-cyan-500/50 transition relative overflow-hidden group">
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-bl-full pointer-events-none group-hover:bg-cyan-500/10 transition"></div>
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-2.5 py-1 text-[11px] font-extrabold rounded-md bg-cyan-950 text-cyan-300 border border-cyan-800/80">CHANNEL OWNER</span>
+                <span class="text-xs text-slate-400 font-mono">Pritamjit B.</span>
+              </div>
+              <h3 class="text-xl font-black text-white mb-1">Pritamjit Banerjee</h3>
+              <p class="text-xs text-cyan-400 font-semibold mb-4">Growth Partner</p>
+              
+              <div class="space-y-2.5 text-xs text-slate-300 mb-6">
+                <div class="flex items-start gap-2">
+                  <span class="text-cyan-400 font-bold">•</span>
+                  <span><strong>Digital Agency Channel:</strong> Securing 3 anchor whitelabel agency partners in Australia and UAE.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <span class="text-cyan-400 font-bold">•</span>
+                  <span><strong>Upwork Enterprise:</strong> Curating and bidding on high-budget ($10k+) enterprise software RFPs.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <span class="text-cyan-400 font-bold">•</span>
+                  <span><strong>Outbound Lead Gating:</strong> Enforcing the multi-trigger qualification filter in Apollo.</span>
+                </div>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-slate-800/80 text-[11px] text-slate-400 font-mono">
+              Key Metric: <strong>1–2 Signed Agency Agreements / mo</strong>
+            </div>
+          </div>
+
+          <!-- Manish Card -->
+          <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-blue-500/50 transition relative overflow-hidden group">
+            <div class="absolute top-0 right-0 w-24 h-24 bg-blue-500/5 rounded-bl-full pointer-events-none group-hover:bg-blue-500/10 transition"></div>
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-2.5 py-1 text-[11px] font-extrabold rounded-md bg-blue-950 text-blue-300 border border-blue-800/80">DIRECT & RESOURCING</span>
+                <span class="text-xs text-slate-400 font-mono">Manish B.</span>
+              </div>
+              <h3 class="text-xl font-black text-white mb-1">Manish Bhaskar</h3>
+              <p class="text-xs text-blue-400 font-semibold mb-4">Global Growth Partner</p>
+              
+              <div class="space-y-2.5 text-xs text-slate-300 mb-6">
+                <div class="flex items-start gap-2">
+                  <span class="text-blue-400 font-bold">•</span>
+                  <span><strong>Direct SaaS / Product CTOs:</strong> Leading technical discovery for accounts suffering recruiting lag.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <span class="text-blue-400 font-bold">•</span>
+                  <span><strong>External Resourcing Desk:</strong> Supervising Shreya to maintain candidate flow and client placements.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <span class="text-blue-400 font-bold">•</span>
+                  <span><strong>Prime Teaming Agreements:</strong> Establishing subcontracting partnerships for enterprise/government work.</span>
+                </div>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-slate-800/80 text-[11px] text-slate-400 font-mono">
+              Key Metric: <strong>$15,000+ New Contracted MRR / mo</strong>
+            </div>
+          </div>
+
+          <!-- Rajeev Card -->
+          <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/50 transition relative overflow-hidden group">
+            <div class="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-bl-full pointer-events-none group-hover:bg-emerald-500/10 transition"></div>
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-2.5 py-1 text-[11px] font-extrabold rounded-md bg-emerald-950 text-emerald-300 border border-emerald-800/80">SYSTEMS & CLOSING</span>
+                <span class="text-xs text-slate-400 font-mono">Rajeev J.</span>
+              </div>
+              <h3 class="text-xl font-black text-white mb-1">Rajeev Jaiswal</h3>
+              <p class="text-xs text-emerald-400 font-semibold mb-4">Co-Founder & Head of Revenue Architecture</p>
+              
+              <div class="space-y-2.5 text-xs text-slate-300 mb-6">
+                <div class="flex items-start gap-2">
+                  <span class="text-emerald-400 font-bold">•</span>
+                  <span><strong>Deliverability & Automation:</strong> Monitoring domain warmup, threaded sequences, and email health.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <span class="text-emerald-400 font-bold">•</span>
+                  <span><strong>Authority Content & SEO:</strong> Publishing weekly architectural teardowns and optimizing inbound organic search.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <span class="text-emerald-400 font-bold">•</span>
+                  <span><strong>Commercial Closing:</strong> Architecting SOWs, leading pricing calls, and closing Master Services Agreements.</span>
+                </div>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-slate-800/80 text-[11px] text-slate-400 font-mono">
+              Key Metric: <strong>&gt;35% Proposal-to-Signature Win Rate</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 flex items-center justify-between text-xs text-slate-400">
+          <div><strong class="text-slate-200">Dedicated Support Role:</strong> <span class="text-cyan-300 font-semibold">Shreya</span> reports to Manish, executing 25 candidate screening calls/day to deliver 3 pre-vetted developer shortlists to hiring clients weekly.</div>
+          <div class="text-slate-400 font-mono">Weekly Target: 125 screens</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SLIDE 4: MOTION 1 - THE DIGITAL AGENCY ENGINE ==================== -->
+    <div class="slide" data-title="Agency Channel Playbook">
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-10 shadow-2xl">
+        <div class="flex items-center space-x-2 text-xs font-bold tracking-widest text-cyan-400 uppercase mb-2">
+          <span>Section 03 // Channel Playbook</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-3">Motion 1: The Agency Whitelabel Engine</h2>
+        <p class="text-slate-400 text-sm max-w-3xl mb-8">
+          The single fastest cashflow engine in IT services. Winning 3 agency partners in Australia and UAE delivers continuous recurring revenue without prospecting end-clients.
+        </p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-6">
+          <div class="lg:col-span-5 bg-slate-950/80 border border-slate-800 rounded-2xl p-6">
+            <h3 class="text-sm font-bold uppercase text-cyan-400 tracking-wider mb-4 flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              The Agency Pain & Offer Fit
+            </h3>
+            <div class="space-y-4 text-xs text-slate-300">
+              <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800">
+                <strong class="text-white block mb-1">The Operational Reality:</strong>
+                Agencies win work in sudden bursts. When a $150k client build lands, hiring local full-time engineers takes 2 months and creates ruinous bench cost when the project ends. Freelancers are unvetted and churn mid-sprint.
+              </div>
+              <div class="p-3.5 rounded-xl bg-cyan-950/40 border border-cyan-800/60 text-cyan-200">
+                <strong class="text-cyan-300 block mb-1">The Offer: Zero-Risk Teaming Agreement</strong>
+                Sign an umbrella NDA and rate schedule ($25–$30/hr) with <strong>$0 upfront cost</strong>. When their pipeline spikes, Zediant provides an embedded whitelabel dev pod on 5–10 days notice with a 30-day flex scale-down clause.
+              </div>
+              <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800">
+                <strong class="text-white block mb-1">Why Agency Leaders Say Yes:</strong>
+                It costs them nothing today. It acts as an insurance policy that allows their sales reps to bid on larger technical projects with zero capacity risk.
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 bg-slate-950/80 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-sm font-bold uppercase text-slate-300 tracking-wider">Outreach Script (LinkedIn & Email)</h3>
+                <span class="text-[11px] font-mono text-cyan-400 bg-cyan-950 px-2.5 py-0.5 rounded border border-cyan-800">Pritamjit Banerjee</span>
+              </div>
+              <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-xs font-mono text-slate-300 leading-relaxed space-y-3">
+                <p><span class="text-cyan-400 font-bold">Subject:</span> {{Company}}'s delivery bench when projects bunch up</p>
+                <p>Hi {{First Name}},</p>
+                <p>Saw the recent client work {{Company}} has been delivering across {{relevant tech/market}}.</p>
+                <p>Most agency delivery heads and COOs I speak with in {{Australia/Dubai}} deal with the same capacity headache: when two large project builds land at the same time, finding senior developers on short notice is tough, and relying on loose freelancers usually ends in quality issues.</p>
+                <p>We act as a dedicated white-label engineering bench for agencies. We put a pre-vetted teaming agreement in place at fixed blended rates, so when your pipeline spikes, you have immediate senior dev pods ready to build under your brand without carrying bench cost when the project wraps.</p>
+                <p>Would it make sense to put an overflow agreement in place so you have capacity on standby for your next project spike?</p>
+                <p class="text-slate-400">Best regards,<br>Pritamjit Banerjee | Growth Partner, Zediant Technologies</p>
+              </div>
+            </div>
+            <div class="mt-4 flex items-center justify-between text-xs text-slate-400">
+              <span>Target Profile: COO, Head of Delivery, MD (15–75 employees)</span>
+              <span class="text-cyan-400 font-bold">Target: 40 Contacts / Week</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SLIDE 5: MOTION 2 - DIRECT SAAS & MULTI-TRIGGER ==================== -->
+    <div class="slide" data-title="SaaS Outbound Playbook">
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-10 shadow-2xl">
+        <div class="flex items-center space-x-2 text-xs font-bold tracking-widest text-blue-400 uppercase mb-2">
+          <span>Section 04 // Direct Acquisition</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-3">Motion 2: Multi-Trigger SaaS Outbound</h2>
+        <p class="text-slate-400 text-sm max-w-3xl mb-8">
+          Eliminates zero-response cold emails. We never contact a company based on firmographics alone; prospects must exhibit active, verifiable operational friction.
+        </p>
+
+        <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 mb-6">
+          <h3 class="text-sm font-bold uppercase text-slate-200 tracking-wider mb-4 flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+            The Multi-Trigger Intent Requirement (Strict Gating)
+          </h3>
+          <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+            As strategic review identified, <em class="text-white">Funding != Propensity to Buy</em>. A company that just raised $5M is often determined to hire an onshore team. We only sequence accounts that show <strong>Trigger A (Capital Pressure) + Trigger B (Delivery Friction)</strong> simultaneously:
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+              <div class="font-bold text-blue-400 mb-1">Trigger 1: Recruiting Lag</div>
+              <div class="text-slate-300">Senior React, Python, or Cloud roles open for <strong>&gt;45 days</strong> on Seek/LinkedIn. Proves internal hiring failure.</div>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+              <div class="font-bold text-emerald-400 mb-1">Trigger 2: Capital & Board Clock</div>
+              <div class="text-slate-300">Closed Seed/Series A within last 6 months. High runway burn and investor-committed roadmap deadlines.</div>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+              <div class="font-bold text-purple-400 mb-1">Trigger 3: Platform Evolution</div>
+              <div class="text-slate-300">Announced v2 rebuild, expanding API integration footprint, or cloud migration from monolith.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800">
+          <div class="text-xs font-bold uppercase text-slate-300 mb-3">The 5-Step Alternating Sequence Cadence</div>
+          <div class="grid grid-cols-1 sm:grid-cols-5 gap-3 text-xs">
+            <div class="p-3 rounded-lg bg-slate-900 border border-slate-800">
+              <div class="font-bold text-cyan-400 mb-1">Step 1: The Hook</div>
+              <div class="text-slate-400">Personalized Opening + Pain Point fused in 1 paragraph.</div>
+            </div>
+            <div class="p-3 rounded-lg bg-slate-900 border border-cyan-800/60 bg-cyan-950/20">
+              <div class="font-bold text-cyan-300 mb-1">Step 2: Authority</div>
+              <div class="text-slate-300"><strong>Zero Tokens.</strong> Roadmap vs. senior bandwidth reality. (Threaded Re:).</div>
+            </div>
+            <div class="p-3 rounded-lg bg-slate-900 border border-slate-800">
+              <div class="font-bold text-cyan-400 mb-1">Step 3: Deep Proof</div>
+              <div class="text-slate-400">Business Challenge + Relevant Zediant Case Study.</div>
+            </div>
+            <div class="p-3 rounded-lg bg-slate-900 border border-slate-800">
+              <div class="font-bold text-slate-300 mb-1">Step 4: The Trade-off</div>
+              <div class="text-slate-400">Hiring vs. Capacity (recruiting lag vs. breathing room).</div>
+            </div>
+            <div class="p-3 rounded-lg bg-slate-900 border border-slate-800">
+              <div class="font-bold text-slate-300 mb-1">Step 5: Breakup</div>
+              <div class="text-slate-400">Dignified permission close; prompts easy reply.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SLIDE 6: MOTION 3 - ECOSYSTEMS & INBOUND ==================== -->
+    <div class="slide" data-title="Ecosystem & Inbound">
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-10 shadow-2xl">
+        <div class="flex items-center space-x-2 text-xs font-bold tracking-widest text-emerald-400 uppercase mb-2">
+          <span>Section 05 // Inbound Gravity</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-3">Motion 3: Low-Cost Ecosystems & Inbound IP</h2>
+        <p class="text-slate-400 text-sm max-w-3xl mb-8">
+          Enterprise buyers do not search for "offshore dev agencies"—they look for specialized implementation partners certified in their existing software stack.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
+          <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition">
+            <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 font-bold mb-4 font-mono">
+              AWS
+            </div>
+            <h3 class="text-base font-bold text-white mb-1">AWS Partner Network</h3>
+            <p class="text-xs text-slate-400 mb-3 font-mono">Registered / Select Tier</p>
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+              Submit our documented <strong>11Wickets AWS Galera cluster case study</strong>. Demonstrates high-throughput database sharding and zero-downtime horizontal scaling.
+            </p>
+            <span class="text-[11px] font-bold text-emerald-400 font-mono">Entry Cost: Free / Low Fee</span>
+          </div>
+
+          <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition">
+            <div class="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 font-bold mb-4 font-mono">
+              BC
+            </div>
+            <h3 class="text-base font-bold text-white mb-1">BigCommerce Partner</h3>
+            <p class="text-xs text-slate-400 mb-3 font-mono">Agency & Implementation Partner</p>
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+              List our expert headless storefront and B2B portal implementations. Captures mid-market retailers looking for complex ERP/CRM integrations beneath the cart.
+            </p>
+            <span class="text-[11px] font-bold text-emerald-400 font-mono">Entry Cost: Community Tier (Free)</span>
+          </div>
+
+          <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition">
+            <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 font-bold mb-4 font-mono">
+              SC
+            </div>
+            <h3 class="text-base font-bold text-white mb-1">Sitecore Implementation</h3>
+            <p class="text-xs text-slate-400 mb-3 font-mono">Technical Delivery Subcontractor</p>
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+              Evidence our multi-site Sitecore implementation for the enterprise equipment manufacturer (5-person team, 6 months, Salesforce sync). Target tier-1 agencies who lack internal Sitecore devs.
+            </p>
+            <span class="text-[11px] font-bold text-emerald-400 font-mono">Entry Cost: Proof-Led</span>
+          </div>
+        </div>
+
+        <div class="bg-slate-950 p-6 rounded-2xl border border-emerald-500/30">
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="text-sm font-bold text-white flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              The "Trojan Horse" Architecture Diagnostic Offer ($3,000–$5,000)
+            </h3>
+            <span class="text-xs font-mono text-emerald-400 font-bold">65%+ Downstream Pod Conversion</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            When a prospective direct client is hesitant to commit to a $100k+ annual pod retainer, pitch the <strong>2-Week Architecture & API Integration Diagnostic</strong>. We audit their database write contention, point-to-point API latency, or technical debt, and present a formal remediation roadmap. In enterprise sales, the firm that conducts the diagnostic invariably wins the implementation contract.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SLIDE 7: COMPLETE KPI MATRIX ==================== -->
+    <div class="slide" data-title="Team KPI Matrix">
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-10 shadow-2xl">
+        <div class="flex items-center space-x-2 text-xs font-bold tracking-widest text-cyan-400 uppercase mb-2">
+          <span>Section 06 // Performance & Accountability</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-3">Unified Sales KPI & Scorecard Matrix</h2>
+        <p class="text-slate-400 text-sm max-w-3xl mb-8">
+          Leading indicators are strictly within our control. Lagging indicators measure closed revenue. Both are tracked in Zoho CRM and reported weekly.
+        </p>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs border-collapse">
+            <thead>
+              <tr class="border-b border-slate-800 text-slate-400 font-mono uppercase text-[11px]">
+                <th class="py-3 px-4">Owner</th>
+                <th class="py-3 px-4">Focus Area</th>
+                <th class="py-3 px-4">Leading Indicator KPI</th>
+                <th class="py-3 px-4">Weekly Target</th>
+                <th class="py-3 px-4">Pipeline KPI</th>
+                <th class="py-3 px-4">Monthly Lagging Target</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 text-slate-200">
+              <tr class="hover:bg-slate-950/40 transition">
+                <td class="py-4 px-4 font-bold text-cyan-400">Pritamjit</td>
+                <td class="py-4 px-4 font-medium">Agency Channel & Upwork</td>
+                <td class="py-4 px-4">Agencies Contacted (LinkedIn/Email)<br>Upwork Enterprise Proposals</td>
+                <td class="py-4 px-4 font-mono font-bold text-white">40 Agencies<br>6–8 Bids</td>
+                <td class="py-4 px-4">3 Agency Discovery Syncs / wk</td>
+                <td class="py-4 px-4 font-bold text-emerald-400 font-mono">1–2 Signed Teaming Agreements</td>
+              </tr>
+              <tr class="hover:bg-slate-950/40 transition">
+                <td class="py-4 px-4 font-bold text-blue-400">Manish</td>
+                <td class="py-4 px-4 font-medium">Direct SaaS & Resourcing</td>
+                <td class="py-4 px-4">Direct CTO Peer Outreach<br>Candidate Shortlists Approved</td>
+                <td class="py-4 px-4 font-mono font-bold text-white">30 CTOs<br>3 Shortlists</td>
+                <td class="py-4 px-4">4 CTO Discovery Calls / wk<br>3 Client Interviews / wk</td>
+                <td class="py-4 px-4 font-bold text-emerald-400 font-mono">$15,000+ New Contracted MRR</td>
+              </tr>
+              <tr class="hover:bg-slate-950/40 transition">
+                <td class="py-4 px-4 font-bold text-emerald-400">Rajeev</td>
+                <td class="py-4 px-4 font-medium">Infrastructure, Content & Closing</td>
+                <td class="py-4 px-4">Deliverability Health Audit<br>Case Teardown / SEO Post</td>
+                <td class="py-4 px-4 font-mono font-bold text-white">&gt;95% Health<br>1 Asset / wk</td>
+                <td class="py-4 px-4">Proposal Turnaround &lt;24 hrs</td>
+                <td class="py-4 px-4 font-bold text-emerald-400 font-mono">&gt;35% Proposal Win Rate<br>&lt;40% Client Concentration</td>
+              </tr>
+              <tr class="hover:bg-slate-950/40 transition bg-slate-950/20">
+                <td class="py-4 px-4 font-bold text-purple-400">Shreya</td>
+                <td class="py-4 px-4 font-medium">Candidate Sourcing & Screening</td>
+                <td class="py-4 px-4">Candidate Phone Screens<br>Resumes Standardized to Deck</td>
+                <td class="py-4 px-4 font-mono font-bold text-white">25 / day (125/wk)<br>12–15 profiles</td>
+                <td class="py-4 px-4">Interview Attendance &gt;90%</td>
+                <td class="py-4 px-4 font-bold text-slate-300 font-mono">Zero Talent Queue Stockouts</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-6 p-4 rounded-xl bg-slate-950 border border-slate-800 text-xs text-slate-400 flex items-center justify-between">
+          <span><strong class="text-slate-200">Accountability Threshold:</strong> If any leading indicator falls below 75% of target for two consecutive weeks, an operational review is triggered immediately.</span>
+          <span class="font-mono text-cyan-400 font-bold">Tracked via Zoho CRM</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SLIDE 8: PRITAMJIT'S TASK PLANNER & DOD ==================== -->
+    <div class="slide" data-title="Pritamjit Weekly SOP">
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-10 shadow-2xl">
+        <div class="flex items-center space-x-2 text-xs font-bold tracking-widest text-cyan-400 uppercase mb-2">
+          <span>Section 07 // Weekly Task Execution</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-3">Pritamjit: Task-Based Execution SOP</h2>
+        <p class="text-slate-400 text-sm max-w-3xl mb-8">
+          Follow each block sequentially. A task is strictly complete only when its explicit <strong>Definition of Done (DoD)</strong> is met.
+        </p>
+
+        <div class="space-y-4 text-xs">
+          <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 hover:border-slate-700 transition">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-bold text-white text-sm">Task 1: Apollo Outbound Lead Gating</span>
+              <span class="text-cyan-400 font-mono">Mon 09:00 AM – 11:00 AM</span>
+            </div>
+            <p class="text-slate-300 mb-3">Review newly generated Apollo leads for Campaign 1 (AI Product Eng) and Campaign 2 (Engineering Pods). Enforce the Multi-Trigger Intent rule.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-slate-400 mb-3 bg-slate-900/60 p-3 rounded-lg border border-slate-800">
+              <div>• Check 1: Headcount 20–200, Australia/UAE only.</div>
+              <div>• Check 2: Persona is CTO, VP Eng, Founder, or COO.</div>
+              <div>• Check 3: Verified senior dev role open &gt;45 days.</div>
+              <div>• Check 4: Tag approved records in Zoho CRM.</div>
+            </div>
+            <div class="text-[11px] font-mono text-emerald-400 font-bold">Definition of Done (DoD): Exactly 100 verified leads approved and queued in Zoho CRM.</div>
+          </div>
+
+          <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 hover:border-slate-700 transition">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-bold text-white text-sm">Task 2: Digital Agency Outbound Loop</span>
+              <span class="text-cyan-400 font-mono">Tue, Wed, Thu 09:30 AM – 11:30 AM</span>
+            </div>
+            <p class="text-slate-300 mb-3">Execute personalized multi-channel outreach to 40 agency leaders in Sydney, Melbourne, and Dubai pitching the Zero-Risk Overflow Teaming Agreement.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-slate-400 mb-3 bg-slate-900/60 p-3 rounded-lg border border-slate-800">
+              <div>• 15 personalized LinkedIn connection notes daily.</div>
+              <div>• Trigger Email Step 1 (Agency Bench Model).</div>
+              <div>• Promptly respond to replies within 2 hours.</div>
+              <div>• Book 20-min Zoom: "Reviewing an overflow bench agreement."</div>
+            </div>
+            <div class="text-[11px] font-mono text-emerald-400 font-bold">Definition of Done (DoD): 40 new agency leaders contacted weekly; minimum 3 discovery calls booked.</div>
+          </div>
+
+          <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 hover:border-slate-700 transition">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-bold text-white text-sm">Task 3: Upwork Enterprise Bidding Sprint</span>
+              <span class="text-cyan-400 font-mono">Daily 11:30 AM – 12:30 PM (60 mins)</span>
+            </div>
+            <p class="text-slate-300 mb-3">Audit high-budget enterprise development RFPs in AU, UAE, US, and UK. Submit tailored technical proposals with relevant case proof.</p>
+            <div class="text-[11px] font-mono text-emerald-400 font-bold">Definition of Done (DoD): Minimum 6 customized enterprise proposals submitted weekly (fixed &gt;$10k or &gt;$28/hr).</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SLIDE 9: MANISH'S TASK PLANNER & DOD ==================== -->
+    <div class="slide" data-title="Manish Weekly SOP">
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-10 shadow-2xl">
+        <div class="flex items-center space-x-2 text-xs font-bold tracking-widest text-blue-400 uppercase mb-2">
+          <span>Section 08 // Weekly Task Execution</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-3">Manish: Task-Based Execution SOP</h2>
+        <p class="text-slate-400 text-sm max-w-3xl mb-8">
+          Directs the external resourcing desk, drives direct technical CTO discovery conversations, and secures prime contractor teaming agreements.
+        </p>
+
+        <div class="space-y-4 text-xs">
+          <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 hover:border-slate-700 transition">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-bold text-white text-sm">Task 1: Resourcing Desk Management (Supervising Shreya)</span>
+              <span class="text-blue-400 font-mono">Daily 09:00 AM – 10:00 AM</span>
+            </div>
+            <p class="text-slate-300 mb-3">Review Shreya's previous day screening log (target: 25 screens/day). Evaluate candidate technical competence against active client job descriptions.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-slate-400 mb-3 bg-slate-900/60 p-3 rounded-lg border border-slate-800">
+              <div>• Audit candidate communication & notice periods.</div>
+              <div>• Approve standardized candidate presentation decks.</div>
+              <div>• Submit shortlists to hiring managers via email/portal.</div>
+              <div>• Coordinate client interview slots.</div>
+            </div>
+            <div class="text-[11px] font-mono text-emerald-400 font-bold">Definition of Done (DoD): Minimum 3 pre-vetted candidate shortlists submitted to hiring clients weekly.</div>
+          </div>
+
+          <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 hover:border-slate-700 transition">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-bold text-white text-sm">Task 2: Direct SaaS & Product CTO Peer Outreach</span>
+              <span class="text-blue-400 font-mono">Tue & Thu 10:00 AM – 12:00 PM</span>
+            </div>
+            <p class="text-slate-300 mb-3">Reach out directly to 30 targeted CTOs with long-vacant engineering roles (&gt;45 days), leading with sprint velocity and hiring relief.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-slate-400 mb-3 bg-slate-900/60 p-3 rounded-lg border border-slate-800">
+              <div>• Send personalized note focusing on sprint velocity vs lag.</div>
+              <div>• Cross-reference tech stack (React, Node, Python, AWS, .NET).</div>
+              <div>• Position Zediant pod as bridge capacity while they hire.</div>
+              <div>• Schedule 30-min technical discovery call.</div>
+            </div>
+            <div class="text-[11px] font-mono text-emerald-400 font-bold">Definition of Done (DoD): 30 direct peer touches weekly; minimum 2–3 technical discovery calls scheduled.</div>
+          </div>
+
+          <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 hover:border-slate-700 transition">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-bold text-white text-sm">Task 3: Technical Discovery Execution & Handoff</span>
+              <span class="text-blue-400 font-mono">Afternoons (Dynamic)</span>
+            </div>
+            <p class="text-slate-300 mb-3">Conduct 30-min discovery call using the standardized Qualification Questionnaire. Diagnose bottleneck, verify budget/timeline, and log detailed brief in Zoho CRM within 2 hours.</p>
+            <div class="text-[11px] font-mono text-emerald-400 font-bold">Definition of Done (DoD): Completed Discovery Notes filed in Zoho CRM under Stage: Solutioning within 2 hours.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SLIDE 10: RAJEEV'S TASK PLANNER & DOD ==================== -->
+    <div class="slide" data-title="Rajeev Weekly SOP">
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-10 shadow-2xl">
+        <div class="flex items-center space-x-2 text-xs font-bold tracking-widest text-emerald-400 uppercase mb-2">
+          <span>Section 09 // Weekly Task Execution</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-3">Rajeev: Task-Based Execution SOP</h2>
+        <p class="text-slate-400 text-sm max-w-3xl mb-8">
+          Architects outbound deliverability, creates high-gravity technical thought leadership assets, and executes commercial closing on all qualified briefs.
+        </p>
+
+        <div class="space-y-4 text-xs">
+          <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 hover:border-slate-700 transition">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-bold text-white text-sm">Task 1: Deliverability & Outbound Engine Audit</span>
+              <span class="text-emerald-400 font-mono">Mon 08:30 AM – 09:30 AM</span>
+            </div>
+            <p class="text-slate-300 mb-3">Inspect domain health across all outbound sending inboxes on Instantly/Smartlead. Verify DNS records, deliverability scores, and threaded sequencing.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-slate-400 mb-3 bg-slate-900/60 p-3 rounded-lg border border-slate-800">
+              <div>• Audit warmup health score across all inboxes (&gt;95%).</div>
+              <div>• Verify SPF, DKIM, DMARC, and custom tracking domains.</div>
+              <div>• Check sequence threading: Steps 2, 3, 4, 5 sending as Re:.</div>
+              <div>• Ensure zero merge-tag syntax errors or anomalies.</div>
+            </div>
+            <div class="text-[11px] font-mono text-emerald-400 font-bold">Definition of Done (DoD): Deliverability Health verified; overall bounce rate maintained strictly below 2%.</div>
+          </div>
+
+          <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 hover:border-slate-700 transition">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-bold text-white text-sm">Task 2: Technical Authority Asset Creation (Inbound/SEO)</span>
+              <span class="text-emerald-400 font-mono">Wed 09:00 AM – 11:30 AM</span>
+            </div>
+            <p class="text-slate-300 mb-3">Author and publish an 800–1,000 word technical teardown based on real Zediant engineering projects to establish organic authority.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-slate-400 mb-3 bg-slate-900/60 p-3 rounded-lg border border-slate-800">
+              <div>• Topic: Galera clustering, Sitecore multi-site, or middleware.</div>
+              <div>• Publish to Zediant Blog with Australia/Dubai targeted SEO tags.</div>
+              <div>• Adapt key takeaways into an executive LinkedIn carousel post.</div>
+              <div>• Distribute link to active pipeline prospects via Zoho CRM.</div>
+            </div>
+            <div class="text-[11px] font-mono text-emerald-400 font-bold">Definition of Done (DoD): 1 authoritative technical teardown published and distributed weekly.</div>
+          </div>
+
+          <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 hover:border-slate-700 transition">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-bold text-white text-sm">Task 3: Proposal Engineering & Executive Commercial Closing</span>
+              <span class="text-emerald-400 font-mono">Dynamic (&lt;24h turnaround)</span>
+            </div>
+            <p class="text-slate-300 mb-3">Review Discovery Briefs submitted by Manish or Pritamjit. Structure commercial engagement, enforce rate floor ($25–$30/hr), and lead closing calls.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-slate-400 mb-3 bg-slate-900/60 p-3 rounded-lg border border-slate-800">
+              <div>• Draft bespoke SOW/MSA deck within 24 hours of brief.</div>
+              <div>• Enforce 30-day scale-down terms and payment security.</div>
+              <div>• Lead 30-minute Proposal Review meeting with client decision-maker.</div>
+              <div>• Resolve contract friction, sign agreement, and trigger onboarding.</div>
+            </div>
+            <div class="text-[11px] font-mono text-emerald-400 font-bold">Definition of Done (DoD): Signed agreement logged under Closed-Won in Zoho CRM; delivery kickoff scheduled.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SLIDE 11: SHREYA'S SCREENING SOP & SCRIPTS ==================== -->
+    <div class="slide" data-title="Shreya Screening SOP">
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-10 shadow-2xl">
+        <div class="flex items-center space-x-2 text-xs font-bold tracking-widest text-purple-400 uppercase mb-2">
+          <span>Section 10 // Resourcing Desk Operations</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-3">Shreya: Candidate Screening SOP & Script</h2>
+        <p class="text-slate-400 text-sm max-w-3xl mb-8">
+          The candidate engine that fuels Zediant's external resourcing and pod staffing. Standardizes technical vetting to ensure only pre-qualified engineers reach client review.
+        </p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-6">
+          <div class="lg:col-span-5 bg-slate-950/80 border border-slate-800 rounded-2xl p-6">
+            <h3 class="text-sm font-bold uppercase text-purple-400 tracking-wider mb-4">Screening Mandate & Targets</h3>
+            <div class="space-y-4 text-xs text-slate-300">
+              <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800">
+                <div class="flex justify-between text-slate-400 mb-1">
+                  <span>Daily Screening Volume</span>
+                  <span class="font-mono text-white font-bold">25 Calls / Day</span>
+                </div>
+                <div class="flex justify-between text-slate-400">
+                  <span>Weekly Screening Benchmark</span>
+                  <span class="font-mono text-purple-400 font-bold">125 Calls / Wk</span>
+                </div>
+              </div>
+              <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800">
+                <div class="flex justify-between text-slate-400 mb-1">
+                  <span>Weekly Client-Ready Profiles</span>
+                  <span class="font-mono text-emerald-400 font-bold">12–15 Profiles</span>
+                </div>
+                <div class="flex justify-between text-slate-400">
+                  <span>Interview Attendance Rate</span>
+                  <span class="font-mono text-white font-bold">&gt;90%</span>
+                </div>
+              </div>
+              <div class="p-3.5 rounded-xl bg-purple-950/30 border border-purple-800/60 text-purple-200">
+                <strong class="text-purple-300 block mb-1">Definition of Done (DoD):</strong>
+                Submit minimum 12 pre-screened, calibrated candidate dossiers into Manish's approval queue by Friday 12:00 PM. Zero requisition stockouts.
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 bg-slate-950/80 border border-slate-800 rounded-2xl p-6">
+            <h3 class="text-sm font-bold uppercase text-slate-300 tracking-wider mb-3">Structured 4-Point Phone Screen Script</h3>
+            <div class="space-y-2.5 text-xs text-slate-300 font-mono bg-slate-900 p-4 rounded-xl border border-slate-800">
+              <div>
+                <span class="text-purple-400 font-bold">1. Technical Depth Check:</span>
+                <p class="text-slate-400 pl-3">"Walk me through your production experience with {{Tech Stack}}. What was the most complex architecture challenge you personally resolved in your last project?"</p>
+              </div>
+              <div>
+                <span class="text-purple-400 font-bold">2. Client Communication & Articulation:</span>
+                <p class="text-slate-400 pl-3">Evaluate clarity, grammar, and presence. Can this engineer articulate architectural decisions cleanly to an Australian or UAE client during daily standups?</p>
+              </div>
+              <div>
+                <span class="text-purple-400 font-bold">3. Compensation Calibration:</span>
+                <p class="text-slate-400 pl-3">"What is your current fixed CTC, and what is your absolute minimum expected in-hand CTC? Are there variable or bonus components?"</p>
+              </div>
+              <div>
+                <span class="text-purple-400 font-bold">4. Notice Period & Availability:</span>
+                <p class="text-slate-400 pl-3">"What is your official notice period? Can you negotiate an early release or buyout? What is your confirmed earliest joining date?"</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SLIDE 12: TECHNICAL DISCOVERY QUESTIONNAIRE ==================== -->
+    <div class="slide" data-title="Discovery Questionnaire">
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-10 shadow-2xl">
+        <div class="flex items-center space-x-2 text-xs font-bold tracking-widest text-blue-400 uppercase mb-2">
+          <span>Section 11 // Sales Methodology</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-3">The Technical Discovery Framework</h2>
+        <p class="text-slate-400 text-sm max-w-3xl mb-8">
+          Used by Manish and Pritamjit on all 30-minute introductory calls. Diagnoses engineering friction, eliminates tire-kickers, and extracts commercial parameters.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 text-xs">
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
+            <div class="font-bold text-cyan-400 mb-1">Q1: Bottleneck Diagnosis</div>
+            <p class="text-slate-300 italic mb-2">"When you look at your roadmap over the next two quarters, is the delivery squeeze primarily due to specialized technical gaps, or sheer senior developer bandwidth?"</p>
+            <p class="text-slate-400">Separates custom architecture needs from dedicated pod capacity opportunities.</p>
+          </div>
+
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
+            <div class="font-bold text-cyan-400 mb-1">Q2: Hiring Lag Quantification</div>
+            <p class="text-slate-300 italic mb-2">"I noticed you've had a Senior {{Stack}} role open for some time. What has been the primary barrier with candidates so far—compensation mismatch, technical caliber, or candidate drop-off?"</p>
+            <p class="text-slate-400">Quantifies recruiting cost and urgency; positions immediate embedded pods.</p>
+          </div>
+
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
+            <div class="font-bold text-cyan-400 mb-1">Q3: Codebase & Team Integration</div>
+            <p class="text-slate-300 italic mb-2">"How does your engineering team typically integrate external capacity? Do you have an established PR review and CI/CD workflow that embedded developers plug into?"</p>
+            <p class="text-slate-400">Validates operational maturity and confirms stand-up / timezone alignment.</p>
+          </div>
+
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
+            <div class="font-bold text-cyan-400 mb-1">Q4: Architectural & Integration Footprint</div>
+            <p class="text-slate-300 italic mb-2">"What existing systems, third-party ERP/CRM platforms, or legacy databases does this application need to communicate with?"</p>
+            <p class="text-slate-400">Identifies integration complexity and opportunities for ZCoupler middleware.</p>
+          </div>
+
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
+            <div class="font-bold text-cyan-400 mb-1">Q5: Decision Clock & Deadlines</div>
+            <p class="text-slate-300 italic mb-2">"What is the hard milestone or board-committed release date driving this project? What happens if that deadline slips by 60 days?"</p>
+            <p class="text-slate-400">Establishes executive urgency and consequences of inaction.</p>
+          </div>
+
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
+            <div class="font-bold text-cyan-400 mb-1">Q6: Commercial & Budget Fit</div>
+            <p class="text-slate-300 italic mb-2">"Most engineering teams we partner with deploy a dedicated 2–3 engineer pod at $25–$30/hour blended rate. Does that structure align with your budget envelope?"</p>
+            <p class="text-slate-400">Enforces commercial rate floor before committing proposal engineering time.</p>
+          </div>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800 text-xs text-slate-400 flex items-center justify-between">
+          <span><strong class="text-slate-200">Logging Rule:</strong> Call notes answering these 6 questions must be logged in Zoho CRM within <strong class="text-cyan-400">2 hours</strong> of call completion.</span>
+          <span class="font-mono text-emerald-400 font-bold">Stage: Solutioning</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SLIDE 13: LIFECYCLE & ESCALATION TRIGGERS ==================== -->
+    <div class="slide" data-title="Pipeline & Escalations">
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-10 shadow-2xl">
+        <div class="flex items-center space-x-2 text-xs font-bold tracking-widest text-emerald-400 uppercase mb-2">
+          <span>Section 12 // Pipeline Architecture</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-3">Opportunity Lifecycle & Escalation Protocols</h2>
+        <p class="text-slate-400 text-sm max-w-3xl mb-8">
+          Standardized progression through Zoho CRM ensures zero lead drop-off, clear functional handoffs, and rapid leadership escalation for high-value deals.
+        </p>
+
+        <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 mb-6">
+          <div class="text-xs font-bold uppercase text-slate-300 mb-4">Visual Opportunity Progression Pipeline</div>
+          <div class="grid grid-cols-2 sm:grid-cols-6 gap-3 text-xs">
+            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-center">
+              <div class="text-[10px] uppercase font-mono text-slate-400 mb-1">Stage 1</div>
+              <div class="font-bold text-white mb-1">Sourcing</div>
+              <div class="text-[11px] text-cyan-400">Apollo / Nav</div>
+              <div class="text-[10px] text-slate-400 mt-2">Pritamjit verifies multi-trigger fit.</div>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-center">
+              <div class="text-[10px] uppercase font-mono text-slate-400 mb-1">Stage 2</div>
+              <div class="font-bold text-white mb-1">Outreach</div>
+              <div class="text-[11px] text-cyan-400">Email / InMail</div>
+              <div class="text-[10px] text-slate-400 mt-2">Manish / Pritamjit execute sequences.</div>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-center">
+              <div class="text-[10px] uppercase font-mono text-slate-400 mb-1">Stage 3</div>
+              <div class="font-bold text-white mb-1">Discovery</div>
+              <div class="text-[11px] text-blue-400">30-Min Zoom</div>
+              <div class="text-[10px] text-slate-400 mt-2">6-Question qualification brief logged.</div>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-center">
+              <div class="text-[10px] uppercase font-mono text-slate-400 mb-1">Stage 4</div>
+              <div class="font-bold text-white mb-1">Solutioning</div>
+              <div class="text-[11px] text-emerald-400">&lt;24h SOW</div>
+              <div class="text-[10px] text-slate-400 mt-2">Rajeev drafts bespoke commercial proposal.</div>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-center">
+              <div class="text-[10px] uppercase font-mono text-slate-400 mb-1">Stage 5</div>
+              <div class="font-bold text-white mb-1">Closing</div>
+              <div class="text-[11px] text-emerald-400">Exec Review</div>
+              <div class="text-[10px] text-slate-400 mt-2">Rajeev & Manish lead negotiation & MSA.</div>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900 border border-emerald-500/40 text-center">
+              <div class="text-[10px] uppercase font-mono text-emerald-400 mb-1">Stage 6</div>
+              <div class="font-bold text-white mb-1">Onboarding</div>
+              <div class="text-[11px] text-emerald-400">5–10 Days</div>
+              <div class="text-[10px] text-slate-400 mt-2">Pod kicks off into client standups.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-950 p-6 rounded-2xl border border-rose-500/30">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-sm font-bold uppercase text-white flex items-center gap-2">
+              <svg class="w-4 h-4 text-rose-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+              Immediate Escalation Triggers (Notify Rajeev within 2 hours)
+            </h3>
+            <span class="text-[11px] font-mono text-rose-400 font-bold bg-rose-950 px-2 py-0.5 rounded border border-rose-800">Mandatory SLA</span>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-300">
+            <div class="p-3 rounded-lg bg-slate-900 border border-slate-800">
+              <strong class="text-rose-300">1. Large Pod Request:</strong> Any client requiring immediate deployment of <strong>3 or more dedicated engineers</strong>.
+            </div>
+            <div class="p-3 rounded-lg bg-slate-900 border border-slate-800">
+              <strong class="text-rose-300">2. Master Teaming Agreement:</strong> Any digital agency seeking formal umbrella teaming for imminent RFP overflow.
+            </div>
+            <div class="p-3 rounded-lg bg-slate-900 border border-slate-800">
+              <strong class="text-rose-300">3. Compliance / Legal Queries:</strong> Inquiries regarding <strong>SOC 2 Type II</strong>, custom infosec audits, or SLA penalties.
+            </div>
+            <div class="p-3 rounded-lg bg-slate-900 border border-slate-800">
+              <strong class="text-rose-300">4. Commercial Pricing Exceptions:</strong> Any request for discounts or custom payment terms below the $25/hr rate floor.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SLIDE 14: GOVERNANCE & 20-MIN REVENUE STANDUP ==================== -->
+    <div class="slide" data-title="Governance & Standup">
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-10 shadow-2xl">
+        <div class="flex items-center space-x-2 text-xs font-bold tracking-widest text-emerald-400 uppercase mb-2">
+          <span>Section 13 // Team Governance</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-3">Operating Cadence & Accountability</h2>
+        <p class="text-slate-400 text-sm max-w-3xl mb-8">
+          How leadership maintains momentum, eliminates micro-management, and resolves operational bottlenecks.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800">
+            <h3 class="text-sm font-bold uppercase text-white mb-3 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              The Single Source of Truth Rule
+            </h3>
+            <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+              <strong class="text-white">"If it's not in Zoho CRM, it didn't happen."</strong> No verbal status updates, Slack threads, or informal conversations count as progress. Every partner must log activities within 2 hours.
+            </p>
+            <div class="space-y-2 text-xs text-slate-400">
+              <div class="flex items-center justify-between p-2 rounded bg-slate-900">
+                <span>Discovery Call Briefs</span>
+                <span class="text-emerald-400 font-mono font-bold">&lt; 2 hrs post-call</span>
+              </div>
+              <div class="flex items-center justify-between p-2 rounded bg-slate-900">
+                <span>Commercial Proposal Delivery</span>
+                <span class="text-emerald-400 font-mono font-bold">&lt; 24 hrs post-brief</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800">
+            <h3 class="text-sm font-bold uppercase text-white mb-3 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+              The 20-Minute Friday Revenue Standup
+            </h3>
+            <p class="text-xs text-slate-300 mb-3 leading-relaxed">
+              Every Friday at <strong>04:30 PM</strong>, the council convenes for exactly 20 minutes. No presentation decks. Each partner verbally reports only their <strong>3 Vital Numbers</strong>:
+            </p>
+            <div class="text-xs font-mono bg-slate-900 p-3.5 rounded-xl border border-slate-800 space-y-1.5 text-slate-300">
+              <div><strong class="text-cyan-400">Pritamjit:</strong> Agencies Contacted [#/40] | Upwork Bids [#/6] | Calls [#/3]</div>
+              <div><strong class="text-blue-400">Manish:</strong> CTO Touches [#/30] | Discovery Calls [#/4] | Shortlists [#/3]</div>
+              <div><strong class="text-emerald-400">Rajeev:</strong> System Health [%] | Proposals Issued [#] | Closed MRR [$]</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 p-6 rounded-2xl border border-slate-800 text-center">
+          <h3 class="text-base font-bold text-white mb-2">Ready to Roll Out to the Leadership Council</h3>
+          <p class="text-xs text-slate-400 max-w-xl mx-auto mb-4">
+            This operational manual gives each partner total autonomy within strict commercial boundaries. Use the navigation buttons above or print to PDF for team distribution.
+          </p>
+          <div class="flex items-center justify-center gap-3">
+            <button onclick="goToSlide(1)" class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-bold text-white transition border border-slate-700">
+              Back to Slide 1
+            </button>
+            <button onclick="window.print()" class="px-4 py-2 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-xs font-bold text-white transition shadow-lg shadow-cyan-600/20">
+              Print / Export Full Manual (PDF)
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- BOTTOM CONTROLLER BAR -->
+  <footer class="no-print border-t border-slate-800/80 bg-slate-900/50 backdrop-blur-md px-6 py-3 flex items-center justify-between text-xs text-slate-400">
+    <div class="flex items-center space-x-2">
+      <span class="font-mono text-slate-400">Shortcuts:</span>
+      <kbd class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700 font-mono text-[10px] text-slate-300">Left Arrow Prev</kbd>
+      <kbd class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700 font-mono text-[10px] text-slate-300">Right Arrow Next</kbd>
+    </div>
+
+    <!-- Slide Thumb Dots -->
+    <div class="flex items-center space-x-1 sm:space-x-1.5" id="dotsContainer"></div>
+
+    <div class="text-slate-400 font-mono text-[11px] hidden sm:block">
+      Zediant Operations Framework v2.0
+    </div>
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    const indicator = document.getElementById('slideIndicator');
+    const dotsContainer = document.getElementById('dotsContainer');
+    const tocList = document.getElementById('tocList');
+    const tocModal = document.getElementById('tocModal');
+
+    // Build Dots & TOC items
+    slides.forEach((slide, index) => {
+      const title = slide.getAttribute('data-title') || `Slide ${index + 1}`;
+      
+      // Dot
+      const dot = document.createElement('button');
+      dot.className = `w-2 h-2 rounded-full transition-all ${index === 0 ? 'bg-cyan-400 w-5' : 'bg-slate-700 hover:bg-slate-500'}`;
+      dot.title = title;
+      dot.onclick = () => goToSlide(index + 1);
+      dotsContainer.appendChild(dot);
+
+      // TOC Item
+      const tocItem = document.createElement('button');
+      tocItem.className = 'text-left p-2.5 rounded-xl bg-slate-950/60 hover:bg-cyan-950/40 hover:text-cyan-300 border border-slate-800/80 transition flex items-center justify-between';
+      tocItem.innerHTML = `<span><strong>${index + 1}.</strong> ${title}</span> <span class="font-mono text-[10px] text-slate-500">Slide ${index + 1}</span>`;
+      tocItem.onclick = () => {
+        goToSlide(index + 1);
+        toggleTOC();
+      };
+      tocList.appendChild(tocItem);
+    });
+
+    function toggleTOC() {
+      tocModal.classList.toggle('hidden');
+    }
+
+    // Close TOC on backdrop click
+    tocModal.addEventListener('click', (e) => {
+      if (e.target === tocModal) toggleTOC();
+    });
+
+    function updateView() {
+      slides.forEach((slide, index) => {
+        slide.classList.toggle('active', index === currentSlide);
+      });
+
+      const activeTitle = slides[currentSlide].getAttribute('data-title');
+      indicator.textContent = `Slide ${currentSlide + 1} of ${totalSlides} — ${activeTitle}`;
+
+      // Update dots
+      const dots = dotsContainer.children;
+      for (let i = 0; i < dots.length; i++) {
+        if (i === currentSlide) {
+          dots[i].className = 'w-5 h-2 rounded-full bg-cyan-400 transition-all shadow-sm shadow-cyan-400/50';
+        } else {
+          dots[i].className = 'w-2 h-2 rounded-full bg-slate-700 hover:bg-slate-500 transition-all';
+        }
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function nextSlide() {
+      if (currentSlide < totalSlides - 1) {
+        currentSlide++;
+        updateView();
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlide > 0) {
+        currentSlide--;
+        updateView();
+      }
+    }
+
+    function goToSlide(slideNum) {
+      if (slideNum >= 1 && slideNum <= totalSlides) {
+        currentSlide = slideNum - 1;
+        updateView();
+      }
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'PageDown') nextSlide();
+      if (e.key === 'ArrowLeft' || e.key === 'PageUp') prevSlide();
+      if (e.key === 'Escape') tocModal.classList.add('hidden');
+    });
+
+    // Initialize
+    updateView();
+  </script>
+</body>
+</html>
