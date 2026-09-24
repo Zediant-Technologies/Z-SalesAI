@@ -129,7 +129,7 @@ def get_existing_apollo_contacts():
             if comp:
                 existing_companies.add(comp.lower())
         page += 1
-        if page > 5:
+        if page > 15:
             break
     return existing_emails, existing_pids, existing_companies
 
@@ -139,12 +139,16 @@ def search_raw_candidates(country, keyword_groups):
     seen_ids = set()
 
     for kw in keyword_groups:
-        for page in range(1, 4):
+        for page in range(1, 6):
             payload = {
                 "page": page,
                 "per_page": 50,
-                "person_titles": ["CTO", "Chief Technology Officer", "VP of Engineering", "VP Engineering", "Head of Engineering", "Chief Operating Officer"],
-                "person_seniorities": ["c_suite", "vp", "head"],
+                "person_titles": [
+                    "CTO", "Chief Technology Officer", "VP of Engineering", "VP Engineering",
+                    "Head of Engineering", "Chief Operating Officer", "Director of Engineering",
+                    "Head of Technology", "VP Technology", "VP of Technology"
+                ],
+                "person_seniorities": ["c_suite", "vp", "head", "director"],
                 "person_locations": [country],
                 "organization_locations": [country],
                 "contact_email_status": ["verified"],
@@ -539,8 +543,12 @@ def run():
     # Save artifact log
     out_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "scratch"))
     os.makedirs(out_dir, exist_ok=True)
-    out_file = os.path.join(out_dir, "scheduler1_100_batch_results.json")
+    ts = time.strftime("%Y%m%d_%H%M%S")
+    out_file = os.path.join(out_dir, f"scheduler1_100_batch_results_{ts}.json")
+    latest_file = os.path.join(out_dir, "scheduler1_100_batch_results.json")
     with open(out_file, "w", encoding="utf-8") as f:
+        json.dump(all_enriched_leads, f, indent=2)
+    with open(latest_file, "w", encoding="utf-8") as f:
         json.dump(all_enriched_leads, f, indent=2)
     print(f"Saved full batch details to {out_file}")
 
