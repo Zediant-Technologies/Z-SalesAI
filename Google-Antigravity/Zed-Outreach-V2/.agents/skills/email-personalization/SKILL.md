@@ -110,18 +110,25 @@ Industry, business model, and growth stage should already be established. Read t
 
 Determine role, likely responsibilities, and likely priorities from what's genuinely available (title, LinkedIn headline if provided, the campaign's documented persona). Job title and public professional activity are fair game; personal life, family, or anything scraped from a non-professional context is not, regardless of whether it was technically findable — see "Never over-personalize" below.
 
-## Step 4 — Find the specific fact that instantiates the campaign's angle
+## Step 4 — Find the specific fact that instantiates the campaign's angle (Concrete Noun Rule)
 
-The campaign's Personalization Opportunities section names *categories* (recent hiring, a product launch, an expansion, a specific technology). Find the actual instance for this company.
+The campaign's Personalization Opportunities section names *categories* (recent hiring, a product launch, an expansion, a specific technology). Antigravity must extract a **concrete, verifiable noun** directly from Apollo enrichment data or live verification rather than general praise.
+
+> [!IMPORTANT]
+> ### THE CONCRETE NOUN RULE (STRICTLY ENFORCED)
+> Beat 1 must NEVER open with generic consulting compliments like *"Saw what your team is building with [Company]'s product platform..."* or *"Noticed your focus across the engineering roadmap..."*. It must name an exact, verifiable entity:
+> 1. **Hiring Signal (Job Title Noun):** Name the exact open role being recruited (e.g., *"Saw TechEmpower is currently looking to add senior platform engineering talent..."* or *"Saw your team is recruiting a Senior React Native engineer..."*).
+> 2. **Product / Release Signal (Feature/Module Noun):** Name the specific feature, API, or release (e.g., *"Noticed Open's recent expansion scaling instant policy integrations for enterprise partners..."*).
+> 3. **Stack Signal (Technology Noun):** Name the verified technology framework in production (e.g., *"Saw TechEmpower's platform is heavily built around Node and React..."*).
 
 **Decision order when more than one candidate fact exists:**
 
-1. Verified recent news (funding, acquisition, launch, expansion) — most timely, strongest opener
-2. Verified hiring activity, especially matching the campaign's target signal
-3. A specific, verifiable detail from the company's own site or public materials
-4. Industry-level personalization as the fallback, if nothing company-specific and verifiable turned up
+1. **Verified hiring activity (Job Title Noun):** Most immediate operational trigger — especially senior or long-open roles matching the campaign's target signal.
+2. **Verified recent product/feature release (Feature Noun):** Direct evidence of active roadmap velocity.
+3. **A specific technology stack observation (Stack Noun):** Verifiable frameworks from job postings or technical headers.
+4. **Verified company event:** Funding round, acquisition, or geographic expansion.
 
-Don't skip straight to industry-level personalization because it's easier. Only use it when a genuine search came back empty, and say so rather than presenting industry-level content as if it were company-specific.
+Don't skip straight to generic industry-level personalization because it's easier. A concrete noun is what earns the next sentence and makes the prospect think: *"How did they know that?"*
 
 ## Step 5 — Identify the one primary outreach angle
 
@@ -181,24 +188,40 @@ Co-Founder | Zediant Technologies
 **The 3-Beat Micro-Structure (Visual Spacing Standard):**
 The `Personalised Email` custom field must ALWAYS be formatted into **3 distinct visual beats separated by double newlines (`\n\n`)**:
 
-1. **Beat 1: The Product-Grounded Observation (Standalone paragraph, 1 sentence):**
-   Opens directly with verified, domain-specific research naming the company's real core platform, product line, or technical function.
-   * **Rule:** Must cite what the company actually builds (e.g., Open's embedded insurance platform, GTS Group's real-time industrial telemetry and OSIsoft PI/SCADA systems, Codafication's Crunchwork claims management platform).
-   * **Banned:** Generic consulting fluff, "Noticed your ongoing platform expansion...", "Saw your company website...", or superficial flattery.
-   * *Example (C1 - Fintech):* `Saw what you guys are building with Open's embedded insurance platform and how you're scaling instant policy integration for enterprise partners.`
-   * *Example (C3 - Telemetry/IoT):* `Noticed GTS Group's real-time industrial data platforms and the scale of OSIsoft PI and SCADA integrations you manage across mining and energy assets.`
+1. **Beat 1: The Product/Signal-Grounded Observation (Standalone paragraph, 1 sentence):**
+   Opens directly with verified, domain-specific research naming a concrete observable signal (e.g. an active hiring push, a specific product release, or the exact core technology stack).
+   * **Rule:** When generating Beat 1, Antigravity MUST pull a concrete, verifiable noun from Apollo’s enrichment data (e.g. an active job posting, a specific release, or a named stack) rather than general praise.
+   * **Banned:** Generic consulting fluff or broad flattery (e.g. "Saw what your team is building with [Company]'s product platform...", "Saw what you guys are building with...", "Noticed your ongoing roadmap expansion..."). If Antigravity uses generic praise without a concrete noun, the opener fails QA.
+   * *Example (C1 - Product Signal — 9/10 Benchmark):* `Noticed Open's recent expansion scaling instant policy integrations for enterprise partners.`
+   * *Example (C1 - Hiring Signal):* `Saw TechEmpower is currently looking to add senior platform engineering talent to the team.`
+   * *Example (C1 - Stack Signal Fallback):* `Saw TechEmpower's platform is heavily built around Node and React.`
+   * *Example (C2 - Branch A Hiring Gap):* `Saw {{company}} is currently recruiting {{open_role}}.`
+   * *Example (C2 - Branch B Agency):* `Saw {{company}}'s recent digital delivery work across [Domain / Named Client / Project].`
+   * *Example (C3 - Platform/DevOps Hiring):* `Saw {{company}} is currently looking to bring on a senior DevOps engineer.`
+   * *Example (C3 - Platform/Stack Fallback):* `Saw {{company}}'s cloud infrastructure is built around AWS and Kubernetes.`
+   * *Example (C4 - Middleware/Integration — 9/10 Benchmark):* `Saw from your docs that {{company}}'s embedded analytics platform connects directly into complex client data sources.`
+   * *Example (C4 - Multi-System Fallback):* `Noticed {{company}} manages data flows across multiple platforms like [Named System 1] and [Named System 2].`
+    * *Example (C5 - Modernization — 9/10 Benchmark):* `Saw {{company}}'s scale across [core product footprint / self-service kiosks] and your expansion into [new digital endpoints / smart government touchpoints].`
+    * *Example (C5 - Modernization Tech Stack Fallback):* `Noticed {{company}}'s core enterprise application is built across [Java EE / .NET Framework / Monolithic DB].`
 
 2. **Beat 2: The Operational Bottleneck & Senior Pod Solution (1–2 sentences):**
-   Transitions smoothly to the engineering tension between rapid feature release cycles and senior capacity / maintenance drag, introducing Zediant's senior engineering pod capability.
-   * **Rule:** Must specify the operational friction (e.g., pulling senior engineers into maintenance, deployment pipeline drag, integration backlog) and present Zediant's pods embedding in 2–3 weeks to take full architectural ownership, shipping 30–40% faster using modern tooling / AI-assisted workflows without disrupting active sprints.
-   * *Example (C1):* `Rolling out partner APIs while keeping the core rating engine fast usually pulls senior engineers in two directions. We embed senior squads in 2-3 weeks to take complete architectural ownership of feature modules, using modern tooling to ship about 35% faster.`
-   * *Example (C3):* `Balancing high-throughput telemetry data with rock-solid cloud platform uptime often stretches senior infrastructure engineers thin. We embed senior platform and DevOps squads to optimize cloud performance and automate CI/CD pipelines without disrupting live client environments.`
+   Transitions smoothly to the visceral tension between roadmap delivery and senior developer maintenance drag, introducing Zediant's senior engineering pod capability.
+   * **Rule:** Use visceral, visual pain ("roadmap deadlines don't pause", "firefighting maintenance instead of shipping core features", "babysitting deployments", "pulling engineers away from core roadmap work", or "hesitating to refactor fragile monoliths") rather than abstract jargon ("straining bandwidth"). Standardize on **"pod"** (not squad), **"10 days"** ramp, and **"shipping 30–40% faster"** (customer-visible output).
+   * *Example (C1):* `When roadmap pressure spikes, your best engineers often get stuck firefighting maintenance instead of shipping core features. We embed dedicated senior engineering pods in 10 days to take full ownership of modules and ship 30–40% faster using AI-assisted delivery workflows.`
+   * *Example (C2 - Branch A Hiring Gap — 9/10 Benchmark):* `While senior hiring locally takes months, roadmap deadlines don't pause. We embed dedicated senior fullstack pods in 10 days — directly into your repo and sprint cycle, owning backlog delivery from day one.`
+   * *Example (C2 - Branch B Agency):* `When new client projects spike, balancing delivery without taking on permanent bench overhead or unvetted freelancers is tricky. We deploy dedicated senior engineering pods in 10 days as an invisible technical extension to help agencies absorb project overflow without long-term commitments.`
+   * *Example (C3 - Platform/DevOps — 9/10 Benchmark):* `When deployment pipelines lag, senior developers end up babysitting releases and troubleshooting builds instead of shipping features. We embed dedicated senior DevOps pods in 10 days to automate CI/CD and eliminate deployment friction.`
+   * *Example (C4 - Middleware/Integration — 9/10 Benchmark):* `Building custom partner connectors often pulls senior product engineers away from core roadmap priorities. We embed dedicated senior integration pods in 10 days to take full architectural ownership of custom connectors and pipelines.`
+   * *Example (C5 - Modernization — 9/10 Benchmark):* `Updating legacy terminal software while maintaining 24/7 transaction uptime traps senior engineers in regression testing rather than shipping new kiosk features. We embed senior engineering pods in 10 days to safely decouple monolithic workflows, cutting modernization cycles by 40% with zero terminal downtime.`
+   * *Example (C5 - Monolithic Refactoring Fallback):* `When core legacy systems become fragile, in-house teams hesitate to refactor them while maintaining daily operations. We embed dedicated senior engineering pods in 10 days with dual legacy and modern stack fluency to safely decouple modules into cloud services with zero operational downtime.`
 
-3. **Beat 3: The Standalone 2-Minute Teardown Ask (Standalone paragraph, 1 sentence):**
+3. **Beat 3: The Standalone Low-Friction Ask (Standalone paragraph, 1 sentence):**
    Closes with a single permission-based question standing on its own line for maximum visual contrast.
-   * **Rule:** Low-friction curiosity offer (the 2-minute teardown or benchmark). Never push a 30-minute meeting or Calendly link in the body.
-   * *Example (C1):* `Open to checking a 2-minute teardown of how we helped a similar fintech product team accelerate release cycles by 35%?`
-   * *Example (C3):* `Open to checking a 2-minute teardown of how we helped a high-throughput platform team eliminate release friction and optimize cloud spend?`
+   * **Rule:** Low-friction, conversational curiosity offer matching the "pod" terminology. Never push a 30-minute meeting or Calendly link.
+   * *Approved Standard A (Direct Confident Offer — 9/10 C3 Benchmark):* `Happy to send over a 2-minute breakdown of how the pod model works?`
+   * *Approved Standard B (With Disarming Exit — 9/10 C2 Benchmark):* `Happy to send over a 2-minute breakdown on how the pod model works — or should I leave you in peace?`
+   * *Approved Standard C (Curiosity Ask):* `Worth a quick look at how an embedded pod sets this up, or should I leave you in peace?`
+   * *Approved Standard D (C5 Diagnostic Executive Ask — 9/10 Benchmark):* `Worth a brief exchange on how you're handling terminal software updates this quarter?` (or `Happy to send over a 2-minute teardown of how we helped an enterprise team modernize legacy transaction systems 40% faster?`)
 
 ---
 
