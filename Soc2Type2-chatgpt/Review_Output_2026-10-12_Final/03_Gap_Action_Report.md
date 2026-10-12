@@ -233,3 +233,35 @@ Identical body text often reflects intentionally retained copies; these groups n
 - `05_IT_and_DevOps/7 - Supporting Documents/6 - Desktop Audit Check List (Not needed)/Desktop Audit Check List - 10.docx`; `05_IT_and_DevOps/7 - Supporting Documents/6 - Desktop Audit Check List (Not needed)/Desktop Audit Check List - 9.docx`
 - `07_Client_and_Vendor/2 - Client Non-Disclosure-Agreement - Template.docx`; `07_Client_and_Vendor/6 - Supporting Documents/2 - Client Non-Disclosure-Agreement/2 - Non-Disclosure-Agreement - Infomedia.docx`
 - `07_Client_and_Vendor/6 - Supporting Documents/8 - Vendor Non-Disclosure Agreement/Vendor Non-Disclosure-Agreement - Sanjay Bundella.docx`; `07_Client_and_Vendor/8 - Vendor - Non-Disclosure-Agreement - Template.docx`
+
+## Corrective drafts and action tracker
+
+The following staged policy copies were rewritten to remove duplicated/incorrect scope, generic template text, corrupted content, and unsupported metrics. Each is visibly marked as a draft with owner, version, effective-date, and authorized-approval fields requiring completion. No target date, legal deadline, system, metric, or operating event was invented.
+
+- `01_Reviewed_Policies/01 - Disciplinary Policy and Procedure.docx`
+- `01_Reviewed_Policies/02 - Code of Conduct Policy.docx`
+- `01_Reviewed_Policies/03 - Rewards and Recognition Policy.docx`
+- `01_Reviewed_Policies/07 - HR-Hiring Procedure.docx`
+- `01_Reviewed_Policies/08 - Data Collection & Privacy Handling Policy.docx`
+- `01_Reviewed_Policies/09 - Data Transfer and Disclosure Policy.docx`
+- `01_Reviewed_Policies/10 - Data Usage and Acceptable Use Policy.docx`
+- `01_Reviewed_Policies/14 - Risk Assessment Policy.docx`
+- `01_Reviewed_Policies/16 - Asset Management Policy.docx`
+- `01_Reviewed_Policies/18 - Incident Management Policy and Response Procedure.docx`
+- `01_Reviewed_Policies/19 - Secure SDLC and Infrastructure Deployment Procedure.docx`
+- `01_Reviewed_Policies/21 - Password Management Policy.docx`
+- `01_Reviewed_Policies/26 - Software Installation and Licensing Policy.docx`
+- `01_Reviewed_Policies/27 - Antivirus and Malware Prevention Policy.docx`
+- `01_Reviewed_Policies/28 - Configuration Management Policy.docx`
+- `01_Reviewed_Policies/31 - Business Continuity and Disaster Recovery Manual.docx`
+- `01_Reviewed_Policies/32 - Software Development Life Cycle (SDLC) Policy.docx`
+- `01_Reviewed_Policies/36 - Backup and Restoration Procedure.docx`
+- `01_Reviewed_Policies/37 - Data Storage Policy.docx`
+- `01_Reviewed_Policies/38 - Data Privacy Policy.docx`
+- `01_Reviewed_Policies/39 - Remote Working and Teleworking Policy.docx`
+
+The workbook `04_Owner_Action_Tracker.xlsx` contains all tracker evidence rows and policy approval actions with blank evidence references and owner confirmations. Every row remains open until supported by authentic period evidence or an authorized declaration.
+
+## Requirements that cannot be completed from this folder alone
+
+The tracker requests period-specific records that are not created by rewriting policies: signed attestations, onboarding and offboarding samples, meeting minutes, training/appraisal records, visitor and maintenance logs, internal audit results, risk/privacy assessments, access/change tickets, cloud/service reports, and evidence of control operation from October 1, 2025 through September 30, 2026. Where the source collection contains a blank template, a prior-period record, or a placeholder (including TBC, [Date], [Insert], or xxx), obtain the actual completed record or a dated and authorized zero-activity declaration. Do not populate historical evidence from memory or backdate it.
