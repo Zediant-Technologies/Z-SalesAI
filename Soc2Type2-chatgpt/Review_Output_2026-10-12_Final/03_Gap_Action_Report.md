@@ -3,6 +3,8 @@
 Source folder: C:\Work\Zediant\Sales\SalesAI\Soc2Type2-chatgpt  
 Audit period in tracker: October 1, 2025–September 30, 2026  
 Review date: October 12, 2026  
+Assumed SOC 2 audit date: 31 October 2026  
+Audit history: SOC 2 audits conducted for the past three years (management-provided context)  
 Review copy folder: Review_Output_2026-10-12_Final
 
 ## Executive summary
@@ -265,3 +267,7 @@ The workbook `04_Owner_Action_Tracker.xlsx` contains all tracker evidence rows a
 ## Requirements that cannot be completed from this folder alone
 
 The tracker requests period-specific records that are not created by rewriting policies: signed attestations, onboarding and offboarding samples, meeting minutes, training/appraisal records, visitor and maintenance logs, internal audit results, risk/privacy assessments, access/change tickets, cloud/service reports, and evidence of control operation from October 1, 2025 through September 30, 2026. Where the source collection contains a blank template, a prior-period record, or a placeholder (including TBC, [Date], [Insert], or xxx), obtain the actual completed record or a dated and authorized zero-activity declaration. Do not populate historical evidence from memory or backdate it.
+
+## Updated audit context
+
+The revised policy copies with document-control tables now state the assumed SOC 2 audit date of 31 October 2026 and the management-provided history that Zediant has undergone SOC 2 audits for the past three years. This does not change the tracker’s stated observation period (October 1, 2025–September 30, 2026) or imply policy approval/effectiveness dates.
